@@ -1,0 +1,53 @@
+p {
+  font-style: italic;
+  color: red;
+  background-color: lightgray;
+  font-weight: bold;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+header {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 50px;
+  height: 100px;  
+
+}
+ul {
+  list-style-type: none;
+}
+.list1 {
+  position: absolute;
+  left: 150px;
+}
+.list2 {
+  position: absolute;
+  left: 200px;
+}
+.list3 {
+  position: absolute;
+  left: 250px;
+}
+.list4 {
+  position: absolute;
+  left: 300px;
+}
+.center {
+  position: absolute;
+  right: 50%;
+}
+.list5 {
+  position: absolute;
+  right: 150px;
+}
+.list6 {
+  position: absolute;
+  right: 100px;
+}
+
+ul svg{
+  height: 30px;
+}
