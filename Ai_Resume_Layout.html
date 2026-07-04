@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Layout</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+body{
+  background:#0b0b0b;
+  color:#fff;
+  display:flex;
+  justify-content:center;
+}
+.container{
+  width:900px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.card{
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:20px;
+}
+.top{
+  display:flex;
+  gap:20px;
+}
+.profile{
+  width:200px;
+  border-radius:20px;
+}
+.bio{
+  flex:1;
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:20px;
+}
+.interests{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+.tag{
+  background:#111;
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:12px;
+}
+.row{
+  display:flex;
+  gap:20px;
+}
+.box{
+  flex:1;
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:20px;
+}
+.title{
+  font-size:22px;
+  margin-bottom:10px;
+}
+ul{
+  margin-left:15px;
+  font-size:14px;
+}
+.tools, .languages, .portfolio, .details{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.badge{
+  background:#111;
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:12px;
+}
+.footer{
+  display:flex;
+  gap:20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- TOP -->
+<div class="top">
+  <img src="/mnt/data/WhatsApp Image 2026-04-08 at 14.37.03.jpeg" class="profile">
+  <div class="bio">
+    <p>My name is Sunil Kumar self-taught logo/brand designer with 4+ years of experience creating modern, clean, and minimal brands that make a lasting impression.</p>
+    <div class="interests">
+      <div class="tag">Gaming</div>
+      <div class="tag">Film Making</div>
+      <div class="tag">Traveling</div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="row">
+  <div class="box">
+    <div class="title">Freelancer</div>
+    <ul>
+      <li>Worked on diverse logo projects</li>
+      <li>Collaborated globally</li>
+      <li>Developed versatile skills</li>
+    </ul>
+  </div>
+  <div class="box">
+    <div class="title">Meetzed</div>
+    <ul>
+      <li>Supported Lead Designer</li>
+      <li>Brand identity creation</li>
+      <li>Used Adobe tools</li>
+    </ul>
+  </div>
+</div>
+
+<!-- TOOLS -->
+<div class="box">
+  <div class="title">Design Tools</div>
+  <div class="tools">
+    <div class="badge">Ai</div>
+    <div class="badge">Ps</div>
+    <div class="badge">Id</div>
+    <div class="badge">Xd</div>
+  </div>
+</div>
+
+<div class="box">
+  <div class="title">Editing Tools</div>
+  <div class="tools">
+    <div class="badge">Ae</div>
+    <div class="badge">Pr</div>
+  </div>
+</div>
+
+<div class="box">
+  <div class="title">Languages</div>
+  <div class="languages">
+    <div class="badge">Hindi</div>
+    <div class="badge">English</div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="box">
+  <div class="title">Education</div>
+  <p>High School, Diploma, Graduation</p>
+</div>
+
+<!-- PORTFOLIO -->
+<div class="box">
+  <div class="title">Portfolio</div>
+  <div class="portfolio">
+    <div class="badge">Behance</div>
+    <div class="badge">Instagram</div>
+    <div class="badge">YouTube</div>
+  </div>
+</div>
+
+<!-- DETAILS -->
+<div class="box">
+  <div class="title">Details</div>
+  <div class="details">
+    <div class="badge">26 years</div>
+    <div class="badge">email</div>
+    <div class="badge">phone</div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
