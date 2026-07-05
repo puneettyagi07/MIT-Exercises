@@ -1350,7 +1350,7 @@ dublicateElement(); */
 
 
 
-// Question :- Check through prompt if any name entered then print it's name with age.
+// Question 21:- Check through prompt if any name entered then print it's name with age.
 // const people = [
 //     {name: "Yash", age: 20},
 //     {name: "Rahul", age: 21},
@@ -1377,7 +1377,7 @@ dublicateElement(); */
 // console.log(b)
 
 
-// Question :- make a new array with current array's double value.
+// Question 22:- make a new array with current array's double value.
 // const doubleNumFunction = () => {
 // let num = [2,4, 6, 8];
 
@@ -1389,7 +1389,7 @@ dublicateElement(); */
 // doubleNumFunction();
 
 
-// Question :- Convert current array into upper case.
+// Question 23:- Convert current array into upper case.
 // const upperCaseFunction = () => {
 
 //     let name = ["yash", "rahul", "amit"];
@@ -1402,7 +1402,7 @@ dublicateElement(); */
 // upperCaseFunction();
 
 
-//Question :- Take out the Only Names from given array
+//Question 24:- Take out the Only Names from given array
 // const takeNameFunction = () => {
 
 // let people = [
@@ -1418,7 +1418,7 @@ dublicateElement(); */
 // }
 // takeNameFunction();
 
-// Question:- Make a new array with same details but with 10% discount in price
+// Question 25:- Make a new array with same details but with 10% discount in price
 
 // const discountFunction = () =>{
 
@@ -1444,13 +1444,13 @@ dublicateElement(); */
 // console.log(b)
 
 
-// Queston: Find even number and odd number 
+// Queston 26:- Find even number and odd number 
 // const num = [1, 2, 3, 4, 5 , 6, 7, 8];
 
-// Question:- print the character which length is more then 5 words.
+// Question 27:- print the character which length is more then 5 words.
 // const word = ["apple", "banana", "kiwi", "watermealomn","meango"];
 
-// Question :- Filer the products more then 5K price.
+// Question 28:- Filer the products more then 5K price.
 // const products = [
 //   { name: "Phone", price: 20000 },
 //   { name: "Mouse", price: 500 },
@@ -1458,7 +1458,7 @@ dublicateElement(); */
 //   { name: "Keyboard", price: 1500 }
 // ];
 
-// Question :- Passing marks are 50, find the students who got pass
+// Question 29:- Passing marks are 50, find the students who got pass
 // const students = [
 //   { name: "A", marks: 90 },
 //   { name: "B", marks: 30 },
@@ -1466,7 +1466,7 @@ dublicateElement(); */
 //   { name: "D", marks: 45 }
 // ];
 
-// Question :- Find the Users whoes email ends with ".com"
+// Question 30:- Find the Users whoes email ends with ".com"
 // const users = [
 //   { email: "abc@gmail.com" },
 //   { email: "test@yahoo.in" },
@@ -1500,15 +1500,15 @@ dublicateElement(); */
 
 
 
-// Question :- Check character, how many times it reapet. Give Number.
+// Question 31:- Check character, how many times it reapet. Give Number.
 // const fruits = [ "apple", "banana", "apple", "orange", "banana", "apple" ];
 
 
-// Question :- Print the Average of marks.
+// Question 32:- Print the Average of marks.
 // const marks = [80, 75, 90, 95, 70];
 
 
-// Question :- Seprate the Odd and even numbers in this object
+// Question 33:- Seprate the Odd and even numbers in this object
 // const numbers = [1,2,3,4,5,6,7,8,9,10];
 
 
