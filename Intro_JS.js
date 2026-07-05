@@ -1421,18 +1421,18 @@ dublicateElement(); */
 // Question 25:- Make a new array with same details but with 10% discount in price
 
 // const discountFunction = () =>{
-
 // const product = [
 //     {name: "Laptop", price: 50000},
 //     {name: "Phone", price: 30000},
 //     {name: "Watch", price: 10000}
 // ]
 // let discountedPrice = product.map((value, index, array) => {
-//     return {value.name, value.price*0.90};
+//     return value.price*0.90;
 // })
 // console.log(discountedPrice);
 // }
 // discountFunction();
+// Incomplete answer it's giving. Only updated price are printing
 
 
 //************** Filter Function for Array **************
@@ -1445,26 +1445,65 @@ dublicateElement(); */
 
 
 // Queston 26:- Find even number and odd number 
-// const num = [1, 2, 3, 4, 5 , 6, 7, 8];
+
+// const OddEven = () =>{
+//     const num = [1, 2, 3, 4, 5 , 6, 7, 8];
+
+//     let even = num.filter((value, index, array) =>{
+//         return value % 2 === 0;
+//     });
+//     let odd = num.filter((value, index, array) => {
+//         return value % 2 !== 0;
+//     });
+//     console.log()
+
+// // Another way With Ternary Method :-
+// //     let odd = num.filter((value, index, array) =>{
+// //         value % 2 !== 0? true : false;
+// //     })
+// //     let even = num.filter((value, index, array) => {
+// //         value % 2 === 0? true : false; 
+// //     })
+//     console.log(`The Odd Numbers are: ${odd} \nThe Even Numbers are: ${even}`);
+// }
+// OddEven();
+
 
 // Question 27:- print the character which length is more then 5 words.
-// const word = ["apple", "banana", "kiwi", "watermealomn","meango"];
+// const charLength = () => {
+// const word = ["apple", "banana", "kiwi", "watermelon","mango"];
 
-// Question 28:- Filer the products more then 5K price.
+// let wordLength_5 = word.filter((value, index, array) => {
+//     return value.length >= 5;
+// })
+// console.log(wordLength_5);
+// }
+// charLength();
+
+// Question 28:- Filter the products more then 5K price.
+// const priceFilter = () => {
 // const products = [
 //   { name: "Phone", price: 20000 },
 //   { name: "Mouse", price: 500 },
 //   { name: "Laptop", price: 70000 },
 //   { name: "Keyboard", price: 1500 }
 // ];
+// let price5K = products.filter((value, index, array) => {
+//     return value.price >= 5000;
+// })
+// console.log(price5K);
+// }
+// priceFilter();
+// In this all values are printing but above in discount Question it's not showing.
 
 // Question 29:- Passing marks are 50, find the students who got pass
-// const students = [
-//   { name: "A", marks: 90 },
-//   { name: "B", marks: 30 },
-//   { name: "C", marks: 75 },
-//   { name: "D", marks: 45 }
-// ];
+
+const students = [
+  { name: "A", marks: 90 },
+  { name: "B", marks: 30 },
+  { name: "C", marks: 75 },
+  { name: "D", marks: 45 }
+];
 
 // Question 30:- Find the Users whoes email ends with ".com"
 // const users = [
