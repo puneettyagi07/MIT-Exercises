@@ -1380,7 +1380,6 @@ dublicateElement(); */
 // Question 22:- make a new array with current array's double value.
 // const doubleNumFunction = () => {
 // let num = [2,4, 6, 8];
-
 //     const doubleArray = num.map((value, index, array) =>{
 //         return value * 2;
 //     })
@@ -1427,7 +1426,7 @@ dublicateElement(); */
 //     {name: "Watch", price: 10000}
 // ]
 // let discountedPrice = product.map((value, index, array) => {
-//     return value.price*0.90;
+//     return {name : value.name, price : value.price*0.90};
 // })
 // console.log(discountedPrice);
 // }
@@ -1435,8 +1434,8 @@ dublicateElement(); */
 // Incomplete answer it's giving. Only updated price are printing
 
 
-//************** Filter Function for Array **************
-//Example :- let a = [1,2,3,4,5,6,7];
+// ************** Filter Function for Array **************
+// Example :- let a = [1,2,3,4,5,6,7];
 
 // let b = a.filter((value, index, array) => {
 //     return value*value;
@@ -1449,21 +1448,21 @@ dublicateElement(); */
 // const OddEven = () =>{
 //     const num = [1, 2, 3, 4, 5 , 6, 7, 8];
 
-//     let even = num.filter((value, index, array) =>{
-//         return value % 2 === 0;
-//     });
-//     let odd = num.filter((value, index, array) => {
-//         return value % 2 !== 0;
-//     });
-//     console.log()
+//     // let even = num.filter((value, index, array) =>{
+//     //     return value % 2 === 0;
+//     // });
+//     // let odd = num.filter((value, index, array) => {
+//     //     return value % 2 !== 0;
+//     // });
+//     // console.log()
 
 // // Another way With Ternary Method :-
-// //     let odd = num.filter((value, index, array) =>{
-// //         value % 2 !== 0? true : false;
-// //     })
-// //     let even = num.filter((value, index, array) => {
-// //         value % 2 === 0? true : false; 
-// //     })
+//     let odd = num.filter((value, index, array) =>{
+//         return value % 2 !== 0? true : false;
+//     })
+//     let even = num.filter((value, index, array) => {
+//         return value % 2 === 0? true : false; 
+//     })
 //     console.log(`The Odd Numbers are: ${odd} \nThe Even Numbers are: ${even}`);
 // }
 // OddEven();
@@ -1557,18 +1556,27 @@ dublicateElement(); */
 // repeat();
 
 // Question 32:- Print the Average of marks.
-const average = () => {
-const marks = [80, 75, 90, 95, 70];
-let averageNumber = marks.reduce((value, ave) => {
-    return value/marks.length;
-})
-console.log(ave);
-}
-average();
+// const average = () => {
+// const marks = [80, 75, 90, 95, 70];
+// let averageNumber = marks.reduce((value, ave) => {
+//     // return value/marks.length;
+//     // return ave/marks.length;
+// })
+// console.log(averageNumber);
+// }
+// average();
 
 // Question 33:- Seprate the Odd and even numbers in this object
+// const oddEven = () => {
 // const numbers = [1,2,3,4,5,6,7,8,9,10];
+// let even = [], odd = [];
 
+// let seprateNum = numbers.reduce(value=> {
+//     value % 2 === 0 ? value.push(even) : value.push(odd);
+// })
+// console.log(`even : ${even} \n odd : ${odd}`);
+// }
+// oddEven();
 
 // Answer should be like this
 // {
