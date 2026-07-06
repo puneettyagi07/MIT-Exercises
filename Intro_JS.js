@@ -1497,13 +1497,19 @@ dublicateElement(); */
 // In this all values are printing but above in discount Question it's not showing.
 
 // Question 29:- Passing marks are 50, find the students who got pass
-
-const students = [
-  { name: "A", marks: 90 },
-  { name: "B", marks: 30 },
-  { name: "C", marks: 75 },
-  { name: "D", marks: 45 }
-];
+// const passStudent = () => {
+// const students = [
+//   { name: "A", marks: 90 },
+//   { name: "B", marks: 30 },
+//   { name: "C", marks: 75 },
+//   { name: "D", marks: 45 }
+// ];
+// let pass = students.filter((value, index, array) => {
+//     return value.marks >= 50;
+// })
+// console.log(`Students who are Passed :`, pass);
+// }
+// passStudent();
 
 // Question 30:- Find the Users whoes email ends with ".com"
 // const users = [
@@ -1518,8 +1524,7 @@ const students = [
 //************** Reduce Function for Array **************
 // Note:- Reduce always return single result. For Example:- if we do sum of any 2 variable it will return result. It doesn't give full array.
 
-
-//Example :- 
+//Example :- find bigger number
 // let a = [1,2,3,4,5,6,7,8,9,10];
 // let b = a.reduce((x,y)=>{
 //         if(y>x){
@@ -1537,15 +1542,29 @@ const students = [
 // })
 // console.log(b);
 
-
-
 // Question 31:- Check character, how many times it reapet. Give Number.
+// const repeat = () => {
 // const fruits = [ "apple", "banana", "apple", "orange", "banana", "apple" ];
 
+// let apple = 0 , banana = 0, orange = 0;
+// let repeatFruitNum = fruits.reduce((value, countFruit) => {
+//     value === apple ? apple.push(value);
+//     value === banana ? banana.push(value);
+//     value === orange ? orange.psuh(value); 
+// })
+// console.log(`Total apples are : `, apple \n `Total Banana are : `, banana \n `Total Oranges are : `,orange);
+// }
+// repeat();
 
 // Question 32:- Print the Average of marks.
-// const marks = [80, 75, 90, 95, 70];
-
+const average = () => {
+const marks = [80, 75, 90, 95, 70];
+let averageNumber = marks.reduce((value, ave) => {
+    return value/marks.length;
+})
+console.log(ave);
+}
+average();
 
 // Question 33:- Seprate the Odd and even numbers in this object
 // const numbers = [1,2,3,4,5,6,7,8,9,10];
