@@ -1545,13 +1545,13 @@ dublicateElement(); */
 // const repeat = () => {
 // const fruits = [ "apple", "banana", "apple", "orange", "banana", "apple" ];
 
-// let apple = 0 , banana = 0, orange = 0;
-// let repeatFruitNum = fruits.reduce((value, countFruit) => {
-//     value === apple ? apple.push(value);
-//     value === banana ? banana.push(value);
-//     value === orange ? orange.psuh(value); 
-// })
-// console.log(`Total apples are : `, apple \n `Total Banana are : `, banana \n `Total Oranges are : `,orange);
+// let apple = 0 , banana = 0, orange = 0; /* let initialCount = {apple : 0, banana : 0, orange : 0} We can write it in this way also, Assigning Variable and assign Multipul values in a object*/
+// let repeatFruitNum = fruits.reduce((total, nextNum) => {
+//     nextNum === "apple"? total.apple++:
+//     nextNum === "banana" ? total.banana++:
+//     nextNum === "orange" ? total.orange++;
+// });
+// console.log(`Toal Apple are : ${repeatFruitNum.apple} \n Total Banana are : 4{repeatFruitNum.banana} \n Total Orange : ${repeatFruitNum.orange}`);
 // }
 // repeat();
 
