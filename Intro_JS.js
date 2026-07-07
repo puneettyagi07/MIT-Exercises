@@ -1546,14 +1546,34 @@ dublicateElement(); */
 // const fruits = [ "apple", "banana", "apple", "orange", "banana", "apple" ];
 
 // let apple = 0 , banana = 0, orange = 0; /* let initialCount = {apple : 0, banana : 0, orange : 0} We can write it in this way also, Assigning Variable and assign Multipul values in a object*/
-// let repeatFruitNum = fruits.reduce((total, nextNum) => {
-//     nextNum === "apple"? total.apple++:
-//     nextNum === "banana" ? total.banana++:
-//     nextNum === "orange" ? total.orange++;
+// let repeatFruitNum = fruits.reduce((acc, nextNum) => {
+//     nextNum === "apple"? acc.apple++:
+//     nextNum === "banana" ? acc.banana++: acc.orange++;
+//     return acc;
 // });
 // console.log(`Toal Apple are : ${repeatFruitNum.apple} \n Total Banana are : 4{repeatFruitNum.banana} \n Total Orange : ${repeatFruitNum.orange}`);
 // }
 // repeat();
+
+// const repeatWithTernary = () => {
+//     const fruits = [ "apple", "banana", "apple", "orange", "banana", "apple" ];
+
+//     // Initialize our accumulator object with starting counts of 0
+//     let initialCounts = { apple: 0, banana: 0, orange: 0 };
+
+//     let finalCounts = fruits.reduce((acc, currentFruit) => {
+//         // Nested Ternary Logic:
+//         currentFruit === 'apple' ? acc.apple++ 
+//         : currentFruit === 'banana' ? acc.banana++ 
+//         : acc.orange++;
+
+//         return acc; // Always return the updated accumulator object
+//     }, initialCounts);
+
+//     console.log(`Total apples are : ${finalCounts.apple}\nTotal Bananas are : ${finalCounts.banana}\nTotal Oranges are : ${finalCounts.orange}`);
+// };
+
+// repeatWithTernary();
 
 // Question 32:- Print the Average of marks.
 // const average = () => {
@@ -1570,24 +1590,17 @@ dublicateElement(); */
 // const oddEven = () => {
 // const numbers = [1,2,3,4,5,6,7,8,9,10];
 // let even = [], odd = [];
-
 // let seprateNum = numbers.reduce((acc, currentNum) => {
 //     currentNum % 2 === 0 ? even.push(currentNum) : odd.push(currentNum);
-//     return currentNum;
+//     return acc;
 // });
-// // let seprateNum = numbers.reduce((acc, currentNum) => {
-// //     currentNum % 2 === 0 ? even.push(currentNum) : odd.push(currentNum);
-// //     return acc;
-// // });
-// console.log(`even : ${even} \n odd : ${odd}`);
+// // console.log(`even : ${even} \n odd : ${odd}`);
+// console.log("even:" , even)
+// console.log("odd:" , odd)
 // }
 // oddEven();
 
-// Answer should be like this
-// {
-//   even: [2,4,6,8,10],
-//   odd: [1,3,5,7,9]
-// }
+
 
 
 
