@@ -1558,11 +1558,11 @@ dublicateElement(); */
 // Question 32:- Print the Average of marks.
 // const average = () => {
 // const marks = [80, 75, 90, 95, 70];
-// let averageNumber = marks.reduce((value, ave) => {
-//     // return value/marks.length;
-//     // return ave/marks.length;
-// })
-// console.log(averageNumber);
+// let total = marks.reduce((acc, current) => {
+//     return acc + current;
+// });
+// let averageNum = total/marks.length;
+// console.log(averageNum);
 // }
 // average();
 
@@ -1571,9 +1571,14 @@ dublicateElement(); */
 // const numbers = [1,2,3,4,5,6,7,8,9,10];
 // let even = [], odd = [];
 
-// let seprateNum = numbers.reduce(value=> {
-//     value % 2 === 0 ? value.push(even) : value.push(odd);
-// })
+// let seprateNum = numbers.reduce((acc, currentNum) => {
+//     currentNum % 2 === 0 ? even.push(currentNum) : odd.push(currentNum);
+//     return currentNum;
+// });
+// // let seprateNum = numbers.reduce((acc, currentNum) => {
+// //     currentNum % 2 === 0 ? even.push(currentNum) : odd.push(currentNum);
+// //     return acc;
+// // });
 // console.log(`even : ${even} \n odd : ${odd}`);
 // }
 // oddEven();
