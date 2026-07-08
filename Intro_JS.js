@@ -1600,6 +1600,62 @@ dublicateElement(); */
 // }
 // oddEven();
 
+//************** Math Methods In JS **************
+// Examples:- 
+
+// let a = 2.19;
+
+// let b = Math.ceil(a); /* it round off forward*/
+// console.log(b)
+
+// let c = Math.floor(a) /* it round off backward */
+// console.log(c)
+
+// let d = Math.round(a) /* it round off towards near number*/
+// console.log(d)
+
+// let e = Math.trunc(a) /* it removes number after .(dot) and returns integer number only */
+// console.log(e)
+
+// let f = Math.random()*10 /* it gives any random number*/
+// console.log(f)
+
+// let g = Math.round(Math.random()*10) /* if we multiply it with any number ex *10 then it will give number between then*/
+// console.log(g)
+
+// let h = Math.floor(Math.random() * 10) + 2;
+// console.log(h)
+
+// Question 34:- Genrate a random number btw 50 to 100
+// const randomNum =() =>{
+//     const x = Math.round(Math.random() * 50) + 50;
+//     console.log(x);
+// }
+// randomNum();
+
+
+// Question 35:- Create a array of 10 fruites and print a random every single time.
+// const randomReapeat = () => {
+// const fruit = ["apple", "banana", "kiwi", "drangonfruit", "lichi", "orange", "gauava", "watermelon", "pumpkin", "mango"];
+//  let reapeatFruit = Math.round(Math.random(fruit.value) *10) +1;
+//  console.log(reapeatFruit);
+// }
+// randomReapeat();
+
+
+// Question 36:- Tossing a coin, if 0 it's head  if 1 it's tail
+// const tossCoin = () =>{
+//     const toss = Math.round(Math.random());
+//     toss === 0 ? console.log (head): console.log(tail);
+// }
+// tossCoin();
+
+// Question 37:- Genarate a random OTP of 6 digits.
+const genrateOTP = () => {
+    const otp = Math.round(Math.random() * 999999) + 100000;
+    console.log(otp);
+}
+genrateOTP();
 
 
 
