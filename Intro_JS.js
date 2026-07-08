@@ -1628,7 +1628,7 @@ dublicateElement(); */
 
 // Question 34:- Genrate a random number btw 50 to 100
 // const randomNum =() =>{
-//     const x = Math.floor(Math.random() * 50) + 50; /* this will not print 100 because of floor, should i use round? or there is no problem */
+//     const x = Math.round(Math.random() * 50) + 50; /* this will not print 100 because of floor, should i use round? or there is no problem */
 //     console.log(x);
 // }
 // randomNum();
@@ -1636,16 +1636,16 @@ dublicateElement(); */
 
 // Question 35:- Create a array of 10 fruites and print a random every single time.
 // const randomReapeat = () => {
-// const fruit = ["apple", "banana", "kiwi", "drangonfruit", "lichi", "orange", "gauava", "watermelon", "pumpkin", "mango"];
-//  let reapeatFruit = Math.round(Math.random(fruit.value) *10) +1;
-//  console.log(reapeatFruit);
+// const fruit = ["apple", "banana", "kiwi", "drangonfruit", "litchi", "orange", "gauava", "watermelon", "pumpkin", "mango"];
+//  let reapeatFruit = Math.round(Math.random(fruit.value) *fruit.length);
+//  console.log(fruit[reapeatFruit]);
 // }
 // randomReapeat();
 
 
 // Question 36:- Tossing a coin, if 0 it's head  if 1 it's tail
 // const tossCoin = () =>{
-//     const toss = Math.round(Math.random());
+//     const toss = Math.round(Math.random()*1);
 //     toss === 0 ? console.log ("head"): console.log("tail");
 // }
 // tossCoin();
