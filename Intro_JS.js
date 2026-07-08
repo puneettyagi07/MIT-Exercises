@@ -1617,18 +1617,18 @@ dublicateElement(); */
 // let e = Math.trunc(a) /* it removes number after .(dot) and returns integer number only */
 // console.log(e)
 
-// let f = Math.random()*10 /* it gives any random number*/
+// let f = Math.random()*10 /* it gives any random number */
 // console.log(f)
 
-// let g = Math.round(Math.random()*10) /* if we multiply it with any number ex *10 then it will give number between then*/
+// let g = Math.round(Math.random()*10) /* if we multiply it with any number example *10 then it will give number between that digit */
 // console.log(g)
 
-// let h = Math.floor(Math.random() * 10) + 2;
+// let h = Math.floor(Math.random() * 10) + 2; /* if we multiply it with any number example *10 then it will give number between that digit but in the last if we add and number then it will start the counting from that number and can go upto the number which was *(Multiply) before */
 // console.log(h)
 
 // Question 34:- Genrate a random number btw 50 to 100
 // const randomNum =() =>{
-//     const x = Math.round(Math.random() * 50) + 50;
+//     const x = Math.floor(Math.random() * 50) + 50; /* this will not print 100 because of floor, should i use round? or there is no problem */
 //     console.log(x);
 // }
 // randomNum();
@@ -1646,16 +1646,16 @@ dublicateElement(); */
 // Question 36:- Tossing a coin, if 0 it's head  if 1 it's tail
 // const tossCoin = () =>{
 //     const toss = Math.round(Math.random());
-//     toss === 0 ? console.log (head): console.log(tail);
+//     toss === 0 ? console.log ("head"): console.log("tail");
 // }
 // tossCoin();
 
 // Question 37:- Genarate a random OTP of 6 digits.
-const genrateOTP = () => {
-    const otp = Math.round(Math.random() * 999999) + 100000;
-    console.log(otp);
-}
-genrateOTP();
+// const genrateOTP = () => {
+//     const otp = Math.floor(Math.random() * 999999) + 100000;
+//     console.log(otp);
+// }
+// genrateOTP();
 
 
 
