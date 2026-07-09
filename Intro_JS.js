@@ -1715,6 +1715,15 @@ const classB = [
 //        console.log(value.name, value.status);
 //     });
 
+// 6. Use filter() to create a new array that contains only the students who passed.
+// let combine = classA.concat(classB);
+// const onlyPass = combine.filter((value, index, array) => {
+//     value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
+//     return value.status === "Pass";
+// });
+// console.log(onlyPass);
+
+// 7. Use map() to create an array of only the names of the passed students.
 
 
 
