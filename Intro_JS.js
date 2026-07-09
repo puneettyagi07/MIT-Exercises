@@ -1659,11 +1659,81 @@ dublicateElement(); */
 
 
 
+// Question 37:- You have two arrays:
+
+// const classA = [
+//   { name: "Yash", marks: 85 },
+//   { name: "Rahul", marks: 42 },
+//   { name: "Amit", marks: 67 }
+// ];
+
+// const classB = [
+//   { name: "Priya", marks: 91 },
+//   { name: "Rohan", marks: 38 },
+//   { name: "Neha", marks: 76 }
+// ];
+
+// Your task is to do the following in one program:
+
+// 1. Add { name: "Karan", marks: 59 } to classA using push().
+// 2. Remove the last student from classB using pop().
+// 3. Combine both arrays into one using concat().
+// 4. Use a for loop and if...else to add a new property called status.
+//    - If marks are 50 or more, status should be "Pass".
+//    - Otherwise, status should be "Fail".
+// 5. Use forEach() to print each student's name and status.
+// 6. Use filter() to create a new array that contains only the students who passed.
+// 7. Use map() to create an array of only the names of the passed students.
+// 8. Use join(" | ") to print all passed students' names in one line.
+// 9. Use reduce() to calculate the total marks of the passed students.
+// 10. Print the final list of passed students and their total marks.
+
+
+
+// Question 38:- You have an array of 15 students:
+
+// const students = [
+//   "Yash", "Rahul", "Amit", "Priya", "Rohan",
+//   "Neha", "Karan", "Simran", "Aryan", "Anjali",
+//   "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
+// ];
+
+// Create one JavaScript program that uses Math.random(), Math.floor(), Math.ceil(), Math.round(), Math.trunc(), Math.abs(), a for loop, and if...else.
+
+// Your task:
+
+// 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
+// 2. Use Math.trunc() to get the integer part of the score.
+// 3. Use Math.abs() to convert the score into a positive number.
+// 4. Use Math.round() to create a rounded score.
+// 5. Use Math.floor() and Math.ceil() to create floorScore and ceilScore.
+// 6. Use if...else:
+//    - If the rounded score is 60 or more, print "Pass".
+//    - Otherwise, print "Fail".
+// 7. Print all the details of every student like this:
+
+// Name: Yash
+// Original Score:
+// Truncated Score:
+// Absolute Score:
+// Rounded Score:
+// Floor Score:
+// Ceil Score:
+// Result:
+
+// 8. After printing all students, count how many students passed and how many failed, then print the final result.
+
+// Rules:
+// - You must use Math.random(), Math.floor(), Math.ceil(), Math.round(), Math.trunc(), Math.abs(), a for loop, and if...else.
+// - Do not use map(), filter(), reduce(), or forEach().
 
 
 
 
 
 
-
-
+//***************DOM AND BOM (DOCUMENT OBJECT MODEL AND BROWSER OBJECT MODEL) ***************   
+document.body.children[0].style.backgroundColor = "red";
+document.body.children[0].style.color = "white";
+document.title="Document object model"
+    
