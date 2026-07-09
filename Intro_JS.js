@@ -1659,21 +1659,7 @@ dublicateElement(); */
 
 
 
-// Question 37:- You have two arrays:
-
-// const classA = [
-//   { name: "Yash", marks: 85 },
-//   { name: "Rahul", marks: 42 },
-//   { name: "Amit", marks: 67 }
-// ];
-
-// const classB = [
-//   { name: "Priya", marks: 91 },
-//   { name: "Rohan", marks: 38 },
-//   { name: "Neha", marks: 76 }
-// ];
-
-// Your task is to do the following in one program:
+// Question 37:- You have two arrays, Your task is to do the following in one program:-
 
 // 1. Add { name: "Karan", marks: 59 } to classA using push().
 // 2. Remove the last student from classB using pop().
@@ -1687,6 +1673,43 @@ dublicateElement(); */
 // 8. Use join(" | ") to print all passed students' names in one line.
 // 9. Use reduce() to calculate the total marks of the passed students.
 // 10. Print the final list of passed students and their total marks.
+
+const classA = [
+  { name: "Yash", marks: 85 },
+  { name: "Rahul", marks: 42 },
+  { name: "Amit", marks: 67 }
+];
+
+const classB = [
+  { name: "Priya", marks: 91 },
+  { name: "Rohan", marks: 38 },
+  { name: "Neha", marks: 76 }
+];
+
+// 1. Add { name: "Karan", marks: 59 } to classA using push().
+// const add = classA.push({name: "Karan", marks: 59});
+// console.log(classA);
+
+// 2. Remove the last student from classB using pop().
+// const remove = classB.pop();
+// console.log(classB); /* printing full array without last one */
+// console.log(remove); /* printing removed array only */
+
+// 3. Combine both arrays into one using concat().
+// let combine = classA.concat(classB);
+// console.log(combine);
+
+// 4. Use a for loop and if...else to add a new property called status.
+//    - If marks are 50 or more, status should be "Pass".
+//    - Otherwise, status should be "Fail".
+let combine = classA.concat(classB);
+for(let i = 0; i < combine.length; i++){
+    combine[i].marks >= 50 ? console.log(`Status : ${"Pass"}`) : console.log(`Status : ${"Fail"}`);
+}
+console.log(combine);
+
+
+
 
 
 
@@ -1733,7 +1756,7 @@ dublicateElement(); */
 
 
 //***************DOM AND BOM (DOCUMENT OBJECT MODEL AND BROWSER OBJECT MODEL) ***************   
-document.body.children[0].style.backgroundColor = "red";
-document.body.children[0].style.color = "white";
-document.title="Document object model"
+// document.body.children[0].style.backgroundColor = "red";
+// document.body.children[0].style.color = "white";
+// document.title="Document object model"
     
