@@ -1702,11 +1702,18 @@ const classB = [
 // 4. Use a for loop and if...else to add a new property called status.
 //    - If marks are 50 or more, status should be "Pass".
 //    - Otherwise, status should be "Fail".
-let combine = classA.concat(classB);
-for(let i = 0; i < combine.length; i++){
-    combine[i].marks >= 50 ? console.log(`Status : ${"Pass"}`) : console.log(`Status : ${"Fail"}`);
-}
-console.log(combine);
+// let combine = classA.concat(classB);
+// for(let i = 0; i < combine.length; i++){
+//     combine[i].marks >= 50 ? combine[i].status = "Pass" : combine[i].status = "Fail";
+// }
+// console.log(combine);
+
+// 5. Use forEach() to print each student's name and status.
+// let combine = classA.concat(classB);
+// combine.forEach((value, index, array) => {
+//        value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
+//        console.log(value.name, value.status);
+//     });
 
 
 
