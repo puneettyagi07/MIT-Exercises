@@ -1393,10 +1393,10 @@ dublicateElement(); */
 
 //     let name = ["yash", "rahul", "amit"];
 
-//     const upperName = name.map((value, index, array) => {
+//     const upperCaseName = name.map((value, index, array) => {
 //         return value.toUpperCase();
 //     });
-//     console.log(upperName);
+//     console.log(upperCaseName);
 // };
 // upperCaseFunction();
 
@@ -1431,7 +1431,6 @@ dublicateElement(); */
 // console.log(discountedPrice);
 // }
 // discountFunction();
-// Incomplete answer it's giving. Only updated price are printing
 
 
 // ************** Filter Function for Array **************
@@ -1724,6 +1723,14 @@ const classB = [
 // console.log(onlyPass);
 
 // 7. Use map() to create an array of only the names of the passed students.
+const combine = classA.concat(classB);
+const onlyPass = combine.map((value, index, array) =>{
+    value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
+    return value.status = "Pass";
+});
+console.log(onlyPass);
+// *******Incorrect Answer
+
 
 
 
