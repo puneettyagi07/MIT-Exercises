@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 4 MIT</title>
+    <style>
+      /* nav{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+      nav .left {
+          display: flex;
+          align-items: center;
+      }
+      nav .left img {
+          width: 100px;
+      }
+      .right {
+              display: flex;
+              align-items: center;
+      }
+      .right svg {
+          margin-left: 5px;
+          height: 20px;
+          width: 20px; 
+      }*/
+      body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #847f7f;
+}
+#card {
+    width: 80%vw;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 5px 8px rgba(0, 0, 0, 0.599);
+    overflow: hidden;
+}
+nav{
+    /* height: 15%vh; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    margin: 10px 0px;
+}
+nav .left,.mid, .right {
+    display: flex;
+    align-items: center;
+}
+nav .left img {
+    width: 100px;
+}
+nav .mid input {
+    width: 2%vw;
+    padding: 10px;
+    border: none;
+    background-color: #847f7f31;
+    color: #847f7f;
+    border-radius: 20px;
+}
+nav .right {
+    position: relative;
+    left: 100px;
+    
+}
+nav .right svg {
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+}
+main {
+   /* border: 2px solid black;
+   background-color: blueviolet;
+   max-width: 800px;
+   height: 900px; */
+   /* grid-template-columns: 300px 300px 300px;
+   grid-template-rows: 300px 300px 300px;
+   gap: 5px; */
+   border: 2px solid rgb(235, 37, 37);
+   display: grid;
+   width: 70%vw;
+   height: 70%vh;
+   justify-content: right;
+   align-content: right;
+   /* align-items: center; */
+}
+.main {
+    border: 2px solid rgb(237, 215, 14);
+   background-color: blueviolet;
+   width: 50%vw;
+   max-width: 800px;
+   height: 70%vh;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px;
+    gap: 5px;
+}
+.main h1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-items: end;
+}
+.clips img {
+    height: 100px;
+    width: 100px;
+    grid-column:-2/-3 ;
+    grid-row: -3/2;
+}
+    </style>
+  </head>
+  <body>
+    <div id="card">
+      <header>
+        <nav>
+          <div class="left">
+            <img src="photos/download.png" alt="Logo" />
+            <p><b>Characters</b></p>
+          </div>
+
+          <div class="mid">
+            <input
+              type="text"
+              placeholder="Search characters..."
+              class="search"
+            />
+          </div>
+
+          <div class="right">
+            Menu
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+              />
+            </svg>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="main">
+            <h1>Sadness</h1>
+            <p>Movie <b>Inside Out</b></p>
+            <p>Sadness is literally the very definition and being of sorraw and gloom. She is hardly ever used because Joy is the boss and doesn't want Riley to ever be sad, even when she needs to be. Becase of this, Joy treats Sadness badly.</p>
+            <h3>Clips</h3>
+            <div class="clips">
+                <ol>
+                    <li><img src="photos/RUIDd5fa74e3ce194c3aac971d33592ef968.jpg" alt=""></li>
+                    <li><img src="photos/RUID2784de3f038e48c58c96aeb4a540f1ea.jpg" alt=""></li>
+                    <li><img src="photos/RUID7cf5b4233e1942298720461ac23b7df0.jpg" alt=""></li>
+                    <li><img src="" alt=""></li>
+                </ol>
+            </div>
+            close
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z" -->
+              />
+            </svg>
+        </main>
+    </div>
+  </body>
+</html>
