@@ -1731,6 +1731,24 @@ const classB = [
 // });
 // console.log(passedName);
 
+// 8. Use join(" | ") to print all passed students' names in one line.
+const combine = classA.concat(classB);
+const passStudent = combine.filter((student, index, array) =>{
+    student.marks >= 50 ? student.status = "Pass" : student.status = "Fail";
+    return student.marks >= 50;
+const passStudent = combine.map((student, index, array) => {
+    return student.name;
+const passStudent = combine.join(" | ");
+})
+});
+
+console.log(passStudent);
+
+
+
+// 9. Use reduce() to calculate the total marks of the passed students.
+
+
 
 
 
