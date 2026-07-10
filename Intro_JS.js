@@ -1723,13 +1723,13 @@ const classB = [
 // console.log(onlyPass);
 
 // 7. Use map() to create an array of only the names of the passed students.
-const combine = classA.concat(classB);
-const onlyPass = combine.map((value, index, array) =>{
-    value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
-    return value.status = "Pass";
-});
-console.log(onlyPass);
-// *******Incorrect Answer
+// const combine = classA.concat(classB);
+// let passedName = [];
+// const onlyPass = combine.map((value, index, array) =>{
+//     value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
+//     value.status === "Pass" ? passedName.push(value.name): null;
+// });
+// console.log(passedName);
 
 
 
