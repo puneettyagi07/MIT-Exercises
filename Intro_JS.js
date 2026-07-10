@@ -1732,17 +1732,26 @@ const classB = [
 // console.log(passedName);
 
 // 8. Use join(" | ") to print all passed students' names in one line.
-const combine = classA.concat(classB);
-const passStudent = combine.filter((student, index, array) =>{
-    student.marks >= 50 ? student.status = "Pass" : student.status = "Fail";
-    return student.marks >= 50;
-const passStudent = combine.map((student, index, array) => {
-    return student.name;
-const passStudent = combine.join(" | ");
-})
-});
+// const combine = classA.concat(classB);
+// let passedName = [];
+// const onlyPass = combine.map((value, index, array) =>{
+//     value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
+//     value.status === "Pass" ? passedName.push(value.name): null;
+// });
+// console.log(passedName.join(" | "));
 
-console.log(passStudent);
+// const combine = classA.concat(classB);
+// const passStudent = combine
+// .filter((student, index, array) =>{
+// student.marks >= 50 ? student.status = "Pass" : student.status = "Fail";
+//     return student.marks >= 50;
+// })
+// .map((student, index, array) => {
+//         return student.name;
+//     });
+// console.log(passStudent.join(" | "));
+
+// Explain this AI answer.
 
 
 
