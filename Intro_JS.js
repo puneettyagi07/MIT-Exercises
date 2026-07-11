@@ -1765,7 +1765,10 @@ const classB = [
 const combine = classA.concat(classB);
 
 const passStudent = combine.filter((value, index, array) => {
-    
+    value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
+    .map((value, index, array) => {
+        
+    })
 })
 
 
