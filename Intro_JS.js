@@ -1762,7 +1762,11 @@ const classB = [
 // Incorrect Answer
 
 // 10. Print the final list of passed students and their total marks.
-const combine 
+const combine = classA.concat(classB);
+
+const passStudent = combine.filter((value, index, array) => {
+    
+})
 
 
 
