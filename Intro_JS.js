@@ -1753,12 +1753,16 @@ const classB = [
 
 // Explain this AI answer.
 
-
-
 // 9. Use reduce() to calculate the total marks of the passed students.
+// const combine = classA.concat(classB);
+// const totalMarks = combine.reduce((acc, student) => {
+//     return student.marks >= 50 ? acc + student.marks : acc; 
+// })
+// console.log(totalMarks);
+// Incorrect Answer
 
-
-
+// 10. Print the final list of passed students and their total marks.
+const combine 
 
 
 
