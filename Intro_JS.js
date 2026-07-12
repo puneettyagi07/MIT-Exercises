@@ -1673,17 +1673,17 @@ dublicateElement(); */
 // 9. Use reduce() to calculate the total marks of the passed students.
 // 10. Print the final list of passed students and their total marks.
 
-const classA = [
-  { name: "Yash", marks: 85 },
-  { name: "Rahul", marks: 42 },
-  { name: "Amit", marks: 67 }
-];
+// const classA = [
+//   { name: "Yash", marks: 85 },
+//   { name: "Rahul", marks: 42 },
+//   { name: "Amit", marks: 67 }
+// ];
 
-const classB = [
-  { name: "Priya", marks: 91 },
-  { name: "Rohan", marks: 38 },
-  { name: "Neha", marks: 76 }
-];
+// const classB = [
+//   { name: "Priya", marks: 91 },
+//   { name: "Rohan", marks: 38 },
+//   { name: "Neha", marks: 76 }
+// ];
 
 // 1. Add { name: "Karan", marks: 59 } to classA using push().
 // const add = classA.push({name: "Karan", marks: 59});
@@ -1818,9 +1818,19 @@ const students = [
   "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
 ];
 // 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
-  const randomScore = Math.round(Math.random() * 200) - 100;
+//   const randomScore = Math.round(Math.random() * 200) - 100;
 
-console.log(); 
+// console.log(randomScore); 
+
+// 2. Use Math.trunc() to get the integer part of the score.
+// const randomScore = Math.random() * 200;
+// const integerOnly = Math.trunc(randomScore);
+
+// console.log(randomScore);
+// console.log(integerOnly);
+
+// 3. Use Math.abs() to convert the score into a positive number.
+
 
 
 
