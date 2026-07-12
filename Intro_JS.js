@@ -1778,28 +1778,25 @@ const classB = [
 
 
 
-// Question 38:- You have an array of 15 students:
+// Question 38:- You have an array of 15 students, Create one JavaScript program that uses Math.random(), Math.floor(), Math.ceil(), Math.round(), Math.trunc(), Math.abs(), a for loop, and if...else.
 
-// const students = [
-//   "Yash", "Rahul", "Amit", "Priya", "Rohan",
-//   "Neha", "Karan", "Simran", "Aryan", "Anjali",
-//   "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
-// ];
-
-// Create one JavaScript program that uses Math.random(), Math.floor(), Math.ceil(), Math.round(), Math.trunc(), Math.abs(), a for loop, and if...else.
-
-// Your task:
-
+// Your tasks are :-
 // 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
+
 // 2. Use Math.trunc() to get the integer part of the score.
+
 // 3. Use Math.abs() to convert the score into a positive number.
+
+
 // 4. Use Math.round() to create a rounded score.
+
 // 5. Use Math.floor() and Math.ceil() to create floorScore and ceilScore.
+
 // 6. Use if...else:
 //    - If the rounded score is 60 or more, print "Pass".
 //    - Otherwise, print "Fail".
-// 7. Print all the details of every student like this:
 
+// 7. Print all the details of every student like this:
 // Name: Yash
 // Original Score:
 // Truncated Score:
@@ -1814,6 +1811,16 @@ const classB = [
 // Rules:
 // - You must use Math.random(), Math.floor(), Math.ceil(), Math.round(), Math.trunc(), Math.abs(), a for loop, and if...else.
 // - Do not use map(), filter(), reduce(), or forEach().
+
+const students = [
+  "Yash", "Rahul", "Amit", "Priya", "Rohan",
+  "Neha", "Karan", "Simran", "Aryan", "Anjali",
+  "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
+];
+// 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
+const 
+
+
 
 
 
