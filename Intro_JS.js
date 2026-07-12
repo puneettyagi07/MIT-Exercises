@@ -1818,7 +1818,9 @@ const students = [
   "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
 ];
 // 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
-const 
+  const randomScore = Math.round(Math.random() * 200) - 100;
+
+console.log(); 
 
 
 
