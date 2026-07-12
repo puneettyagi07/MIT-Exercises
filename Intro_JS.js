@@ -1762,15 +1762,19 @@ const classB = [
 // Incorrect Answer
 
 // 10. Print the final list of passed students and their total marks.
-const combine = classA.concat(classB);
-
-const passStudent = combine.filter((value, index, array) => {
-    value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
-    .map((value, index, array) => {
-        
-    })
-})
-
+// const combine = classA.concat(classB);
+// let finalList = [];
+// const passStudent = combine.filter((value, index, array) => {
+//     value.marks >= 50 ? value.status = "Pass" : value.status = "Fail";
+//     // return value.status = "Pass";
+//     value.marks >= 50 ? finalList.push(value) : null;
+//     });
+// const totalMarks = finalList.reduce((acc, currentNum) => {
+//     return acc + currentNum.marks;
+//     });
+// console.log(finalList);
+// console.log(totalMarks);
+// // Passed Students New Array List is ready but total Marks are not printing again.
 
 
 
@@ -1813,7 +1817,7 @@ const passStudent = combine.filter((value, index, array) => {
 
 
 
-
+//*************** What is Method Chaining *************** 
 
 
 //***************DOM AND BOM (DOCUMENT OBJECT MODEL AND BROWSER OBJECT MODEL) ***************   
