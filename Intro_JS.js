@@ -1834,6 +1834,49 @@ const students = [
 // const positiveNum = Math.abs(score);
 // console.log(positiveNum);
 
+// 4. Use Math.round() to create a rounded score.
+// const roundedScore = Math.round(Math.random() * 10);
+// console.log(roundedScore);
+
+// 5. Use Math.floor() and Math.ceil() to create floorScore and ceilScore.
+// const score = Math.random() * 10;
+
+// const roundBackward = Math.floor(score);
+// const roundForward = Math.ceil(score);
+
+// console.log(score);
+// console.log(roundBackward);
+// console.log(roundForward);
+
+
+// 6. Use if...else:
+//    - If the rounded score is 60 or more, print "Pass".
+//    - Otherwise, print "Fail".
+
+// const score = Math.random() * 100 - 10;
+// console.log(score);
+// Math.round(score) >= 60 ? console.log("Pass") : console.log("Fail");
+
+// 7. Print all the details of every student like this:
+// Name: Yash
+// Original Score:
+// Truncated Score:
+// Absolute Score:
+// Rounded Score:
+// Floor Score:
+// Ceil Score:
+// Result:
+
+// for(let i = 0; i < students.length; i++){
+//     value[i] === i ? console.log(`The Original Score : ${Math.random()}, \n 
+//                                     The Truncated Score : ${}, \n
+//                                     The Absolute Score : ${}, \n
+//                                     The Rounded Score : ${Math.round(Math.random())}, \n
+//                                     The Floor Score : ${Math.floor(Math.round)}, \n
+//                                     The Ceil Score : ${Math.ceil(Math.random())};
+//                                     The Result : ${Math.round(Math.random)}; `)};
+
+// 8. After printing all students, count how many students passed and how many failed, then print the final result.
 
 
 
