@@ -1830,8 +1830,9 @@ const students = [
 // console.log(integerOnly);
 
 // 3. Use Math.abs() to convert the score into a positive number.
-
-
+// const score = Math.random() * 10;
+// const positiveNum = Math.abs(score);
+// console.log(positiveNum);
 
 
 
