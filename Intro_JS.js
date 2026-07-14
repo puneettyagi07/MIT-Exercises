@@ -1757,9 +1757,24 @@ dublicateElement(); */
 // const combine = classA.concat(classB);
 // const totalMarks = combine.reduce((acc, student) => {
 //     return student.marks >= 50 ? acc + student.marks : acc; 
-// })
+// }, 0);
 // console.log(totalMarks);
-// Incorrect Answer
+
+// Second Method :- 
+// const combine = classA.concat(classB);
+// const passStudent = combine.map((student, index, array) => {
+//     student.marks >= 50 ? student.status = "Pass" : student.stauts = "Fail";
+//     return student.marks >= 50;
+//     return student;
+// });
+// let x = passStudent.map(value=>{
+//     return value.marks
+// })
+// let totalMarks = passStudent.reduce((acc, currentNum)=>{
+//  return acc + currentNum
+// })
+// console.log(passStudent);
+// console.log(totalMarks);
 
 // 10. Print the final list of passed students and their total marks.
 // const combine = classA.concat(classB);
@@ -1771,11 +1786,9 @@ dublicateElement(); */
 //     });
 // const totalMarks = finalList.reduce((acc, currentNum) => {
 //     return acc + currentNum.marks;
-//     });
+//     },0);
 // console.log(finalList);
 // console.log(totalMarks);
-// // Passed Students New Array List is ready but total Marks are not printing again.
-
 
 
 // Question 38:- You have an array of 15 students, Create one JavaScript program that uses Math.random(), Math.floor(), Math.ceil(), Math.round(), Math.trunc(), Math.abs(), a for loop, and if...else.
@@ -1812,15 +1825,29 @@ dublicateElement(); */
 // - You must use Math.random(), Math.floor(), Math.ceil(), Math.round(), Math.trunc(), Math.abs(), a for loop, and if...else.
 // - Do not use map(), filter(), reduce(), or forEach().
 
-const students = [
-  "Yash", "Rahul", "Amit", "Priya", "Rohan",
-  "Neha", "Karan", "Simran", "Aryan", "Anjali",
-  "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
-];
-// 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
-//   const randomScore = Math.round(Math.random() * 200) - 100;
+// const students = [
+//   "Yash", "Rahul", "Amit", "Priya", "Rohan",
+//   "Neha", "Karan", "Simran", "Aryan", "Anjali",
+//   "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
+// ];
 
+// 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
+// const randomScore = Math.round(Math.random() * 200) - 100;
 // console.log(randomScore); 
+
+// 1. Transform the string array into an array of objects with random scores
+// const studentsWithScores = students.map((name) => {
+//   // Generates a random decimal between -100 and 100
+//   const randomScore = (Math.random() * 200) - 100;
+  
+//   return {
+//     name: name,
+//     score: randomScore
+//   };
+// });
+
+// console.log(studentsWithScores);
+
 
 // 2. Use Math.trunc() to get the integer part of the score.
 // const randomScore = Math.random() * 200;
@@ -1883,8 +1910,17 @@ const students = [
 //*************** What is Method Chaining *************** 
 
 
-//***************DOM AND BOM (DOCUMENT OBJECT MODEL AND BROWSER OBJECT MODEL) ***************   
+//***************DOM AND BOM (DOCUMENT OBJECT MODEL AND BROWSER OBJECT MODEL) ***************  
+
+// nodes
+/**
+ * text
+ * comment
+ * element
+ */
+
 // document.body.children[0].style.backgroundColor = "red";
 // document.body.children[0].style.color = "white";
 // document.title="Document object model"
     
+
