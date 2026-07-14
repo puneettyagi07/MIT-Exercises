@@ -1912,6 +1912,55 @@ dublicateElement(); */
 
 //***************DOM AND BOM (DOCUMENT OBJECT MODEL AND BROWSER OBJECT MODEL) ***************  
 
+        // Nodes 
+        // 1. text 
+        // 2. comment 
+        // 3. element 
+
+        // let a = document.body.childNodes[11].childNodes[3]
+
+
+        // let a = document.body.children[1].children
+
+
+        // let b = document.body.childNodes
+        
+        // let a = document.body.firstChild 
+        // firschild   work as per nodelist 
+        // let a = document.body.firstElementChild
+        // firstElementChild work as per html collection 
+        // let a = document.body.lastChild
+        // let a = document.body.lastElementChild
+        // let a = document.body.previousSibling
+        // let a = document.body.previousElementSibling
+        // let a = document.body.children[0].nextElementSibling
+        // console.log(b)
+        // console.log(a)
+
+
+        // styling through dom 
+
+
+        // let a = document.body.children[1].children[1];
+        // console.log(a)
+        // a.style.backgroundColor="blue";
+        // a.style.color="white";
+        // a.style.fontSize="20px"
+
+        // document.body.children[1].children[1].style.height="300px"
+
+
+
+        //  let a = [1,2,3]
+        let a = document.body.children[1].children;
+        console.log(a)
+
+
+        // for(let i = 0; i<a.length; i++){    
+        //     a[i].style.backgroundColor="blue";
+        //     a[i].style.height="300px";
+        // }
+
 // nodes
 /**
  * text
