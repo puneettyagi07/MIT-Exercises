@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 6</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family:
+          "Gill Sans",
+          "Gill Sans MT",
+          Calibri,
+          "Trebuchet MS",
+          sans-serif,
+          DM sans;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 16px;
+        width: 95vw;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .logo img {
+        width: 50px;
+      }
+      .navinfo ul {
+        display: flex;
+        gap: 25px;
+        list-style-type: none;
+      }
+      .navrightbutton button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #1a162e;
+        color: #f9f9fb;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+      main #topcont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url("photos/WhatsApp Image 2026-04-08 at 14.37.33.jpeg");
+        background-size: cover;
+        background-position: center;
+        width: 95vw;
+        height: 100vh;
+        border-radius: 2%;
+        padding-top: 40px;
+      }
+      #topcont img {
+        width: 25px;
+      }
+      #topcont .heading {
+        font-size: 64px;
+      }
+      #topcont .sub-heading {
+        font-size: 20px;
+        width: 30%;
+        margin: 20px 0px;
+        text-align: center;
+      }
+      #topcont button {
+        box-sizing: border-box;
+        padding: 10px 30px;
+        border: none;
+        background-color: #1a162e;
+        color: #f9f9fb;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      #usdpart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95vw;
+        margin: 50px 0px;
+      }
+      #usdpart .right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 400px;
+      }
+      #usdpart .right p {
+        font-size: 36px;
+      }
+      #usdpart .right button {
+        box-sizing: border-box;
+        padding: 10px 30px;
+        border: none;
+        background-color: #1a162e;
+        color: #f9f9fb;
+        border-radius: 20px;
+        cursor: pointer;
+        width: 150px;
+      }
+      #usdpart .left p {
+        width: 350px;
+        font-size: 20px;
+        font-stretch: 100%;
+        letter-spacing: 2px;
+      }
+      #flower-3box {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 95vw;
+        height: 35vh;
+        gap: 20px;
+      }
+      #flower-3box .col-1 {
+        background-image: url("photos/WhatsApp Image 2026-04-08 at 14.37.32.jpeg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 20px;
+        height: 35vh;
+        color: #1a162e;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+      }
+      .col-1 .cap-head {
+        font-size: 24px;
+      }
+      .col-1 .cap-subhead {
+        font-size: 16px;
+        width: 55%;
+        font-stretch: 100%;
+        letter-spacing: 2px;
+      }
+      #flower-3box .col-2 {
+        background-color: #1a162e;
+        color: #f9f9fb;
+        padding: 20px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .col-2 .cap-head {
+        font-size: 24px;
+      }
+      .col-2 .sub-heading {
+        font-size: 16px;
+        font-stretch: 100%;
+        letter-spacing: 2px;
+      }
+      #flower-3box .col-3 {
+        background-color: #1a162e;
+        color: #f9f9fb;
+        padding: 20px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .col-3 .cap-head {
+        font-size: 24px;
+      }
+      .col-3 .sub-heading {
+        font-size: 16px;
+        font-stretch: 100%;
+        letter-spacing: 2px;
+      }
+      .logo-col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95vw;
+        margin: 50px 0px;
+      }
+      .logo-col .right p {
+        font-size: 12px;
+        width: 150px;
+        color: rgba(9, 9, 9, 0.53);
+      }
+      .logo-col .left ul {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        align-items: center;
+      }
+      .logo-col .left ul li img {
+        width: 100px;
+      }
+      .last-col {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        width: 95vw;
+        margin: 50px 0px;
+      }
+      .last-col .right-content {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+      }
+      .right-content .line1 {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.526);
+      }
+      .right-content .use {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .right-content .usd-para {
+        font-size: 16px;
+        font-stretch: 100%;
+        letter-spacing: 2px;
+        width: 400px;
+        color: rgba(0, 0, 0, 0.506);
+      }
+      .business-card {
+        background-image: url("photos/WhatsApp Image 2026-04-08 at 14.37.30.jpeg");
+        background-size: cover;
+        background-position: center center;
+        padding: 20px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 500px;
+      }
+      .business-card .business {
+        font-size: 24px;
+        color: #1a162e;
+        margin-bottom: 20px;
+      }
+      .business-card .right-content {
+        font-size: 16px;
+        width: 380px;
+      }
+      .business-card .learn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .learn .right-arrow svg {
+        width: 20px;
+        fill: #1a162e;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="photos/WhatsApp Image 2026-04-08 at 19.25.21-removebg-preview.jpg"
+            alt="Logo"
+          />
+          <p>BloomFi</p>
+        </div>
+        <div class="navinfo">
+          <ul>
+            <li>USD bloom</li>
+            <li>Business</li>
+            <li>Treasury</li>
+            <li>Developers</li>
+            <li>Join us</li>
+          </ul>
+        </div>
+        <div class="navrightbutton">
+          <button>Launch BETA</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="topcont">
+        <img
+          src="photos/WhatsApp Image 2026-04-08 at 19.25.21-removebg-preview.jpg"
+          alt=""
+        />
+        <p class="heading">Where Money Grows</p>
+        <p class="sub-heading">
+          A programmable, utility-driven stable token designed for native value
+          accrual and seamless integration into DeFi.
+        </p>
+        <button>Try it now</button>
+      </div>
+      <div id="usdpart">
+        <div class="right">
+          <p>What is USD Bloom?</p>
+          <button>Explore now</button>
+        </div>
+        <div class="left">
+          <p>
+            USD Bloom is a yield-bearing stablecoin that helps your capital grow
+            while staying pegged to the U.S. dollar.
+          </p>
+        </div>
+      </div>
+      <div id="flower-3box">
+        <div class="col-1">
+          <div class="cap-head">Capital that grows</div>
+          <div class="cap-subhead">
+            Earn passive income as your stablecoins are deployed into
+            high-performing DeFi protocols.
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="cap-head">Always liquid, always stable</div>
+          <div class="sub-heading">
+            Stay fully dollar-pegged with instant access to your funds-no
+            lockups or delays.
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="cap-head">100% <br />hands-free</div>
+          <div class="sub-heading">
+            No need to manage strategies manually. USD Bloom works in the
+            background for you.
+          </div>
+        </div>
+      </div>
+      <div class="logo-col">
+        <div class="right">
+          <p>Backed by the best companies and visionary angles.</p>
+        </div>
+        <div class="left">
+          <ul>
+            <li>
+              <img
+                src="https://crypto-fundraising.info/wp-content/uploads/funds/Funds/Fundamental-Labs.png"
+                alt="Fundamental Labs logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7pXgAuQQDCOkB1NwJiUCCCfOKHdP9sjDdLwQUwJsEavbAYqK39uWdMYU&s"
+                alt="kucoin logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5eb4bd3fa7fa602822926281/1588985350093-5DP6VEVU5G5DIC6QBKQA/NGC+Logo+Main.png"
+                alt="NGC logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuPHKrFIDYSL1S-Fmdk24hDShrCo8QhXc2ee351KiC5sODKYAQR64C&s"
+                alt="NxGen logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEJ6O7FmKPqWrwDycCrZdf7UiJoEYd4AWlQw&s"
+                alt="Matter Labs logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://images.seeklogo.com/logo-png/44/2/dextools-logo-png_seeklogo-446734.png"
+                alt="Dextools logo"
+              />
+            </li>
+            <li>
+              <img
+                src="https://a.storyblok.com/f/233541/1280x720/c559a1954d/ngrave-og.png"
+                alt="Ngrave logo"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="last-col">
+        <div class="right-content">
+          <div class="line1">USD bloom in Action</div>
+          <div class="use">Use cases</div>
+          <p class="usd-para">
+            USD bloom offers a variety of use cases for developers, businesses
+            and treasuries seeking secure and profitable stablecoin
+            integrations.
+          </p>
+        </div>
+        <div class="business-card">
+          <div class="business">Business</div>
+          <p class="right-content">
+            Boost user engagement by offering USD bloom, a secure fiat-backed
+            stablecoin with high yields, allowing your customers to earn
+            effortlessly on your platform.
+          </p>
+          <div class="learn">
+            <div class="right-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"
+                />
+              </svg>
+            </div>
+            <p>Learn more</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
