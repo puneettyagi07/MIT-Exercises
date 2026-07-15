@@ -1832,14 +1832,35 @@ dublicateElement(); */
 // ];
 
 // 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
-// const randomScore = Math.round(Math.random() * 200) - 100;
-// console.log(randomScore); 
+// 2. Use Math.trunc() to get the integer part of the score.
 
-// 1. Transform the string array into an array of objects with random scores
+// 3. Use Math.abs() to convert the score into a positive number.
+
+// 4. Use Math.round() to create a rounded score.
+
+// 5. Use Math.floor() and Math.ceil() to create floorScore and ceilScore.
+
+// 6. Use if...else:
+//    - If the rounded score is 60 or more, print "Pass".
+//    - Otherwise, print "Fail".
+
+// 7. Print all the details of every student like this:
+// Name: Yash
+// Original Score:
+// Truncated Score:
+// Absolute Score:
+// Rounded Score:
+// Floor Score:
+// Ceil Score:
+// Result:
+
+// 8. After printing all students, count how many students passed and how many failed, then print the final result.
+
+// 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
+// Transform the string array into an array of objects with random scores
 // const studentsWithScores = students.map((name) => {
-//   // Generates a random decimal between -100 and 100
+// Generates a random decimal between -100 and 100
 //   const randomScore = (Math.random() * 200) - 100;
-  
 //   return {
 //     name: name,
 //     score: randomScore
