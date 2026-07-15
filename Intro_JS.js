@@ -1831,7 +1831,7 @@ dublicateElement(); */
 //   "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
 // ];
 
-// 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
+// 1. Generate a random decimal number between -100 to 100 for each students and store it as their score.
 // 2. Use Math.trunc() to get the integer part of the score.
 
 // 3. Use Math.abs() to convert the score into a positive number.
@@ -1855,6 +1855,80 @@ dublicateElement(); */
 // Result:
 
 // 8. After printing all students, count how many students passed and how many failed, then print the final result.
+
+// Transforming a string array into a object array to store scores.
+// const studentsWithScores = students.map(value => {
+//     // generating random number for score
+//     const randomScore = (Math.random() * 200 - 100).toFixed(2);
+
+//     return{
+//         name : value,
+//         score : randomScore
+//     };
+// })
+
+// const students = [
+//   "Yash", "Rahul", "Amit", "Priya", "Rohan",
+//   "Neha", "Karan", "Simran", "Aryan", "Anjali",
+//   "Mohit", "Riya", "Sohan", "Pooja", "Kabir"
+// ];
+
+// Variables to keep track of final counts (Task 8)
+let passCount = 0;
+let failCount = 0;
+
+// Use a classic for loop to process each student
+for (let i = 0; i < students.length; i++) {
+    const studentName = students[i];
+
+    // Task 1: Generate a random decimal between -100 and 100
+    // Math.random() * 200 gives 0 to 199.999... 
+    // Subtracting 100 shifts the range to -100 to 99.999...
+    const originalScore = (Math.random() * 200) - 100;
+
+    // Task 2: Use Math.trunc() to get the integer part (discards decimals)
+    const truncatedScore = Math.trunc(originalScore);
+
+    // Task 3: Use Math.abs() to convert the score to a positive number
+    const absoluteScore = Math.abs(originalScore);
+
+    // Task 4: Use Math.round() to round the absolute score to the nearest integer
+    const roundedScore = Math.round(absoluteScore);
+
+    // Task 5: Use Math.floor() and Math.ceil() on the absolute score
+    const floorScore = Math.floor(absoluteScore);
+    const ceilScore = Math.ceil(absoluteScore);
+
+    // Task 6: Use if...else to check pass/fail status & update counts
+    let result = "";
+    if (roundedScore >= 60) {
+        result = "Pass";
+        passCount++; // Increment passing counter
+    } else {
+        result = "Fail";
+        failCount++; // Increment failing counter
+    }
+
+    // Task 7: Print all details of the student
+    console.log(`Name: ${studentName}`);
+    console.log(`Original Score: ${originalScore}`);
+    console.log(`Truncated Score: ${truncatedScore}`);
+    console.log(`Absolute Score: ${absoluteScore}`);
+    console.log(`Rounded Score: ${roundedScore}`);
+    console.log(`Floor Score: ${floorScore}`);
+    console.log(`Ceil Score: ${ceilScore}`);
+    console.log(`Result: ${result}`);
+    console.log("-----------------------------------"); // Separator for readability
+}
+
+// Task 8: Print the final tally after the loop finishes running
+console.log("===================================");
+console.log("FINAL RESULTS:");
+console.log(`Total Students Passed: ${passCount}`);
+console.log(`Total Students Failed: ${failCount}`);
+console.log("===================================");
+
+
 
 // 1. Generate a random decimal number between -100 and 100 for each student and store it as their score.
 // Transform the string array into an array of objects with random scores
@@ -1973,8 +2047,8 @@ dublicateElement(); */
 
 
         //  let a = [1,2,3]
-        let a = document.body.children[1].children;
-        console.log(a)
+        // let a = document.body.children[1].children;
+        // console.log(a)
 
 
         // for(let i = 0; i<a.length; i++){    
@@ -1982,12 +2056,7 @@ dublicateElement(); */
         //     a[i].style.height="300px";
         // }
 
-// nodes
-/**
- * text
- * comment
- * element
- */
+
 
 // document.body.children[0].style.backgroundColor = "red";
 // document.body.children[0].style.color = "white";
