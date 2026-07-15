@@ -1,0 +1,1 @@
+document.body.style.backgroundColor = "rgb(15,23,42)";
