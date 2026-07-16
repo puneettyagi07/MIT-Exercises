@@ -90,16 +90,30 @@ card1.style.borderRadius = " 15px"
 card1.style.borderColor = "purple";
 card1.style.padding = "10px";
 card1.style.display = "flex";
+card1.style.flexDirection = "column";
 card1.style.justifyContent = "left";
-card1.style.padding = "10px";
+card1.style.gap = "10px";
 
 // console.log(card1);
 
 const card1Content = card1.children[0];
-card1Content.style.fontSize = "18px";
-card1Content.style.color= "white";
-card1Content.style.margin= "0px";
-card1Content.style.padding= "0px";
+card1Content.style.fontSize = "20px";
+card1Content.style.color = "white";
+card1Content.style.margin = "0px";
+card1Content.style.padding = "0px";
+
+const card1Content = card1.children[1];
+card1Content.style.fontSize = "14px";
+card1Content.style.color = "gray";
+card1Content.style.margin = "0px";
+card1Content.style.padding = "0px";
+card1Content.style.width = "70px";
+
+const card1Content = card1.children[2];
+card1Content.style.fontSize = "14px";
+card1Content.style.color = "purple";
+card1Content.style.margin = "0px";
+card1Content.style.padding = "0px";
 
 
 const card2 = cards.children[1];
@@ -110,8 +124,30 @@ card2.style.borderRadius = " 15px"
 card2.style.borderColor = "rgb(104, 155, 219)";
 card2.style.padding = "10px";
 card2.style.display = "flex";
+card2.style.flexDirection = "column";
 card2.style.justifyContent = "left";
-card2.style.padding = "10px";
+card2.style.gap = "10px";
+card2.style.shadow = "10px";
+card2.style.shadowColor = "blue";
+
+const card2Content = card2.children[0];
+card2Content.style.fontSize = "20px";
+card2Content.style.color = "white";
+card2Content.style.margin = "0px";
+card2Content.style.padding = "0px";
+
+const card2Content = card2.children[1];
+card2Content.style.fontSize = "14px";
+card2Content.style.color = "gray";
+card2Content.style.margin = "0px";
+card2Content.style.padding = "0px";
+card2Content.style.width = "70px";
+
+const card2Content = card2.children[2];
+card2Content.style.fontSize = "14px";
+card2Content.style.color = "blue";
+card2Content.style.margin = "0px";
+card2Content.style.padding = "0px";
 
 const card3 = cards.children[2];
 card3.style.height = "fit-content";
@@ -121,5 +157,25 @@ card3.style.borderRadius = " 15px"
 card3.style.borderColor = "beige";
 card3.style.padding = "10px";
 card3.style.display = "flex";
+card3.style.flexDirection = "column";
 card3.style.justifyContent = "left";
-card3.style.padding = "10px";
+card3.style.gap = "10px";
+
+const card3Content = card3.children[0];
+card3Content.style.fontSize = "20px";
+card3Content.style.color = "white";
+card3Content.style.margin = "0px";
+card3Content.style.padding = "0px";
+
+const card3Content = card3.children[1];
+card3Content.style.fontSize = "14px";
+card3Content.style.color = "gray";
+card3Content.style.margin = "0px";
+card3Content.style.padding = "0px";
+card3Content.style.width = "70px";
+
+const card3Content = card3.children[2];
+card3Content.style.fontSize = "14px";
+card3Content.style.color = "beige";
+card3Content.style.margin = "0px";
+card3Content.style.padding = "0px";
