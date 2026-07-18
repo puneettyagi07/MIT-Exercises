@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM_Exercise-1</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -20,19 +27,62 @@
             <a href="#" class="card-link">Targeted via .firstElementChild</a>
         </div>
         <div class="card2">
-            <h4 class="card-heading">HTML Nodes</h4>
-            <p class="card-para">Everthing in the DOM is a Node, including attributes and invisible whitespaces.</p>
-            <a href="#" class="card-link">Targeted via .firstElementChild</a>
+            <h4 class="card-heading">DOM Elements</h4>
+            <p class="card-para">Elements are strictly HTML tags like divs, paragraphs, and sections.</p>
+            <a href="#" class="card-link">Targeted via .nextElementSibiling</a>
         </div>
         <div class="card3">
-            <h4 class="card-heading">HTML Nodes</h4>
-            <p class="card-para">Everthing in the DOM is a Node, including attributes and invisible whitespaces.</p>
-            <a href="#" class="card-link">Targeted via .firstElementChild</a>
+            <h4 class="card-heading">JS Styling</h4>
+            <p class="card-para">Directly manipulate layouts, colors, and typography using element.style.</p>
+            <a href="#" class="card-link">Targeted via .lastElementChild</a>
         </div>
     </section>
     <hr>
     <p class="footer-text">Built for beginners learning JavaScript DOM manipulation.</p>
     
+
+<!-- 
+    <table>
+        <caption>DOM Table</caption>
+        <thead>
+            <tr>
+                <th>Table Head</th>
+                <th>Table Head</th>
+                <th>Table Head</th>
+                <th>Table Head</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data2</td>
+                <td>Table Data2</td>
+                <td>Table Data2</td>
+                <td>Table Data2</td>
+            </tr>
+            <tr>
+                <td>Table Data3</td>
+                <td>Table Data3</td>
+                <td>Table Data3</td>
+                <td>Table Data3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Table Foot</td>
+                <td>Table Foot</td>
+                <td>Table Foot</td>
+                <td>Table Foot</td>
+            </tr>
+        </tfoot>
+    </table>
+ -->
+
     <script src="exercise_12_MIT_DOM_1.js"></script>
 </body>
 </html>
