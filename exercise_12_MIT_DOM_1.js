@@ -80,6 +80,16 @@ const cards = document.body.children[2].children;
 // console.log(cards)
 
 for(let i = 0; i < cards.length; i++){
+// When the mouse pointer enters the card area
+cards[i].addEventListener("mouseenter", () => {
+    cards[i].style.transform = "scale(1.05)";
+    cards[i].style.boxShadow = "0px 0px 20px rgba(56, 189, 245, 0.4)";
+    });
+// When the mouse pointer leaves the card area
+cards[i].addEventListener("mouseleave", () => {
+    cards[i].style.transform = "scale(1)";
+    cards[i].style.boxShadow = "none";
+    });
 cards[i].style.height = "200px";
 cards[i].style.width = "30vw";
 cards[i].style.borderWidth = "5px 0px 0px 0px";
@@ -92,7 +102,8 @@ cards[i].style.justifyContent = "space-between";
 cards[i].style.alignItems = "left";
 cards[i].style.gap = "10px";
 cards[i].style.backgroundColor = "rgb(29,40,58)";
-cards[i].style.onHover = "animate(translate1.1x)";
+cards[i].style.boxSizing = "border-box"; 
+cards[i].style.transition = "transform 0.3s ease, box-shadow 0.3s ease";
 };
 
 // Card 1 (Border Color)
