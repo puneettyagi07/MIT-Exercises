@@ -137,23 +137,48 @@ mitSectionHeadingLastDiv.style.fontWeight = '600';
 const mitSectionPara = mitSectionContainer.lastElementChild;
 mitSectionPara.style.display = 'flex';
 mitSectionPara.style.alignItems = 'center';
-mitSectionPara.style.gap = '10px';
+mitSectionPara.style.gap = '30px';
 console.log(mitSectionPara);
 
+// Target both children paragraphs inside mitSectionPara
+const mitParaChildren = mitSectionPara.children;
+for (let i = 0; i < mitParaChildren.length; i++) {
+    mitParaChildren[i].style.height = '122px';
+    mitParaChildren[i].style.width = '450px';
+    mitParaChildren[i].style.letterSpacing = '2px';
+    mitParaChildren[i].style.fontSize = '12px';
+    mitParaChildren[i].style.padding = '12px';
+
+    // 1. Set Base Styles (Default Look)
+    mitParaChildren[i].style.borderRadius = "12px";
+    mitParaChildren[i].style.border = "1px solid transparent"; // Invisible border to prevent layout shift
+    mitParaChildren[i].style.backgroundColor = "transparent";
+    mitParaChildren[i].style.cursor = "pointer";
+    // Smooth transition for scale, background color, and border
+    mitParaChildren[i].style.transition = "transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease";
+
+    // 2. Mouse Enter (Hover Effect)
+    mitParaChildren[i].addEventListener("mouseenter", () => {
+        mitParaChildren[i].style.transform = "scale(1.03)";
+        mitParaChildren[i].style.backgroundColor = "rgb(25, 25, 25)"; // Light black / Dark charcoal
+        mitParaChildren[i].style.borderColor = "rgba(255, 255, 255, 0.15)"; // Subtle outline on hover
+    });
+
+    // 3. Mouse Leave (Reset Effect)
+    mitParaChildren[i].addEventListener("mouseleave", () => {
+        mitParaChildren[i].style.transform = "scale(1)";
+        mitParaChildren[i].style.backgroundColor = "transparent";
+        mitParaChildren[i].style.borderColor = "transparent";
+    });
+}
+console.log(mitParaChildren);
+
 const mitSectionParaFirstDiv = mitSectionPara.firstElementChild;
-mitSectionParaFirstDiv.style.height = '122px';
-mitSectionParaFirstDiv.style.width = '400px';
-mitSectionParaFirstDiv.style.letterSpacing = '2px';
 mitSectionParaFirstDiv.style.color = 'gray';
-mitSectionParaFirstDiv.style.fontSize = '12px';
-mitSectionParaFirstDiv.style.padding = '12px';
 
 const mitSectionParaLastDiv = mitSectionPara.lastElementChild;
-mitSectionParaLastDiv.style.height = '122px';
-mitSectionParaLastDiv.style.width = '400px';
-mitSectionParaLastDiv.style.letterSpacing = '2px';
 mitSectionParaLastDiv.style.color = 'skyBlue';
-mitSectionParaLastDiv.style.fontSize = '12px';
-mitSectionParaLastDiv.style.padding = '12px';
+
+
 
 
