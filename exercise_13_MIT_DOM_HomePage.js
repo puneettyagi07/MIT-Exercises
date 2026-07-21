@@ -144,44 +144,37 @@ mitSectionPara.style.alignItems = 'center';
 mitSectionPara.style.gap = '30px';
 // console.log(mitSectionPara);
 
-const mitParaChildren = mitSectionPara.children;
+const mitParaChildren = mitSectionPara.children; // Array containing [<p>, <p>]
+
 for (let i = 0; i < mitParaChildren.length; i++) {
+    // Basic Box Layout Styles
     mitParaChildren[i].style.height = '122px';
     mitParaChildren[i].style.width = '450px';
     mitParaChildren[i].style.letterSpacing = '2px';
     mitParaChildren[i].style.fontSize = '12px';
     mitParaChildren[i].style.padding = '12px';
-
-    // 1. Set Base Styles (Default Look)
     mitParaChildren[i].style.borderRadius = "12px";
-    mitParaChildren[i].style.border = "1px solid transparent"; // Invisible border to prevent layout shift
+    mitParaChildren[i].style.border = "1px solid transparent";
     mitParaChildren[i].style.backgroundColor = "transparent";
     mitParaChildren[i].style.cursor = "pointer";
-    // Smooth transition for scale, background color, and border
     mitParaChildren[i].style.transition = "transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease";
 
-    // 2. Mouse Enter (Hover Effect)
+    // Set Text Color Based on Which Box We Are Currently On
+    i === 0 ? mitParaChildren[i].style.color = 'gray' : mitParaChildren[i].style.color = 'skyBlue';
+
+    // Hover Listeners
     mitParaChildren[i].addEventListener("mouseenter", () => {
         mitParaChildren[i].style.transform = "scale(1.03)";
-        mitParaChildren[i].style.backgroundColor = "rgb(25, 25, 25)"; // Light black / Dark charcoal
-        mitParaChildren[i].style.borderColor = "rgba(255, 255, 255, 0.15)"; // Subtle outline on hover
+        mitParaChildren[i].style.backgroundColor = "rgb(25, 25, 25)";
+        mitParaChildren[i].style.borderColor = "rgba(255, 255, 255, 0.15)";
     });
 
-    // 3. Mouse Leave (Reset Effect)
     mitParaChildren[i].addEventListener("mouseleave", () => {
         mitParaChildren[i].style.transform = "scale(1)";
         mitParaChildren[i].style.backgroundColor = "transparent";
         mitParaChildren[i].style.borderColor = "transparent";
     });
 }
-// console.log(mitParaChildren);
-
-const mitSectionParaFirstDiv = mitSectionPara.firstElementChild;
-mitSectionParaFirstDiv.style.color = 'gray';
-
-const mitSectionParaLastDiv = mitSectionPara.lastElementChild;
-mitSectionParaLastDiv.style.color = 'skyBlue';
-
 
 // Capability Section
 const capabilitySectionContainer = document.body.children[1].children[2];
@@ -219,30 +212,58 @@ capabilitySectionCards.style.justifyContent = 'center';
 capabilitySectionCards.style.width = '1000px';
 capabilitySectionCards.style.alignItems = 'center';
 capabilitySectionCards.style.gap = '30px';
-console.log(capabilitySectionCards);
+// console.log(capabilitySectionCards);
 
-const capabiityCards = capabilitySectionCards.children;
-for(let i=0; i<capabiityCards.length; i++){
-    capabiityCards[i].style.height = '200px';
-    capabiityCards[i].style.width = '300px';
-    capabiityCards[i].style.backgroundColor = 'black';
-    capabiityCards[i].style.borderRadius = '5px';
-    capabiityCards[i].style.padding = '12px';
-    capabiityCards[i].style.cursor = "pointer";
-    // Smooth transition for scale, background color, and border
-    capabiityCards[i].style.transition = "transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease";
+const capabilityCards = capabilitySectionCards.children;
+for(let i = 0; i < capabilityCards.length; i++) {
+    capabilityCards[i].style.height = '150px';
+    capabilityCards[i].style.width = '300px';
+    capabilityCards[i].style.padding = '24px';
+    capabilityCards[i].style.borderRadius = '12px';
+    capabilityCards[i].style.cursor = 'pointer';
+    capabilityCards[i].style.display = 'flex';
+    capabilityCards[i].style.flexDirection = 'column';
+    capabilityCards[i].style.justifyContent = 'flex-start';
+    capabilityCards[i].style.gap = '12px';
 
-    // 2. Mouse Enter (Hover Effect)
-    capabiityCards[i].addEventListener("mouseenter", () => {
-        capabiityCards[i].style.transform = "scale(1.03)";
-        capabiityCards[i].style.backgroundColor = "rgb(25, 25, 25)"; // Light black / Dark charcoal
-        capabiityCards[i].style.borderColor = "rgba(255, 255, 255, 0.15)"; // Subtle outline on hover
+    // Style the title (1st paragraph inside the card)
+    const cardTitle = capabilityCards[i].children[0];
+    cardTitle.style.fontSize = '16px';
+    cardTitle.style.fontWeight = '600';
+    cardTitle.style.color = 'white';
+
+    // Style the description (2nd paragraph inside the card)
+    const cardDesc = capabilityCards[i].children[1];
+    cardDesc.style.fontSize = '13px';
+    cardDesc.style.color = 'gray';
+    cardDesc.style.lineHeight = '1.5';
+
+    // --- 2. Base Style & Smooth Transitions ---
+    capabilityCards[i].style.backgroundColor = 'black';
+    capabilityCards[i].style.border = '1px solid rgba(255, 255, 255, 0.05)'; // Base subtle border
+    capabilityCards[i].style.transition = 'transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease';
+
+    // --- 3. Mouse Enter (Hover State) ---
+    capabilityCards[i].addEventListener('mouseenter', () => {
+        capabilityCards[i].style.transform = 'scale(1.05)';
+        capabilityCards[i].style.backgroundColor = 'rgb(18, 18, 18)'; // Slightly lighter black
+        capabilityCards[i].style.borderColor = 'skyBlue'; // Accent blue border on hover
+        capabilityCards[i].style.boxShadow = '0px 8px 20px rgba(0, 0, 0, 0.5)';
     });
 
-    // 3. Mouse Leave (Reset Effect)
-    capabiityCards[i].addEventListener("mouseleave", () => {
-        capabiityCards[i].style.transform = "scale(1)";
-        capabiityCards[i].style.backgroundColor = "transparent";
-        capabiityCards[i].style.borderColor = "transparent";
+    // --- 4. Mouse Leave (Reset State) ---
+    capabilityCards[i].addEventListener('mouseleave', () => {
+        capabilityCards[i].style.transform = 'scale(1)';
+        capabilityCards[i].style.backgroundColor = 'black'; // Resets cleanly back to black!
+        capabilityCards[i].style.borderColor = 'rgba(255, 255, 255, 0.05)';
+        capabilityCards[i].style.boxShadow = 'none';
     });
 }
+
+// Numbers Section
+const numbersSectionContainer = document.body.children[1].children[3];
+numbersSectionContainer.style.height = '400px'
+numbersSectionContainer.style.width = '100%'
+numbersSectionContainer.style.display = 'flex';
+numbersSectionContainer.style.flexDirection = 'column';
+numbersSectionContainer.style.justifyContent = 'center';
