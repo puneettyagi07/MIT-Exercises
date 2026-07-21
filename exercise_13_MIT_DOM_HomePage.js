@@ -7,6 +7,7 @@ body.style.color = "white";
 const bodyElements = document.body.children;
 // console.log(bodyElements);
 
+// Nav Section
 const nav = document.body.children[0];
 nav.style.display = "flex";
 nav.style.justifyContent = "space-between";
@@ -26,19 +27,21 @@ navLeft_span.style.fontSize = "20px";
 // console.log(navLeft_span);
 
 const navRight = nav.children[1].firstElementChild;
-navRight.style.listStyle =  "none";
-navRight.style.display =  "flex";
-navRight.style.gap =  "20px";
-navRight.style.color =  "rgb(211, 222, 220)";
+navRight.style.listStyle = "none";
+navRight.style.display = "flex";
+navRight.style.gap = "20px";
+navRight.style.color = "rgb(211, 222, 220)";
 // console.log(navRight);
 
+// Main Container
 const mainContainer = document.body.children[1];
 mainContainer.style.display = "flex";
 mainContainer.style.flexDirection = "column";
 mainContainer.style.justifyContent = "center";
 mainContainer.style.alignItems = "center";
-// console.log(mainContainer);
+console.log(mainContainer);
 
+// Modern Web Section
 const topHeadSectionContainer = document.body.children[1].children[0];
 topHeadSectionContainer.style.display = "flex";
 topHeadSectionContainer.style.flexDirection = "column";
@@ -87,7 +90,7 @@ for (let i = 0; i < modernWebBtn.length; i++) {
     modernWebBtn[i].style.borderRadius = "6px";
     modernWebBtn[i].style.cursor = "pointer";
     // 1-2 shades lighter than pure black for a sleek dark mode look
-    modernWebBtn[i].style.backgroundColor = "rgb(18, 18, 18)"; 
+    modernWebBtn[i].style.backgroundColor = "rgb(18, 18, 18)";
     modernWebBtn[i].style.color = "white";
     modernWebBtn[i].style.border = "1px solid white";
     // Smooth transition handles scaling, background flips, and text colors simultaneously
@@ -103,13 +106,14 @@ for (let i = 0; i < modernWebBtn.length; i++) {
     modernWebBtn[i].addEventListener("mouseleave", () => {
         modernWebBtn[i].style.transform = "scale(1)";
         // Returns safely back to the dark outline design
-        modernWebBtn[i].style.backgroundColor = "rgb(18, 18, 18)"; 
+        modernWebBtn[i].style.backgroundColor = "rgb(18, 18, 18)";
         modernWebBtn[i].style.color = "white";
         modernWebBtn[i].style.border = "1px solid white";
     });
 }
 // console.log(modernWebBtn);
 
+// MIT Section 
 const mitSectionContainer = document.body.children[1].children[1];
 mitSectionContainer.style.marginTop = '100px';
 mitSectionContainer.style.display = 'flex';
@@ -138,9 +142,8 @@ const mitSectionPara = mitSectionContainer.lastElementChild;
 mitSectionPara.style.display = 'flex';
 mitSectionPara.style.alignItems = 'center';
 mitSectionPara.style.gap = '30px';
-console.log(mitSectionPara);
+// console.log(mitSectionPara);
 
-// Target both children paragraphs inside mitSectionPara
 const mitParaChildren = mitSectionPara.children;
 for (let i = 0; i < mitParaChildren.length; i++) {
     mitParaChildren[i].style.height = '122px';
@@ -171,7 +174,7 @@ for (let i = 0; i < mitParaChildren.length; i++) {
         mitParaChildren[i].style.borderColor = "transparent";
     });
 }
-console.log(mitParaChildren);
+// console.log(mitParaChildren);
 
 const mitSectionParaFirstDiv = mitSectionPara.firstElementChild;
 mitSectionParaFirstDiv.style.color = 'gray';
@@ -180,5 +183,66 @@ const mitSectionParaLastDiv = mitSectionPara.lastElementChild;
 mitSectionParaLastDiv.style.color = 'skyBlue';
 
 
+// Capability Section
+const capabilitySectionContainer = document.body.children[1].children[2];
+capabilitySectionContainer.style.marginTop = '60px';
+capabilitySectionContainer.style.backgroundColor = 'rgb(25, 25, 25)';
+capabilitySectionContainer.style.display = 'flex';
+capabilitySectionContainer.style.flexDirection = 'column';
+// capabilitySectionContainer.style.justifyContent = 'center';
+capabilitySectionContainer.style.alignItems = 'center';
+capabilitySectionContainer.style.gap = '20px';
+capabilitySectionContainer.style.height = 'fit-content';
+capabilitySectionContainer.style.width = '100%';
+capabilitySectionContainer.style.padding = '60px 15px';
+console.log(capabilitySectionContainer);
 
+const capabilitySectionHeading = capabilitySectionContainer.firstElementChild;
+capabilitySectionHeading.style.textAlign = 'center';
+capabilitySectionHeading.style.display = 'flex';
+capabilitySectionHeading.style.flexDirection = 'column';
+capabilitySectionHeading.style.gap = '10px';
 
+const capabilitySectionHeadingFirstDiv = capabilitySectionHeading.firstElementChild;
+capabilitySectionHeadingFirstDiv.style.fontSize = '10px';
+capabilitySectionHeadingFirstDiv.style.fontWeight = '700';
+capabilitySectionHeadingFirstDiv.style.color = 'skyBlue';
+
+const capabilitySectionHeadingLastDiv = capabilitySectionHeading.lastElementChild;
+capabilitySectionHeadingLastDiv.style.fontSize = '26px';
+capabilitySectionHeadingLastDiv.style.fontWeight = '600';
+
+const capabilitySectionCards = capabilitySectionContainer.lastElementChild;
+capabilitySectionCards.style.display = 'flex';
+capabilitySectionCards.style.flexWrap = 'wrap';
+capabilitySectionCards.style.justifyContent = 'center';
+capabilitySectionCards.style.width = '1000px';
+capabilitySectionCards.style.alignItems = 'center';
+capabilitySectionCards.style.gap = '30px';
+console.log(capabilitySectionCards);
+
+const capabiityCards = capabilitySectionCards.children;
+for(let i=0; i<capabiityCards.length; i++){
+    capabiityCards[i].style.height = '200px';
+    capabiityCards[i].style.width = '300px';
+    capabiityCards[i].style.backgroundColor = 'black';
+    capabiityCards[i].style.borderRadius = '5px';
+    capabiityCards[i].style.padding = '12px';
+    capabiityCards[i].style.cursor = "pointer";
+    // Smooth transition for scale, background color, and border
+    capabiityCards[i].style.transition = "transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease";
+
+    // 2. Mouse Enter (Hover Effect)
+    capabiityCards[i].addEventListener("mouseenter", () => {
+        capabiityCards[i].style.transform = "scale(1.03)";
+        capabiityCards[i].style.backgroundColor = "rgb(25, 25, 25)"; // Light black / Dark charcoal
+        capabiityCards[i].style.borderColor = "rgba(255, 255, 255, 0.15)"; // Subtle outline on hover
+    });
+
+    // 3. Mouse Leave (Reset Effect)
+    capabiityCards[i].addEventListener("mouseleave", () => {
+        capabiityCards[i].style.transform = "scale(1)";
+        capabiityCards[i].style.backgroundColor = "transparent";
+        capabiityCards[i].style.borderColor = "transparent";
+    });
+}
