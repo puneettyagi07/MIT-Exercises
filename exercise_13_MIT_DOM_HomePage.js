@@ -497,7 +497,7 @@ for (let i = 0; i < caseStudyCards.length; i++) {
     caseStudyCards[i].style.display = 'flex';
     caseStudyCards[i].style.flexDirection = 'column';
     caseStudyCards[i].style.justifyContent = 'flex-end'; // Pushes children to the bottom
-    caseStudyCards[i].style.alignItems = 'flex-end';   // Aligns children to the left
+    caseStudyCards[i].style.alignItems = 'flex-start';   // Aligns children to the left
     caseStudyCards[i].style.gap = '8px';
     
     // Base styles & smooth transitions
