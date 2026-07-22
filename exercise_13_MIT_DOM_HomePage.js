@@ -1,3 +1,4 @@
+
 const body = document.body;
 body.style.backgroundColor = "black";
 body.style.display = "flex";
@@ -227,16 +228,16 @@ for(let i = 0; i < capabilityCards.length; i++) {
     capabilityCards[i].style.gap = '12px';
 
     // Style the title (1st paragraph inside the card)
-    const cardTitle = capabilityCards[i].children[0];
-    cardTitle.style.fontSize = '16px';
-    cardTitle.style.fontWeight = '600';
-    cardTitle.style.color = 'white';
+    const capabilityCardTitle = capabilityCards[i].children[0];
+    capabilityCardTitle.style.fontSize = '16px';
+    capabilityCardTitle.style.fontWeight = '600';
+    capabilityCardTitle.style.color = 'white';
 
     // Style the description (2nd paragraph inside the card)
-    const cardDesc = capabilityCards[i].children[1];
-    cardDesc.style.fontSize = '13px';
-    cardDesc.style.color = 'gray';
-    cardDesc.style.lineHeight = '1.5';
+    const capabilityCardDesc = capabilityCards[i].children[1];
+    capabilityCardDesc.style.fontSize = '13px';
+    capabilityCardDesc.style.color = 'gray';
+    capabilityCardDesc.style.lineHeight = '1.5';
 
     // --- 2. Base Style & Smooth Transitions ---
     capabilityCards[i].style.backgroundColor = 'black';
@@ -258,12 +259,276 @@ for(let i = 0; i < capabilityCards.length; i++) {
         capabilityCards[i].style.borderColor = 'rgba(255, 255, 255, 0.05)';
         capabilityCards[i].style.boxShadow = 'none';
     });
-}
+};
 
 // Numbers Section
 const numbersSectionContainer = document.body.children[1].children[3];
-numbersSectionContainer.style.height = '400px'
-numbersSectionContainer.style.width = '100%'
+numbersSectionContainer.style.height = '300px';
+numbersSectionContainer.style.width = '100%';
 numbersSectionContainer.style.display = 'flex';
 numbersSectionContainer.style.flexDirection = 'column';
-numbersSectionContainer.style.justifyContent = 'center';
+numbersSectionContainer.style.justifyContent = 'space-around';
+numbersSectionContainer.style.alignItems = 'center';
+console.log(numbersSectionContainer);
+
+// Top Horizontal Line
+const numberSectionHr = numbersSectionContainer.firstElementChild;
+numberSectionHr.style.width = '1000px';
+numberSectionHr.style.height = '1px';
+numberSectionHr.style.backgroundColor = 'gray';
+numberSectionHr.style.borderWidth = '0px';
+numberSectionHr.style.marginTop = '50px';
+
+// Middle Stat Box Container (Renamed to prevent variable collision)
+const statContainer = numbersSectionContainer.children[1];
+statContainer.style.display = 'flex';
+statContainer.style.justifyContent = 'space-between';
+statContainer.style.width = '900px';
+
+// Bottom Horizontal Line
+const numberSectionHr2 = numbersSectionContainer.lastElementChild;
+numberSectionHr2.style.width = '1000px';
+numberSectionHr2.style.height = '1px';
+numberSectionHr2.style.backgroundColor = 'gray';
+numberSectionHr2.style.borderWidth = '0px';
+numberSectionHr2.style.marginBottom = '50px';
+
+// List of the 4 stat boxes
+const numberSectionCards = statContainer.children;
+for (let i = 0; i < numberSectionCards.length; i++) {
+    // Style each stat box wrapper
+    numberSectionCards[i].style.display = 'flex';
+    numberSectionCards[i].style.flexDirection = 'column';
+    numberSectionCards[i].style.alignItems = 'center';
+    numberSectionCards[i].style.gap = '8px';
+
+    // Target the first paragraph (e.g., "99.99%")
+    const statNumber = numberSectionCards[i].firstElementChild;
+    statNumber.style.color = 'blue';
+    statNumber.style.fontSize = '28px';
+    statNumber.style.fontWeight = '700';
+
+    // Target the second paragraph (e.g., "UPTIME SLA")
+    const statLabel = numberSectionCards[i].lastElementChild;
+    statLabel.style.color = 'gray';
+    statLabel.style.fontSize = '8px';
+    statLabel.style.letterSpacing = '1px';
+};
+
+// Integrations Section 
+
+const integrationSectionContainer = document.body.children[1].children[4];
+integrationSectionContainer.style.height = 'fit-content';
+integrationSectionContainer.style.width = '100%';
+integrationSectionContainer.style.backgroundColor = 'rgb(25,25,25)';
+integrationSectionContainer.style.padding = '50px 0px';
+integrationSectionContainer.style.display = 'flex';
+integrationSectionContainer.style.flexDirection = 'column';
+integrationSectionContainer.style.alignItems = 'center';
+integrationSectionContainer.style.justifyContent = 'space-between';
+console.log(integrationSectionContainer);
+
+const integrationHeading = integrationSectionContainer.firstElementChild;
+integrationHeading.style.textAlign = 'center';
+integrationHeading.style.display = 'flex';
+integrationHeading.style.flexDirection = 'column';
+integrationHeading.style.gap = '10px';
+
+const integrationheadingChildren = integrationHeading.children;
+for (let i = 0; i < integrationheadingChildren.length; i++) {
+    if (i === 0) {
+        // First Child: "INTEGRATIONS"
+        integrationheadingChildren[i].style.fontSize = '10px';
+        integrationheadingChildren[i].style.fontWeight = '700';
+        integrationheadingChildren[i].style.color = 'skyBlue';
+    } else {
+        // Last Child: "Plays nice with others."
+        integrationheadingChildren[i].style.fontSize = '26px';
+        integrationheadingChildren[i].style.fontWeight = '600';
+    }
+};
+const integrationHr = integrationSectionContainer.children[1];
+integrationHr.style.width = '100%';
+integrationHr.style.height = '1px';
+integrationHr.style.backgroundColor = 'gray';
+integrationHr.style.borderWidth = '0px';
+integrationHr.style.marginTop = '20px';
+integrationHr.style.marginBottom = '20px';
+
+const integrationUlContainer = integrationSectionContainer.children[2].firstElementChild;
+integrationUlContainer.style.display = 'flex';
+integrationUlContainer.style.gap = '30px';
+integrationUlContainer.style.listStyle = 'none';
+
+const integrationUl = integrationUlContainer.children;
+for (let i = 0; i < integrationUl.length; i++) {
+    integrationUl[i].style.fontSize = '22px';
+    integrationUl[i].style.color = 'gray';
+    integrationUl[i].style.cursor = 'pointer';
+    integrationUl[i].style.transition = 'color 0.2s ease';
+
+    integrationUl[i].addEventListener('mouseenter', () => {
+        integrationUl[i].style.color = 'white';
+    });
+    integrationUl[i].addEventListener('mouseleave', () => {
+        integrationUl[i].style.color = 'gray';
+    });
+};
+
+// // Case Study Section
+// const caseStudySectionContainer = document.body.children[1].children[5];
+// caseStudySectionContainer.style.width = '100%';
+// caseStudySectionContainer.style.height = 'fit-content';
+// caseStudySectionContainer.style.padding = '50px 0px';
+// caseStudySectionContainer.style.display = 'flex';
+// caseStudySectionContainer.style.flexDirection = 'column';
+// caseStudySectionContainer.style.gap = '30px';
+
+// const caseStudyHeading = caseStudySectionContainer.firstElementChild;
+// caseStudyHeading.style.textAlign = 'center';
+// caseStudyHeading.style.display = 'flex';
+// caseStudyHeading.style.flexDirection = 'column';
+// caseStudyHeading.style.gap = '10px';
+
+// const caseStudyheadingChildren = caseStudyHeading.children;
+// for (let i = 0; i < caseStudyheadingChildren.length; i++) {
+//     if (i === 0) {
+//         // First Child: "INTEGRATIONS"
+//         caseStudyheadingChildren[i].style.fontSize = '10px';
+//         caseStudyheadingChildren[i].style.fontWeight = '700';
+//         caseStudyheadingChildren[i].style.color = 'skyBlue';
+//     } else {
+//         // Last Child: "Plays nice with others."
+//         caseStudyheadingChildren[i].style.fontSize = '26px';
+//         caseStudyheadingChildren[i].style.fontWeight = '600';
+//     }
+// };
+
+// const caseStudyCardsContainer = caseStudySectionContainer.children[1];
+// caseStudyCardsContainer.style.display = 'flex';
+// caseStudyCardsContainer.style.justifyContent = 'center';
+// caseStudyCardsContainer.style.gap = '20px';
+
+// const caseStudyCards = caseStudySectionContainer.children[1].children;
+// for(let i = 0; i < caseStudyCards.length; i++){
+//     caseStudyCards[i].style.height = '250px';
+//     caseStudyCards[i].style.width = '400px';
+//     caseStudyCards[i].style.backgroundColor = 'gray';
+//     caseStudyCards[i].style.padding = '12px';
+//     caseStudyCards[i].style.borderRadius = '10px';
+//     caseStudyCards[i].style.gap = '20px';
+
+//      const caseStudyCardTitle = caseStudyCards[i].children[0];
+//     caseStudyCardTitle.style.fontSize = '16px';
+//     caseStudyCardTitle.style.fontWeight = '600';
+//     caseStudyCardTitle.style.color = 'white';
+//     caseStudyCardTitle.style.position = 'bottom';
+
+//     // Style the description (2nd paragraph inside the card)
+//     const caseStudyCardDesc = caseStudyCards[i].children[1];
+//     caseStudyCardDesc.style.fontSize = '13px';
+//     caseStudyCardDesc.style.color = 'gray';
+//     caseStudyCardDesc.style.lineHeight = '1.5';
+//     caseStudyCardDesc.style.position = 'bottom 5px';
+
+//     // --- 2. Base Style & Smooth Transitions ---
+//     caseStudyCards[i].style.backgroundColor = 'black';
+//     caseStudyCards[i].style.border = '1px solid rgba(255, 255, 255, 0.05)'; // Base subtle border
+//     caseStudyCards[i].style.transition = 'transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease';
+
+//     // --- 3. Mouse Enter (Hover State) ---
+//     caseStudyCards[i].addEventListener('mouseenter', () => {
+//         caseStudyCards[i].style.transform = 'scale(1.05)';
+//         caseStudyCards[i].style.backgroundColor = 'rgb(18, 18, 18)';
+//         caseStudyCards[i].style.borderColor = 'skyBlue';
+//         caseStudyCards[i].style.boxShadow = '0px 8px 20px rgba(0, 0, 0, 0.5)';
+//     });
+
+//     // --- 4. Mouse Leave (Reset State) ---
+//     caseStudyCards[i].addEventListener('mouseleave', () => {
+//         caseStudyCards[i].style.transform = 'scale(1)';
+//         caseStudyCards[i].style.backgroundColor = 'darkNavy'; 
+//         caseStudyCards[i].style.borderColor = 'rgba(255, 255, 255, 0.05)';
+//         caseStudyCards[i].style.boxShadow = 'none';
+//     });
+// };
+// console.log(caseStudyCards);
+
+// Case Study Section
+const caseStudySectionContainer = document.body.children[1].children[5];
+caseStudySectionContainer.style.width = '100%';
+caseStudySectionContainer.style.height = 'fit-content';
+caseStudySectionContainer.style.padding = '50px 0px';
+caseStudySectionContainer.style.display = 'flex';
+caseStudySectionContainer.style.flexDirection = 'column';
+caseStudySectionContainer.style.alignItems = 'center';
+caseStudySectionContainer.style.gap = '30px';
+
+const caseStudyHeading = caseStudySectionContainer.firstElementChild;
+caseStudyHeading.style.textAlign = 'center';
+caseStudyHeading.style.display = 'flex';
+caseStudyHeading.style.flexDirection = 'column';
+caseStudyHeading.style.gap = '10px';
+
+const caseStudyheadingChildren = caseStudyHeading.children;
+for (let i = 0; i < caseStudyheadingChildren.length; i++) {
+    if (i === 0) {
+        caseStudyheadingChildren[i].style.fontSize = '10px';
+        caseStudyheadingChildren[i].style.fontWeight = '700';
+        caseStudyheadingChildren[i].style.color = 'skyBlue';
+    } else {
+        caseStudyheadingChildren[i].style.fontSize = '26px';
+        caseStudyheadingChildren[i].style.fontWeight = '600';
+    }
+}
+
+const caseStudyCardsContainer = caseStudySectionContainer.children[1];
+caseStudyCardsContainer.style.display = 'flex';
+caseStudyCardsContainer.style.justifyContent = 'center';
+caseStudyCardsContainer.style.gap = '20px';
+
+const caseStudyCards = caseStudyCardsContainer.children;
+for (let i = 0; i < caseStudyCards.length; i++) {
+    // 1. Flexbox layout to push content to the bottom-left
+    caseStudyCards[i].style.height = '250px';
+    caseStudyCards[i].style.width = '400px';
+    caseStudyCards[i].style.padding = '24px';
+    caseStudyCards[i].style.borderRadius = '10px';
+    caseStudyCards[i].style.display = 'flex';
+    caseStudyCards[i].style.flexDirection = 'column';
+    caseStudyCards[i].style.justifyContent = 'flex-end'; // Pushes children to the bottom
+    caseStudyCards[i].style.alignItems = 'flex-end';   // Aligns children to the left
+    caseStudyCards[i].style.gap = '8px';
+    
+    // Base styles & smooth transitions
+    caseStudyCards[i].style.backgroundColor = 'rgb(10, 10, 10)';
+    caseStudyCards[i].style.border = '1px solid rgba(255, 255, 255, 0.05)';
+    caseStudyCards[i].style.transition = 'transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease';
+
+    // 2. Style title (Top text inside bottom group)
+    const caseStudyCardTitle = caseStudyCards[i].children[0];
+    caseStudyCardTitle.style.fontSize = '18px';
+    caseStudyCardTitle.style.fontWeight = '600';
+    caseStudyCardTitle.style.color = 'white';
+
+    // 3. Style description (Bottom text inside bottom group)
+    const caseStudyCardDesc = caseStudyCards[i].children[1];
+    caseStudyCardDesc.style.fontSize = '13px';
+    caseStudyCardDesc.style.color = 'gray';
+    caseStudyCardDesc.style.lineHeight = '1.5';
+
+    // 4. Hover Listeners
+    caseStudyCards[i].addEventListener('mouseenter', () => {
+        caseStudyCards[i].style.transform = 'scale(1.03)';
+        caseStudyCards[i].style.backgroundColor = 'rgb(20, 20, 20)';
+        caseStudyCards[i].style.borderColor = 'skyBlue';
+        caseStudyCards[i].style.boxShadow = '0px 8px 20px rgba(0, 0, 0, 0.5)';
+    });
+
+    caseStudyCards[i].addEventListener('mouseleave', () => {
+        caseStudyCards[i].style.transform = 'scale(1)';
+        caseStudyCards[i].style.backgroundColor = 'rgb(10, 10, 10)'; 
+        caseStudyCards[i].style.borderColor = 'rgba(255, 255, 255, 0.05)';
+        caseStudyCards[i].style.boxShadow = 'none';
+    });
+};
