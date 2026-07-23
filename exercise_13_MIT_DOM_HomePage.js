@@ -443,3 +443,50 @@ const communityCardsContainer = communitySectionContainer.children[1];
 communityCardsContainer.style.display = 'flex';
 communityCardsContainer.style.justifyContent = 'center';
 communityCardsContainer.style.gap = '20px';
+
+const communityCards = communityCardsContainer.children;
+for (let i = 0; i < communityCards.length; i++) {
+    communityCards[i].style.height = '150px';
+    communityCards[i].style.width = '250px';
+    communityCards[i].style.padding = '22px';
+    communityCards[i].style.borderRadius = '10px';
+    communityCards[i].style.display = 'flex';
+    communityCards[i].style.flexDirection = 'column';
+    communityCards[i].style.justifyContent = 'space-between';
+    communityCards[i].style.cursor = 'pointer';
+    
+    // Base styling
+    communityCards[i].style.backgroundColor = 'black';
+    communityCards[i].style.border = '1px solid rgba(255, 255, 255, 0.05)';
+    communityCards[i].style.transition = 'transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease';
+
+    // Title text
+    const communityCardTitle = communityCards[i].children[0];
+    communityCardTitle.style.fontSize = '12px';
+    communityCardTitle.style.fontWeight = '600';
+    communityCardTitle.style.fontStyle = 'italic';
+    communityCardTitle.style.color = 'gray';
+
+    // Description text
+    const communityCardDesc = communityCards[i].children[1];
+    communityCardDesc.style.fontSize = '14px';
+    communityCardDesc.style.fontWeight = '600';
+    communityCardDesc.style.color = 'skyBlue';
+    communityCardDesc.style.lineHeight = '1.5';
+
+    // Hover listeners
+    communityCards[i].addEventListener('mouseenter', () => {
+        communityCards[i].style.transform = 'scale(1.03)';
+        communityCards[i].style.backgroundColor = 'rgb(20, 20, 20)';
+        communityCards[i].style.borderColor = 'skyBlue';
+        communityCards[i].style.boxShadow = '0px 8px 20px rgba(0, 0, 0, 0.5)';
+    });
+
+    communityCards[i].addEventListener('mouseleave', () => {
+        communityCards[i].style.transform = 'scale(1)';
+        communityCards[i].style.backgroundColor = 'black'; 
+        communityCards[i].style.borderColor = 'rgba(255, 255, 255, 0.05)';
+        communityCards[i].style.boxShadow = 'none';
+    });
+};
+
