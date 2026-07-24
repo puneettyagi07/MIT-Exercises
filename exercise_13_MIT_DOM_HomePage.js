@@ -490,3 +490,34 @@ for (let i = 0; i < communityCards.length; i++) {
     });
 };
 
+// Pricing Section
+const pricingSectionContainer = document.body.children[1].children[7];
+pricingSectionContainer.style.width = '100%';
+pricingSectionContainer.style.height = 'fit-content';
+pricingSectionContainer.style.backgroundColor = 'black';
+pricingSectionContainer.style.padding = '50px 0px';
+pricingSectionContainer.style.display = 'flex';
+pricingSectionContainer.style.flexDirection = 'column';
+pricingSectionContainer.style.alignItems = 'center';
+pricingSectionContainer.style.gap = '30px';
+
+const pricingHeading = pricingSectionContainer.firstElementChild;
+pricingHeading.style.textAlign = 'center';
+pricingHeading.style.display = 'flex';
+pricingHeading.style.flexDirection = 'column';
+pricingHeading.style.gap = '10px';
+
+const pricingheadingChildren = pricingHeading.children;
+for (let i = 0; i < pricingheadingChildren.length; i++) {
+    if (i === 0) {
+        pricingheadingChildren[i].style.fontSize = '10px';
+        pricingheadingChildren[i].style.fontWeight = '700';
+        pricingheadingChildren[i].style.color = 'skyBlue';
+    } else {
+        pricingheadingChildren[i].style.fontSize = '26px';
+        pricingheadingChildren[i].style.fontWeight = '600';
+    }
+};
+
+
+
