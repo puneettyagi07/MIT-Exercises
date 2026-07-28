@@ -17,7 +17,7 @@ section_1_leftSide.style.flexDirection = `column`;
 section_1_leftSide.style.alignItems = `flex-start`;
 section_1_leftSide.style.gap = `20px`;
 
-const section_1_left_h1 = document.getElementsByTagName('h1')[0];
+const section_1_left_h1 = document.getElementsByClassName('Heading_H1');
 section_1_left_h1.style.fontSize = `42px`;
 section_1_left_h1.style.fontWeight = `600`;
 section_1_left_h1.style.width = `292px`;
@@ -25,19 +25,15 @@ section_1_left_h1.style.width = `292px`;
 const section_1_left_span = document.getElementsByTagName('span')[0];
 section_1_left_span.style.color = "rgb(231, 84, 128)";
 
-// const section_1_left = document.getElementsByClassName('section_1_left')[1];
-// section_1_left.style.fontSize = '10px';
-// console.log(section_1_left);
-// This is not working
+const subPara = document.querySelectorAll('.sub_para');
+for(let i = 0; i<section_1_Left_subPara.length; i++){
+subPara[i].style.fontSize = '12px';
+}
 
-// const section_1_left_para = document.getElementsByTagName('para');
-// section_1_left_para.style.fontSize = '8px';
-// console.log(section_1_left_para);
-
-const section_1_Left_subPara = document.querySelectorAll('.sub_para');
-section_1_Left_subPara.style.fontSize = '12px';
-section_1_Left_subPara.style.width = '415px';
-section_1_Left_subPara.style.lineHeight = '20px';
+const section_1_left_para = document.getElementsByClassName('sub_para');
+section_1_left_para.style.width = '415px';
+section_1_left_para.style.lineHeight = '20px';
+console.log(section_1_left_para);
 
 const section_1_left_btn = document.getElementsByClassName('green_btn')[0];
 section_1_left_btn.style.padding = '6px 14px';
