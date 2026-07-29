@@ -2007,7 +2007,7 @@ console.log("===================================");
 
 //***************DOM AND BOM (DOCUMENT OBJECT MODEL AND BROWSER OBJECT MODEL) ***************  
 
-        // Nodes 
+        // Nodes / Nodelist
         // 1. text 
         // 2. comment 
         // 3. element 
@@ -2021,13 +2021,13 @@ console.log("===================================");
         // let b = document.body.childNodes
         
         // let a = document.body.firstChild 
-        // firschild   work as per nodelist 
-        // let a = document.body.firstElementChild
-        // firstElementChild work as per html collection 
         // let a = document.body.lastChild
-        // let a = document.body.lastElementChild
         // let a = document.body.previousSibling
+        // firstChild and lastChild work as per nodelist or No Element word means it's for nodeList
+        // let a = document.body.firstElementChild
+        // let a = document.body.lastElementChild
         // let a = document.body.previousElementSibling
+        // firstElementChild and lastElementChild work as per html collection . Or basically Element word works as HTML collection
         // let a = document.body.children[0].nextElementSibling
         // console.log(b)
         // console.log(a)
@@ -2045,21 +2045,68 @@ console.log("===================================");
         // document.body.children[1].children[1].style.height="300px"
 
 
-
+        // How to target and element from array / HTML Body (Just look at it as a array any whichever element needs to be target write down it's index number)
         //  let a = [1,2,3]
         // let a = document.body.children[1].children;
         // console.log(a)
 
-
+        // How to use loop for designing. 
         // for(let i = 0; i<a.length; i++){    
         //     a[i].style.backgroundColor="blue";
         //     a[i].style.height="300px";
         // }
-
-
 
 // document.body.children[0].style.backgroundColor = "red";
 // document.body.children[0].style.color = "white";
 // document.title="Document object model"
     
 
+
+//*************** DOM Table  *************** 
+// This is little advance table. It Includes few more tags given below:-
+/**
+ * Caption
+ * thead
+ * tbody
+ * tfoot
+ */
+// Caption :- It is the name / caption of the table.
+// thead :- It includes only <th> data. And we console it as console.log(table.thead);[table is variable name here.]
+// tbody :- It includes only <td> data. And we console it as console.log(table.tbodies);[table is variable name here.]
+// tfoot :- It includes only <td> data. And we console it as console.log(table.tfoot);[table is variable name here.]
+
+
+//*************** Searching the DOM  *************** 
+/**
+ * getElementById = `document.getElementById("ID Name Only")`;
+ * getElementByTagName = `document.getElementByTagName("Tag Name Only")`;
+ * getElementByClassName = `document.getElementByClassName("Class name Only")`;
+ * getElementByName = `document.getElementByName("input tag me Name se")`;
+ * querySelector = `document.querySelector("Iss me koi bhi id/class/tagName/Name/or anything kisi ka bhi 1st element hi lega pure")`;
+ * querySelectorAll = `document.querySelectorAll("")
+ */
+
+//*************** DOM Method for Finding and checking Elements *************** 
+// *********** 1. element.matches("CSS Selector"); ***********
+
+// let box = document.getElementById("box");
+// console.log(box.matches("#box"));
+
+// if the element gets matches with the CSS Selector it Gives "True" otherwise "False";
+// Simple is baat agr humne koi element bnaya h or uss me multiple ID's and Classes and to uss me se particular vhi ID and Class find out karne k liye iss ka use krte h.
+
+// *********** 2. element.closest("CSS Selector"); ***********
+// It finds the nearest ancestor that matches a CSS Selector.
+
+// let btn = document.getElementsByClassName("box");
+// console.log(btn.closest(".box"));
+
+// It will give the box div if it is the parent or grandparent of the .btn otherwise it will give null.
+
+// *********** 3. element A .contains(element B); ***********
+// It checks whether one element contain another. If yes it will give true otherWise False.
+
+// let parent = document.getElementById("parent");
+// let child = document.getElementById("Child");
+
+// console.log(parent.contains(child));
