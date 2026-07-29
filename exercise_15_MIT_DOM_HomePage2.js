@@ -17,23 +17,24 @@ section_1_leftSide.style.flexDirection = `column`;
 section_1_leftSide.style.alignItems = `flex-start`;
 section_1_leftSide.style.gap = `20px`;
 
-const section_1_left_h1 = document.getElementsByClassName('Heading_H1');
+const section_1_left_h1 = document.getElementsByClassName('Heading_H1')[0];
 section_1_left_h1.style.fontSize = `42px`;
 section_1_left_h1.style.fontWeight = `600`;
 section_1_left_h1.style.width = `292px`;
 
+
 const section_1_left_span = document.getElementsByTagName('span')[0];
 section_1_left_span.style.color = "rgb(231, 84, 128)";
 
+//Appling Font size for all the subPara on this Page
 const subPara = document.querySelectorAll('.sub_para');
-for(let i = 0; i<section_1_Left_subPara.length; i++){
+for(let i = 0; i < subPara.length; i++){
 subPara[i].style.fontSize = '12px';
-}
+};
 
-const section_1_left_para = document.getElementsByClassName('sub_para');
+const section_1_left_para = document.getElementsByClassName('sub_para')[0];
 section_1_left_para.style.width = '415px';
 section_1_left_para.style.lineHeight = '20px';
-console.log(section_1_left_para);
 
 const section_1_left_btn = document.getElementsByClassName('green_btn')[0];
 section_1_left_btn.style.padding = '6px 14px';
@@ -45,25 +46,100 @@ section_1_left_btn.style.color = 'white';
 const section_1_right_img = document.getElementsByTagName('img')[0];
 section_1_right_img.style.border = 'none';
 section_1_right_img.style.borderRadius = '16px';
-section_1_right_img.style.boxShadow = "10px 10px 0px 0px yellow";
+section_1_right_img.style.boxShadow = "10px 10px 0px 0px yellow"; //" 1st for X second for Y 3rd for blur 4th for spread 5th for color"
 section_1_right_img.style.height = '400px';
 section_1_right_img.style.width = '700px';
 
+// Our Service Section :-
 const serviceSection = document.getElementById("services");
 serviceSection.style.height = 'fit-content';
 serviceSection.style.width = '100%';
-serviceSection.style.padding = '50px 25px';
+serviceSection.style.padding = '60px 25px';
 serviceSection.style.display = 'flex';
 serviceSection.style.flexDirection = 'column';
 serviceSection.style.alignItems = 'center';
 serviceSection.style.textAlign = 'center';
 serviceSection.style.gap = '30px';
 
-const serviceHeadingSection = document.querySelector('service_heading')[0];
-// serviceHeadingSection.style.fontSize = '22px'; //Not Working
+const serviceHeadingSection = document.querySelector('.service_heading');
+serviceHeadingSection.style.display = 'flex';
+serviceHeadingSection.style.flexDirection = 'column';
+serviceHeadingSection.style.gap = '15px';
 
-const serviceHeadingH3 = document.querySelectorAll('h3');
-serviceHeadingH3.style.fontSize = '16px';
+// Applying H3 properties for all H3 elements on the Page, Using ForEach Loop
+const h3 = document.querySelectorAll('.Heading_H3');
+h3.forEach(element => {
+    element.style.fontSize = '16px';
+    element.style.fontWeight = '400';
+});
+// SubPara for service Heading Section already got fontSize Property from above subPara Loop.
 
-const serviceSubPara = document.querySelectorAll('sub_para');
+const serviceContentSection = document.querySelector('.service_content');
+serviceContentSection.style.display = 'flex';
+serviceContentSection.style.maxWidth = '1000px';
+serviceContentSection.style.gap = '20px';
+serviceContentSection.style.justifyContent = 'flex-start';
+serviceContentSection.style.alignItems = 'center';
+serviceContentSection.style.flexWrap = 'wrap';
+console.log(serviceContentSection);
 
+const serviceCards = document.querySelectorAll('.card');
+serviceCards.forEach((value, index, array) =>{
+    value.style.height = '200px';
+    value.style.width = '300px';
+    value.style.backgroundColor = 'rgb(208, 225, 233, 0.2)';
+    value.style.borderRadius = '12px';
+    value.style.padding = '30px 20px';
+    value.style.display = 'flex';
+    value.style.flexDirection = 'column';
+    value.style.gap = '10px';
+    value.style.alignItems = 'center';
+});
+
+const serviceCardsIcon = document.querySelectorAll('.icon');
+
+// Array of background colors for each card icon
+const bgColors = ['blue', 'green', 'pink', 'yellow'];
+
+serviceCardsIcon.forEach((value, index, array) => {
+    // Shared styles for all icons
+    value.style.height = '70px';
+    value.style.width = '70px';
+    value.style.padding = '8px 8px';
+    // value.style.boxSizing = 'borderBox';
+    value.style.borderRadius = '8px';
+    value.style.display = 'flex';
+    value.style.alignItems = 'center';
+    value.style.justifyContent = 'center';
+    value.style.color = 'white';
+    
+    // Set text color to black specifically for the 4th icon (index 3)
+    if (index === 3) {
+        value.style.color = 'black';
+    }
+
+    // Apply unique background color based on the current element's index
+    if (bgColors[index]) {
+        value.style.backgroundColor = bgColors[index];
+    }
+});
+
+const h5 = document.getElementsByTagName('h5');
+for(let i = 0; i < h5.length; i++){
+    h5[i].style.fontSize = '14px';
+    h5[i].style.color = 'blue';
+};
+const h5Color = document.getElementsByTagName('h5');
+
+// 1. Define an array with different colors for each heading
+const h5Colors = ['#0284c7', '#16a34a', '#db2777', '#ca8a04']; 
+
+for(let i = 0; i < h5Color.length; i++){
+    h5Color[i].style.fontSize = '14px';
+    
+    // 2. Assign unique color using modulo operator (%) so it stays safe if you add more cards
+    h5Color[i].style.color = h5Colors[i % h5Colors.length];
+};
+
+// Imagination Section :- 
+const imaginationSection = document.getElementById('imagination');
