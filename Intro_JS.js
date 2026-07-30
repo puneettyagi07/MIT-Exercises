@@ -1874,59 +1874,59 @@ dublicateElement(); */
 // ];
 
 // Variables to keep track of final counts (Task 8)
-let passCount = 0;
-let failCount = 0;
+// let passCount = 0;
+// let failCount = 0;
 
-// Use a classic for loop to process each student
-for (let i = 0; i < students.length; i++) {
-    const studentName = students[i];
+// // Use a classic for loop to process each student
+// for (let i = 0; i < students.length; i++) {
+//     const studentName = students[i];
 
-    // Task 1: Generate a random decimal between -100 and 100
-    // Math.random() * 200 gives 0 to 199.999... 
-    // Subtracting 100 shifts the range to -100 to 99.999...
-    const originalScore = (Math.random() * 200) - 100;
+//     // Task 1: Generate a random decimal between -100 and 100
+//     // Math.random() * 200 gives 0 to 199.999... 
+//     // Subtracting 100 shifts the range to -100 to 99.999...
+//     const originalScore = (Math.random() * 200) - 100;
 
-    // Task 2: Use Math.trunc() to get the integer part (discards decimals)
-    const truncatedScore = Math.trunc(originalScore);
+//     // Task 2: Use Math.trunc() to get the integer part (discards decimals)
+//     const truncatedScore = Math.trunc(originalScore);
 
-    // Task 3: Use Math.abs() to convert the score to a positive number
-    const absoluteScore = Math.abs(originalScore);
+//     // Task 3: Use Math.abs() to convert the score to a positive number
+//     const absoluteScore = Math.abs(originalScore);
 
-    // Task 4: Use Math.round() to round the absolute score to the nearest integer
-    const roundedScore = Math.round(absoluteScore);
+//     // Task 4: Use Math.round() to round the absolute score to the nearest integer
+//     const roundedScore = Math.round(absoluteScore);
 
-    // Task 5: Use Math.floor() and Math.ceil() on the absolute score
-    const floorScore = Math.floor(absoluteScore);
-    const ceilScore = Math.ceil(absoluteScore);
+//     // Task 5: Use Math.floor() and Math.ceil() on the absolute score
+//     const floorScore = Math.floor(absoluteScore);
+//     const ceilScore = Math.ceil(absoluteScore);
 
-    // Task 6: Use if...else to check pass/fail status & update counts
-    let result = "";
-    if (roundedScore >= 60) {
-        result = "Pass";
-        passCount++; // Increment passing counter
-    } else {
-        result = "Fail";
-        failCount++; // Increment failing counter
-    }
+//     // Task 6: Use if...else to check pass/fail status & update counts
+//     let result = "";
+//     if (roundedScore >= 60) {
+//         result = "Pass";
+//         passCount++; // Increment passing counter
+//     } else {
+//         result = "Fail";
+//         failCount++; // Increment failing counter
+//     }
 
-    // Task 7: Print all details of the student
-    console.log(`Name: ${studentName}`);
-    console.log(`Original Score: ${originalScore}`);
-    console.log(`Truncated Score: ${truncatedScore}`);
-    console.log(`Absolute Score: ${absoluteScore}`);
-    console.log(`Rounded Score: ${roundedScore}`);
-    console.log(`Floor Score: ${floorScore}`);
-    console.log(`Ceil Score: ${ceilScore}`);
-    console.log(`Result: ${result}`);
-    console.log("-----------------------------------"); // Separator for readability
-}
+//     // Task 7: Print all details of the student
+//     // console.log(`Name: ${studentName}`);
+//     // console.log(`Original Score: ${originalScore}`);
+//     // console.log(`Truncated Score: ${truncatedScore}`);
+//     // console.log(`Absolute Score: ${absoluteScore}`);
+//     // console.log(`Rounded Score: ${roundedScore}`);
+//     // console.log(`Floor Score: ${floorScore}`);
+//     // console.log(`Ceil Score: ${ceilScore}`);
+//     // console.log(`Result: ${result}`);
+//     // console.log("-----------------------------------"); // Separator for readability
+// }
 
 // Task 8: Print the final tally after the loop finishes running
-console.log("===================================");
-console.log("FINAL RESULTS:");
-console.log(`Total Students Passed: ${passCount}`);
-console.log(`Total Students Failed: ${failCount}`);
-console.log("===================================");
+// console.log("===================================");
+// console.log("FINAL RESULTS:");
+// console.log(`Total Students Passed: ${passCount}`);
+// console.log(`Total Students Failed: ${failCount}`);
+// console.log("===================================");
 
 
 
@@ -2110,3 +2110,25 @@ console.log("===================================");
 // let child = document.getElementById("Child");
 
 // console.log(parent.contains(child));
+
+
+
+//*************** DOM Inner HTML *************** 
+// 1st Method:-
+// document.body.children[0].innerHTML="Hello Puneet !";
+
+// 2nd Method :-
+// let container = document.getElementsByClassName('con')[0];
+// container.innerHTML = `Hello Puneet !`;
+
+// This replaces the content written inside the div.
+
+
+//*************** DOM Outer HTML ***************
+// let button = document.getElementsByClassName('btn')[0];
+// button.outerHTML = `<button class="bttn">Click here </div>`;
+
+// This removes the parent container jis container k ander hum outer Html likhte h. and agr hum koi new div banenge to uss ki jgha ye aa jaega else div nhi banenge uss div ko delete kr k uss k parent k ander directly aa jaega.
+// agr mai uss new div me same class ya id use krta hu to vo class and id kaam karegi uss ko delete nhi karegi.
+
+
