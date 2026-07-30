@@ -23,8 +23,10 @@ section_1_left_h1.style.fontWeight = `600`;
 section_1_left_h1.style.width = `292px`;
 
 
-const section_1_left_span = document.getElementsByTagName('span')[0];
-section_1_left_span.style.color = "rgb(231, 84, 128)";
+const span = document.getElementsByTagName('span');
+for(let i = 0; i < span.length; i++){
+span[i].style.color = "rgb(231, 84, 128)";
+};
 
 //Appling Font size for all the subPara on this Page
 const subPara = document.querySelectorAll('.sub_para');
@@ -36,12 +38,12 @@ const section_1_left_para = document.getElementsByClassName('sub_para')[0];
 section_1_left_para.style.width = '415px';
 section_1_left_para.style.lineHeight = '20px';
 
-const section_1_left_btn = document.getElementsByClassName('green_btn')[0];
-section_1_left_btn.style.padding = '6px 14px';
-section_1_left_btn.style.border = 'none';
-section_1_left_btn.style.borderRadius = '24px';
-section_1_left_btn.style.backgroundColor = 'green';
-section_1_left_btn.style.color = 'white';
+const green_button = document.getElementsByClassName('green_btn')[0];
+green_button.style.padding = '6px 14px';
+green_button.style.border = 'none';
+green_button.style.borderRadius = '24px';
+green_button.style.backgroundColor = 'green';
+green_button.style.color = 'white';
 
 const section_1_right_img = document.getElementsByTagName('img')[0];
 section_1_right_img.style.border = 'none';
@@ -69,7 +71,7 @@ serviceHeadingSection.style.gap = '15px';
 // Applying H3 properties for all H3 elements on the Page, Using ForEach Loop
 const h3 = document.querySelectorAll('.Heading_H3');
 h3.forEach(element => {
-    element.style.fontSize = '16px';
+    element.style.fontSize = '22px';
     element.style.fontWeight = '400';
 });
 // SubPara for service Heading Section already got fontSize Property from above subPara Loop.
@@ -81,7 +83,6 @@ serviceContentSection.style.gap = '20px';
 serviceContentSection.style.justifyContent = 'flex-start';
 serviceContentSection.style.alignItems = 'center';
 serviceContentSection.style.flexWrap = 'wrap';
-console.log(serviceContentSection);
 
 const serviceCards = document.querySelectorAll('.card');
 serviceCards.forEach((value, index, array) =>{
@@ -142,4 +143,112 @@ for(let i = 0; i < h5Color.length; i++){
 };
 
 // Imagination Section :- 
-const imaginationSection = document.getElementById('imagination');
+const imaginationSection = document.getElementById("imagination");
+imaginationSection.style.height = 'fit-content';
+imaginationSection.style.width = '100%';
+imaginationSection.style.padding = '100px 50px';
+imaginationSection.style.display = 'flex';
+imaginationSection.style.alignItems = 'center';
+imaginationSection.style.justifyContent = 'center';
+imaginationSection.style.gap = '50px';
+// console.log(imaginationSection);
+
+const imaginationImg = document.getElementsByTagName('img')[1];
+imaginationImg.style.height = '250px';
+imaginationImg.style.width = '500px';
+imaginationImg.style.border = 'none';
+imaginationImg.style.borderRadius = '16px';
+imaginationImg.style.boxShadow = "-10px 10px 0px 0px blue"; //" 1st for X second for Y 3rd for blur 4th for spread 5th for color"
+// console.log(imaginationImg);
+
+const imaginationRight = document.getElementsByClassName("imaginationRight")[0];
+imaginationRight.style.display = 'flex';
+imaginationRight.style.flexDirection = 'column';
+imaginationRight.style.gap = '20px';
+imaginationRight.style.alignItems = 'flex-start';
+// console.log(imaginationRight);
+
+const imaginationHeading = document.getElementsByClassName('imaginationHeading')[0];
+imaginationHeading.style.display = 'flex';
+imaginationHeading.style.flexDirection = 'column';
+imaginationHeading.style.gap = '10px';
+imaginationHeading.style.width = '350px';
+// console.log(imaginationHeading);
+
+const h2 = document.getElementsByTagName('h2');
+for(let i = 0; i < h2.length; i++){
+    h2[i].style.fontSize = '32px';
+    h2[i].style.fontWeight = '600';
+};
+
+const black_Button = document.getElementsByClassName('black-btn')[0];
+black_Button.style.padding = '6px 14px';
+black_Button.style.border = 'none';
+black_Button.style.borderRadius = '24px';
+black_Button.style.backgroundColor = 'black';
+black_Button.style.color = 'white';
+
+const projectSection = document.getElementById('projects');
+projectSection.style.height = 'fit-content';
+projectSection.style.width = '100%';
+projectSection.style.display = 'flex';
+projectSection.style.flexDirection = 'column';
+projectSection.style.alignItems = 'center';
+projectSection.style.gap = '30px';
+projectSection.style.padding = '30px 0px';
+
+const photoSection = document.getElementsByClassName('photoSection')[0];
+photoSection.style.display = 'flex';
+photoSection.style.flexDirection = 'column';
+photoSection.style.alignItems = 'flex-start';
+
+const upperPhoto = document.getElementsByClassName('upperPhotos')[0];
+upperPhoto.style.display = 'flex';
+upperPhoto.style.gap = '10px';
+
+const leftImg = document.getElementsByClassName('leftImg')[0];
+leftImg.style.borderRadius = '12px';
+
+const rightImgSection = document.getElementsByClassName('rightImgSection')[0];
+rightImgSection.style.display = 'flex';
+rightImgSection.style.flexDirection = 'column';
+rightImgSection.style.gap = '10px';
+
+const rightImg = document.getElementsByClassName('rightImg');
+for(let i = 0; i < rightImg.length; i++){
+    rightImg[i].style.height = '285px';
+    rightImg[i].style.width = '290px';
+    rightImg[i].style.borderRadius = '10px';
+};
+
+const lowerPhotoSec = document.getElementsByClassName('lowerPhotoSection')[0];
+lowerPhotoSec.style.display = 'flex';
+lowerPhotoSec.style.gap = '10px';
+// lowerPhotoSec.style.alignItems = 'flex-start';
+
+const lowerImg = document.getElementsByClassName('lowerPhoto');
+console.log(lowerImg);
+for(let i = 0; i < lowerImg.length; i++){
+lowerImg[i].style.height = '285px';
+lowerImg[i].style.width = '285px';
+lowerImg[i].style.borderRadius = '10px';
+};
+
+const numberSection = document.getElementById('numbers');
+numberSection.style.height = 'fit-content';
+numberSection.style.width = '100%';
+numberSection.style.display = 'flex';
+numberSection.style.flexDirection = 'column';
+numberSection.style.gap = '20px';
+numberSection.style.alignItems = 'center';
+
+const blue = document.getElementsByClassName('blueBG')[0];
+blue.style.height = 'fit-content';
+blue.style.width = '100%';
+blue.style.padding = '30px 50px';
+blue.style.display = 'flex';
+blue.style.gap = '150px';
+blue.style.backgroundColor = 'blue';
+blue.style.color = 'white';
+blue.style.alignItems = 'center';
+blue.style.justifyContent = 'center';
