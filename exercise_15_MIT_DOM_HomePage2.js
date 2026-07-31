@@ -107,7 +107,6 @@ serviceCardsIcon.forEach((value, index, array) => {
     value.style.height = '70px';
     value.style.width = '70px';
     value.style.padding = '8px 8px';
-    // value.style.boxSizing = 'borderBox';
     value.style.borderRadius = '8px';
     value.style.display = 'flex';
     value.style.alignItems = 'center';
@@ -227,19 +226,19 @@ lowerPhotoSec.style.gap = '10px';
 // lowerPhotoSec.style.alignItems = 'flex-start';
 
 const lowerImg = document.getElementsByClassName('lowerPhoto');
-console.log(lowerImg);
 for(let i = 0; i < lowerImg.length; i++){
-lowerImg[i].style.height = '285px';
-lowerImg[i].style.width = '285px';
-lowerImg[i].style.borderRadius = '10px';
+    lowerImg[i].style.height = '285px';
+    lowerImg[i].style.width = '285px';
+    lowerImg[i].style.borderRadius = '10px';
 };
+// console.log(lowerImg);
 
 const numberSection = document.getElementById('numbers');
 numberSection.style.height = 'fit-content';
 numberSection.style.width = '100%';
 numberSection.style.display = 'flex';
 numberSection.style.flexDirection = 'column';
-numberSection.style.gap = '20px';
+numberSection.style.gap = '10px';
 numberSection.style.alignItems = 'center';
 
 const blue = document.getElementsByClassName('blueBG')[0];
@@ -252,3 +251,18 @@ blue.style.backgroundColor = 'blue';
 blue.style.color = 'white';
 blue.style.alignItems = 'center';
 blue.style.justifyContent = 'center';
+
+const number = document.getElementsByClassName('number');
+for(let i = 0; i < number.length; i++){
+    number[i].style.display = 'flex';
+    number[i].style.flexDirection = 'column';
+    number[i].style.gap = '8px';
+    number[i].style.alignItems = 'center';
+
+    // Loop through the child elements of each number container
+    for(let j = 0; j < number[i].children.length; j++){
+        // If it's the first child element (j === 0), make it 32px; otherwise 16px
+        number[i].children[j].style.fontSize = (j === 0) ? '32px' : '16px';
+    }
+};
+// console.log(number);
