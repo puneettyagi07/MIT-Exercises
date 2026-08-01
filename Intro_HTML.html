@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- Doctype means which document type we have to use here we have to use HTML doctype. -->
+<html lang="en">
+    <!-- html tag is the biggest tag in a single page and in HTML tag, lang (language) is the attribute which say which languge to use.-->
+<head> 
+    <!-- Head is only includes meta data and any files link  -->
+    <meta charset="UTF-8">
+    <!-- UTF-8 is the character set which includes all possible characters which can be used. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport means it's used to view the page and width device is used to take width if device and initial scale means the zoom percentage -->
+    <title>Document</title>
+    <!-- title is the name of page which shows in navigation bar/ tab of browser. -->
+</head>
+<body>
+    <header></header>
+    <!-- body includes the content which has to be shown on webpage. this is also divided into 3 parts 1st navigation + 2nd Main + 3rd footer -->
+<main>
+    <h1><strong>What is HTML?</strong></h1>
+    <p>HTML stand for Hyper Text Markup Language. Although it's not a language.</p>
+    <p>HTML describes the structure of web page. It means it's used to build the structure of Web Page.</p> 
+    <br> <br>
+
+    <h3><strong>HTML Elements</strong></h3>
+    <p>An Element describes a component of our webpage. It's the combination of Opening Tag + Content + Closing Tag. Ex:- <p> this is HTML Element</p> </p>
+    <p>They help us determine the structure of a page</p>
+    <br><br>
+
+    <h3><b>General HTML Structure</b></h3>
+    <p>It includes Doctype(Document type) + HTML tag in which HTML is the biggest tag + Head tag + Body tag. We can get by pressing escaliration mark + tab</p>
+    <p>Head includes only links and meta data</p>
+    <p>Body includes only content which has to be shown on webpage which is also divided into 3 parts navigation bar + Main + Footer</p><br>
+
+    <h1><b>HTML Tags :- </b></h1>
+    <br>
+    <h1><strong>Heading Tags</strong></h1> <br>
+
+    <h1>This is Heading 1</h1>
+    <h2>This is Heading 2</h2>
+    <h3>This is Heading 3</h3>
+    <h4>This is Heading 4</h4>
+    <h5>This is Heading 5</h5>
+    <h6>This is Heading 6</h6>
+
+    <br>
+    <h1><strong>Paragraph Tags</strong></h1>
+    <h3><b>Bold Tag, Underline Tag, Italic Tag, Mark / Highlight Tag</b></h3>
+
+    <p><u><b><i>Lorem</i></b> ipsum dolor sit</u>, amet <strong><em>consectetur</em></strong> adipisicing elit. Eum perferendis earum reiciendis nulla <mark>voluptates</mark> aspernatur excepturi porro alias at ratione.
+    </p> <br>
+
+    <h1><b>Image Tag</b></h1>
+    <p>Image is a self closing tag. it includes the image link or directly image. It has default attribute of alt which is the alternate text of image in case image link is crashed or image does not get loaded</p>
+    
+    <img src="https://plus.unsplash.com/premium_photo-1666901328734-3c6eb9b6b979?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tfGVufDB8fDB8fHww" alt="Tree Picture" width="250px" height="250px">
+    <br>
+
+    <h1><b>Anchor Tag</b></h1>
+    <p>Anchor tag is used to link any page via making a link. we can convert any image, paragrapgh, word etc into a link. it has a default attribute of alt which says the links name. Also we can add one more attribute to open link into a new page which is target = _blank</p>
+    <a href="https://plus.unsplash.com/premium_photo-1666901328734-3c6eb9b6b979?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tfGVufDB8fDB8fHww" target="_blank"><img src="https://images.unsplash.com/photo-1633544325196-bcf8bf81ead0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHVuc3BsYXNofGVufDB8fDB8fHww" alt="unsplash Image" width="250px" height="250px">Unsplash Page</a>    
+
+    <h1><b>Tables and Lists</b></h1>
+    <P>Tables and lists are made by using Table tags and list tags:- </P>
+    <table>
+        <caption> Table 1</caption>
+        <!-- Caption tag is used to Provide the Main Headline of Table -->
+        <tr>
+            <!-- tr means Table row. it's used to add new row into table -->
+            <th>Heading 1!</th>
+            <!-- th means table heading. It's used to add Heading into table -->
+            <th>Heading 2!</th>
+        </tr>
+        <tr>
+            <td>Data 1!</td>
+            <!-- td means table data. it adds the containt/ data to table -->
+            <td>Data 2!</td>
+        </tr>
+
+        <!-- colspan:- It's the attribute to merge the colums in table -->
+         <!-- rowspan:- It's the attribute to merge the row in table -->
+
+    </table>
+    <br> 
+    <h1><b>List Tags</b></h1>\
+    <p>There are two types of list. 1<sup>st</sup> is ordered List and 2<sup>nd</sup> is unordered List.</p>
+    <p>In ordered List we can denote it by Alphabets, numbers, roman number. And in Unordered list there will be bullets points, disc points, circle points.</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+    <br> <br>
+
+   <h1><b>Video Tag</b></h1>
+   <p>Video tag is use to add video in web page. There are attributes like controls to play pause video, autoplay to automatically play the video, loop to continuly play the video</p>
+
+   <br><br>
+
+   <h1><b>Forms</b></h1>
+   <p>Form tag is used to create the form. there are many attributes and input tags to take several input from user.</p>
+<p>There are Many tag in form some of are legend tag, fieldset tag, label tag & input tag, textarea tag, input file tag etc. </p>
+    
+</main>
+<footer></footer>
+
+</body>
+</html>
