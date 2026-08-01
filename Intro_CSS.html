@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Intro</title>
+    <link rel="stylesheet" href="style.css">
+       
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+
+        <p>CSS stands for Cascading Style sheets</p> 
+        
+        <p>Css describes how HTML elements are displayed on the screen</p>
+        
+       <p>There are three ways to use CSS:</p>
+       <ol>
+           <li>Inline CSS</li>
+           <li>Internal CSS</li>
+           <li>External CSS</li>
+       </ol>
+         <p>Inline CSS is used to apply a unique style to a single element. To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property. Ex:- <p style="color: red;"> This is Inline CSS. Inline CSS takes most priority out of three then Internal CSS and then External CSS</p> <br>
+        <p>Internal CSS is used to define a style for a single HTML page. To use internal styles, add a style element to the head section of the HTML page. Inside the style element, you can write CSS to style the HTML elements on that page. Ex:- style p{ color: blue; } style</p> <br>
+        <p>External CSS is used to define the style for many HTML pages. To use external styles, create a CSS file and link it to the HTML document using the <link> element. The <link> element goes inside the <head> section of the HTML page. Ex:- <link rel="stylesheet" href="style.css"></p> <br>
+
+    <p>we can use ID's and classes to target specific elements and apply styles to them. Id is the unique identifier for an element, while classes can be shared by multiple elements. Id takes more priority than classes. ID's are denoted by a hash symbol (#) followed by the ID name, and classes are denoted by a period (.) followed by the class name.</p> <br>
+
+    <p>There are many CSS properties available for styling elements. Some common ones include color, background-color, font-size, font-family, margin, padding, and border, position.</p> <br>
+
+    <p>CSS also allows for responsive design, which means that the layout and styling of a webpage can adapt to different screen sizes and devices. This is typically achieved using media queries, which apply different styles based on the characteristics of the device or screen size.</p> <br>
+
+    <p>Overall, CSS is a powerful tool for controlling the visual presentation of web content and creating engaging and user-friendly websites.</p> <br>
+
+    <h1>Flexbox</h1>
+    <p>Flexbox is a layout model in CSS that allows for the easy arrangement of elements in a container. It provides a more efficient way to distribute space and align items within a container, especially when the size of the items is unknown or dynamic.</p>
+    <p>With Flexbox, you can easily create flexible and responsive layouts without the need for complex CSS rules or JavaScript. It allows you to control the alignment, direction, and order of elements within a container, making it easier to create complex layouts with less code.</p>
+    <p>To use Flexbox, you need to set the display property of the container to flex. This will enable Flexbox for that container and allow you to use its properties to control the layout of the child elements. Some common Flexbox properties include justify-content, align-items, flex-direction, and flex-wrap.</p>
+    <p>Overall, Flexbox is a powerful tool for creating flexible and responsive layouts in CSS, and it is widely supported by modern browsers.</p>
+
+
+
+
+<!-- Font Size -->
+1. What rem Value for 14px Font Size? By default, most browsers set the root base font size to 16px.To convert pixels (px) to rem, divide your pixel value by the base font size: 14px / 16px = 0.875rem 
+(a.) Default setup (16px base): Use 0.875rem
+(b.) 62.5% trick setup (10px base): Use 1.4rem
+
+2. Full Forms of rem and em
+(a.) rem = Root EM (Relative to the root element, which is the <html> tag)
+(b.) em = Historically derived from the width of the capital letter "M" in typography. In CSS, it stands for Element Value / Element EM (Relative to its parent element's font size).
+
+3. How to Set the HTML Base Font Size :-
+Always set base font sizes using percentages (%) rather than fixed px. This preserves accessibility settings for users who adjust their browser's default text size.
+
+Method A: The Modern Standard (100% Base)This keeps the default 16px base while respecting user browser preferences.
+Example for CSS file:- 
+html {
+  font-size: 100%; /* 100% of browser default (usually 16px) */
+}
+
+Method B: The "62.5% Trick" (Simplifies Math)
+By setting html to 62.5%, you scale the base font size from 16px down to 10px (16 * 0.625 = 10). This makes mental math significantly easier:
+Example for CSS file :-
+html {
+  font-size: 62.5%; /* Base becomes 10px */
+}
+
+/* Now 1rem = 10px */
+body {
+  font-size: 1.6rem; /* 16px */
+}
+
+p {
+  font-size: 1.4rem; /* 14px */
+}
+
+Warning on Hardcoding px on html:
+Avoid doing html { font-size: 16px; }. This hardcodes the font size and overrides the user's custom browser accessibility preferences if they have vision impairments.
+
+
+4. Which Unit Should You Use? (The Complete Cheat Sheet)
+=> Unit.   What it is Relative To.    Best Use Cases.   Avoid For
+=> rem.    The <html> root font size. Font sizes, padding, margin, layout spacing, gap.  Single component internal scaling
+=> em.     The parent/current element's font size. Buttons, badges, and icons (where padding/size should automatically scale if text grows).  Global font sizes, margins (can cause compound scaling bugs). 
+=> px.     Absolute screen pixels.   Thin borders (1px), subtle box shadows, media query breakpoints.    Font sizes, line heights. 
+=> %.      Parent element's dimensions.   Grid columns, container widths, layout bounds.     Font sizes
+=> vw / vh.   1% of Viewport Width / Height.    Full-screen hero sections, modal overlays, background covers.    Body text (can become illegible on small mobile screens)
+
+
+Quick Example: Best Practices in Action
+Example for CSS file:- 
+/* 1. Global typography & layout spacing using REM */
+h1 {
+  font-size: 2rem;       /* 32px - Scales with user settings */
+  margin-bottom: 1rem;   /* Consistent spacing unit */
+}
+
+/* 2. Components using EM so padding scales automatically with button text size */
+.btn {
+  font-size: 1rem;       /* Base button text */
+  padding: 0.5em 1.2em;  /* Padding scales proportionally if font-size changes */
+  border: 1px solid black; /* PX for fixed, sharp borders */
+}
+
+.btn-large {
+  font-size: 1.25rem;    /* Larger text; padding expands automatically because of EM! */
+}
+
+/* 3. Fluid typography using clamp() with VW */
+.hero-title {
+  /* Min: 2rem, Ideal: 4vw, Max: 3.5rem */
+  font-size: clamp(2rem, 4vw, 3.5rem); 
+}
+
+                
+
+        
+
+
+
+    </main>
+    <footer></footer>
+    
+</body>
+</html>     
