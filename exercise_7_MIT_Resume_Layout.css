@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    padding-top: 40px;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr 2fr;
+    grid-template-rows: repeat(11, 110px);
+    gap: 20px;
+}
+.icon-bar{
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+.icon-box{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 6px 12px;
+    color: rgb(78, 75, 75);
+    background-color: black;
+}
+.year{
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 6px 12px;
+    width: 100px;
+    color: rgb(78, 75, 75);
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.card-heading{
+    font-size: 26px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-subheading{
+    font-size: 18px;
+}
+/* .year{
+    background-color: black;
+    
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 5px 10px;
+} */
+.horizontal-hr{
+    background-color: black;
+    width: fit-content;
+    height: 10px;
+}
+.vertical-hr{
+    background-color: black;
+    width: 1px;
+    height: fit-content;
+}
+.img{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-image: url(https://t3.ftcdn.net/jpg/16/50/73/48/360_F_1650734891_UlhFqi2OsJq7ivrqLUNamDpfJ7IXeSgw.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 20px;
+    background-color: white;
+}
+.into{
+    grid-column: 2/5;
+    grid-row: 1/3;
+    font-size: 35px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(78, 75, 75);  
+}
+.into-text{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.interest{
+    grid-column: 2/5;
+    grid-row: 3/-10;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+    font-size: 35px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(78, 75, 75);
+}
+.freelancer{
+    grid-column: 1/3;
+    grid-row: 4/6;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: space-around;
+    background-color: rgb(78, 75, 75);
+}
+.freelancer .work{
+    grid-column: 1/3;
+    grid-row: 5/6;
+    gap: 10px;
+}
+.work ul{
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside;
+}
+.meetzed{
+    grid-column: 3/5;
+    grid-row: 4/6;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: space-around;
+    background-color: rgb(78, 75, 75);
+}
+.meetzeed .work{
+    grid-column: 3/5;
+    grid-row: 5/6;
+    gap: 10px;
+}
+.work ul{
+    display: flex;
+    flex-direction: column;
+}
+.design-tool{
+    grid-column: 1/3;
+    grid-row: 6/7;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    gap: 40px;
+    font-size: 35px;
+    border-radius: 20px;
+    background-color: rgb(78, 75, 75);
+
+}
+.editing-tool{
+    grid-column: 1/3;
+    grid-row: 7/8;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    gap: 40px;
+    font-size: 35px;
+    border-radius: 20px;
+    background-color: rgb(78, 75, 75);
+
+}
+.languages{
+    grid-column: 1/3;
+    grid-row: 8/9;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    gap: 40px;
+    font-size: 35px;
+    border-radius: 20px;
+    background-color: rgb(78, 75, 75);
+
+}
+.portfolio{
+    grid-column: 1/6;
+    grid-row: 9/10;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    gap: 40px;
+    font-size: 35px;
+    border-radius: 20px;
+    background-color: rgb(78, 75, 75);
+
+}
+.details{
+    grid-column: 1/6;
+    grid-row: 10/11;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    gap: 40px;
+    font-size: 35px;
+    border-radius: 20px;
+    background-color: rgb(78, 75, 75);
+
+}
+.education{
+    grid-column: 3/6;
+    grid-row: 6/9;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 10px;
+    gap: 20px;
+    
+    border-radius: 20px;
+    background-color: rgb(78, 75, 75);
+}
