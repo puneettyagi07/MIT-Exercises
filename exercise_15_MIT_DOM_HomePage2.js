@@ -72,7 +72,7 @@ serviceHeadingSection.style.gap = '15px';
 const h3 = document.querySelectorAll('.Heading_H3');
 h3.forEach(element => {
     element.style.fontSize = '22px';
-    element.style.fontWeight = '400';
+    element.style.fontWeight = '600';
 });
 // SubPara for service Heading Section already got fontSize Property from above subPara Loop.
 
@@ -240,6 +240,7 @@ numberSection.style.display = 'flex';
 numberSection.style.flexDirection = 'column';
 numberSection.style.gap = '10px';
 numberSection.style.alignItems = 'center';
+numberSection.style.padding = '30px 0';
 
 const blue = document.getElementsByClassName('blueBG')[0];
 blue.style.height = 'fit-content';
@@ -261,8 +262,61 @@ for(let i = 0; i < number.length; i++){
 
     // Loop through the child elements of each number container
     for(let j = 0; j < number[i].children.length; j++){
-        // If it's the first child element (j === 0), make it 32px; otherwise 16px
-        number[i].children[j].style.fontSize = (j === 0) ? '32px' : '16px';
-    }
+    const child = number[i].children[j];
+
+    (j === 0) 
+        ? (child.style.fontSize = '32px', child.style.fontWeight = '600') 
+        : (child.style.fontSize = '16px', child.style.fontWeight = '300');
+}
 };
 // console.log(number);
+
+const client = document.getElementsByClassName('client')[0];
+client.style.display = 'flex';
+client.style.flexDirection = 'column';
+client.style.gap = '40px';
+client.style.alignItems = 'center';
+client.style.height = 'fit-content';
+client.style.width = '100%';
+client.style.padding = `30px 0px`;
+client.style.marginTop = '50px'
+client.style.backgroundColor = 'rgb(238, 238, 238, 0.5)';
+// console.log(client);
+
+const clientCard = document.getElementsByClassName('clientCard')[0];
+clientCard.style.width = '900px';
+clientCard.style.height = 'fit-contnet';
+clientCard.style.backgroundColor = 'white';
+clientCard.style.borderRadius = '12px';
+clientCard.style.padding = '20px';
+clientCard.style.marginBottom = '20px';
+clientCard.style.display = 'flex';
+clientCard.style.flexDirection = 'column';
+clientCard.style.gap = '15px';
+
+const profileSection = document.getElementsByClassName('cardProfileSection')[0];
+profileSection.style.display = 'flex';
+profileSection.style.gap = '12px';
+profileSection.style.alignItems = 'center';
+// console.log(profileSection);
+
+const profileImgContainer = document.getElementsByClassName('profileImg')[0];
+profileImgContainer.style.height = '50px';
+profileImgContainer.style.width = '50px';
+profileImgContainer.style.borderRadius = '50%';
+profileImgContainer.style.overflow = 'hidden';
+// console.log(profileImgContainer);
+
+const profileImg = profileImgContainer.children[0];
+profileImg.style.width = '100%';
+profileImg.style.height = '100%';
+profileImg.style.objectFit = 'cover';
+
+const profileAbout = document.getElementsByClassName('profileAbout')[0];
+const profileAboutChildren = profileAbout.children;
+for (let i = 0; i < profileAboutChildren.length; i++) {
+    const child = profileAboutChildren[i];
+    child.style.fontSize = (i === 0) ? '16px' : '12px';
+    child.style.margin = '0';
+};
+
