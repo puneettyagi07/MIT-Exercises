@@ -35,6 +35,28 @@ mainContainer.style.flexDirection = "column";
 mainContainer.style.justifyContent = "center";
 mainContainer.style.alignItems = "center";
 
+
+// UNIVERSAL HEADING LOOP (Optimized for all .headingSection)
+const headingSections = document.querySelectorAll(".headingSection");
+headingSections.forEach((heading) => {
+    heading.style.textAlign = "center";
+    heading.style.display = "flex";
+    heading.style.flexDirection = "column";
+    heading.style.gap = "10px";
+
+    const children = heading.children;
+    if (children[0]) {
+        children[0].style.fontSize = "10px";
+        children[0].style.fontWeight = "700";
+        children[0].style.color = "skyBlue";
+    }
+    if (children[1]) {
+        children[1].style.fontSize = "26px";
+        children[1].style.fontWeight = "600";
+        children[1].style.color = "white";
+    }
+});
+
 // Modern Web Section
 const topHeadSectionContainer = document.body.children[1].children[0];
 topHeadSectionContainer.style.display = "flex";
@@ -491,40 +513,117 @@ for (let i = 0; i < communityCards.length; i++) {
 };
 
 // Pricing Section
-const pricingSectionContainer = document.body.children[1].children[7];
-pricingSectionContainer.style.width = '100%';
-pricingSectionContainer.style.height = 'fit-content';
-pricingSectionContainer.style.backgroundColor = 'black';
-pricingSectionContainer.style.padding = '50px 0px';
-pricingSectionContainer.style.display = 'flex';
-pricingSectionContainer.style.flexDirection = 'column';
-pricingSectionContainer.style.alignItems = 'center';
-pricingSectionContainer.style.gap = '30px';
-// console.log(pricingSectionContainer);
+const pricingSectionContainer = document.querySelector(".pricing");
+pricingSectionContainer.style.width = "100%";
+pricingSectionContainer.style.height = "fit-content";
+pricingSectionContainer.style.backgroundColor = "black";
+pricingSectionContainer.style.padding = "50px 0px";
+pricingSectionContainer.style.display = "flex";
+pricingSectionContainer.style.flexDirection = "column";
+pricingSectionContainer.style.alignItems = "center";
+pricingSectionContainer.style.gap = "30px";
 
-const headingSection = document.getElementsByClassName('headingSection')[0];
-headingSection.style.textAlign = 'center';
-headingSection.style.display = 'flex';
-headingSection.style.flexDirection = 'column';
-headingSection.style.gap = '10px';
-// console.log(headingSection);
+const priceCardSection = document.querySelector(".priceCard_section");
+priceCardSection.style.display = "flex";
+priceCardSection.style.justifyContent = "center";
+priceCardSection.style.alignItems = "stretch";
+priceCardSection.style.gap = "20px";
 
-const headingChild = headingSection.children;
-for (let i = 0; i < headingChild.length; i++) {
-    if (i === 0) {
-        headingChild[i].style.fontSize = '10px';
-        headingChild[i].style.fontWeight = '700';
-        headingChild[i].style.color = 'skyBlue';
-    } else {
-        headingChild[i].style.fontSize = '26px';
-        headingChild[i].style.fontheadingChild
+const priceCards = document.querySelectorAll(".priceCard");
+priceCards.forEach((card) => {
+    // Card Base Styling & Uniform Height
+    card.style.width = "260px";
+    card.style.height = "380px";
+    card.style.padding = "24px";
+    card.style.borderRadius = "12px";
+    card.style.backgroundColor = "rgb(18, 18, 18)";
+    card.style.border = "1px solid rgba(255, 255, 255, 0.1)";
+    card.style.display = "flex";
+    card.style.flexDirection = "column";
+    card.style.justifyContent = "space-between";
+    card.style.gap = "10px";
+    card.style.transition = "transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease";
+
+    // First DIV inside Card (Header Container -> Column Layout)
+    const headerDiv = card.children[0];
+    if (headerDiv) {
+        headerDiv.style.display = "flex";
+        headerDiv.style.flexDirection = "column";
+        headerDiv.style.gap = "6px";
+        headerDiv.style.alignItems = "flex-start";
+
+        // 1st child of the first div (Title/Plan Name)
+        if (headerDiv.children[0]) {
+            headerDiv.children[0].style.fontSize = "16px";
+            headerDiv.children[0].style.fontWeight = "400";
+            headerDiv.children[0].style.color = "skyBlue";
+        }
+
+        // 2nd child of the first div (Price)
+        if (headerDiv.children[1]) {
+            headerDiv.children[1].style.fontSize = "24px";
+            headerDiv.children[1].style.fontWeight = "700";
+            headerDiv.children[1].style.color = "white";
+        }
     }
-};
-// console.log(headingChild);
 
-const pricingCard = document.getElementsByClassName('priceCard_section')[0];
+    // Light Gray Text for Features
+    const featureParagraphs = card.querySelectorAll("p");
+    featureParagraphs.forEach((p, index) => {
+        // Skip features if they are inside headerDiv
+        if (!headerDiv.contains(p)) {
+            p.style.color = "rgb(180, 180, 180)";
+            p.style.fontSize = "13px";
+        }
+    });
 
-console.log(pricingCard);
+    // Horizontal Line (<hr>) Styling
+    const hrs = card.querySelectorAll("hr");
+    hrs.forEach((hr) => {
+        hr.style.width = "100%";
+        hr.style.height = "1px";
+        hr.style.backgroundColor = "rgb(50, 50, 50)";
+        hr.style.border = "none";
+        hr.style.margin = "4px 0";
+    });
 
+    // Button Base Styling
+    const cardBtn = card.querySelector("button");
+    if (cardBtn) {
+        cardBtn.style.width = "100%";
+        cardBtn.style.marginTop = "auto";
+        cardBtn.style.padding = "10px 16px";
+        cardBtn.style.borderRadius = "6px";
+        cardBtn.style.border = "1px solid white";
+        cardBtn.style.backgroundColor = "black";
+        cardBtn.style.color = "white";
+        cardBtn.style.cursor = "pointer";
+        cardBtn.style.fontWeight = "500";
+        cardBtn.style.transition = "all 0.3s ease";
+    }
 
+    // Card Hover Effects
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "scaleY(1.02)";
+        card.style.borderColor = "dodgerblue";
+        card.style.boxShadow = "0px 8px 20px rgba(30, 144, 255, 0.25)";
 
+        if (cardBtn) {
+            cardBtn.style.backgroundColor = "dodgerblue";
+            cardBtn.style.borderColor = "dodgerblue";
+            cardBtn.style.color = "white";
+        }
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "scaleY(1)";
+        card.style.borderColor = "rgba(255, 255, 255, 0.1)";
+        card.style.boxShadow = "none";
+
+        if (cardBtn) {
+            cardBtn.style.backgroundColor = "black";
+            cardBtn.style.borderColor = "white";
+            cardBtn.style.color = "white";
+        }
+    });
+});
