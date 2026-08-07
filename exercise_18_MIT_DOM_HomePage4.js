@@ -368,6 +368,20 @@ copyRight.style.fontSize = '12px';
 
 // ******************** Using Attribute Method To add or remove items ********************
 
+// ******************** Annoucement BAnner Section ********************
+
+const banner = document.createElement('p');
+banner.innerHTML = 'Special Update : We just won the 2026 Awwwards Site of the Year!'
+banner.style.position = 'fixed';
+banner.style.display = 'flex';
+banner.style.alignItems ='center';
+banner.style.padding = '10px';
+banner.style.backgroundColor = 'rgb(7, 15, 69)';
+banner.style.color = 'yellow';
+
+document.body.prepend('banner');
+console.log(banner);
+
 // ******************** Vibrant Colors Section ********************
 
 const buttonStyle = document.getElementById('vibrant_color').firstElementChild.lastElementChild;
@@ -380,7 +394,8 @@ buttonStyle.style.backgroundColor = 'rgb(231, 84, 128)';
 const trending = document.createElement('p')
 trending.innerHTML = '&#128293; Trending';
 // trending.setAttribute("id","yash")  //by this method i can add id to the tag and style it from CSS.
-trending.setAttribute(``)
+trending.setAttribute("style", "fontSize : 8px;");
+
 
 console.log(trending);
 
@@ -388,6 +403,7 @@ const trendingAdd = document.getElementById('trending');
 trendingAdd.before(trending);
 
 // const trending = document.getElementsByClassName('service_content')[0].children[1];
+
 
 
 
