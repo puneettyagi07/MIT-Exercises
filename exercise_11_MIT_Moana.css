@@ -1,0 +1,1019 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-manrope);
+}
+
+/* ******************** Variables / Assets ******************** */
+:root {
+  /* Typography */
+  --font-family-manrope: "Manrope", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
+  --font-family-syne: "Syne", sans-serif;
+
+  /* Typography Scale */
+  --text-8px: 0.5rem; /* 8px */
+  --text-12px: 0.75rem; /* 12px */
+  --text-16px: 1rem; /* 16px */
+  --text-20px: 1.25rem; /* 20px */
+  --text-48px: 3rem; /* 48px */
+  --text-155px: 155px;
+
+  /* Font Colors */
+  --text-black: black;
+  --text-white: white;
+  --text-pink: pink;
+  --text-blue: rgb(67, 97, 250);
+  --color-heading: rgb(135, 135, 135);
+
+  /* Background Colors */
+  --color-blue-bg: blue;
+  --color-yellow-bg: yellow;
+  --color-transparent-bg: transparent;
+  --color-white-bg: white;
+  --color-blur-bg: blur;
+  --color-black-bg: black;
+
+  /* Border Colors */
+  --color-border-white: white;
+  --color-border-gray: rgb(135, 135, 135);
+
+  /* Gradient Colors */
+  /* --color-gradient-1: ;
+    --color-gradient-2: ;
+    --color-gradient-3: ; */
+
+  /* Semantic Colors */
+  --color-error-red: #ef4444;
+  --color-success-green: #22c55e;
+
+  /* Spacing (4px base increasing by 4px) */
+  --space-4px: 0.25rem;
+  --space-8px: 0.5rem;
+  --space-12px: 0.75rem;
+  --space-16px: 1rem;
+  --space-32px: 2rem; /* 32px */
+  --margin-top-bottom: 10px 0px 10px 0px;
+
+  /* radius and shadow */
+  --radius-8px: 8px;
+  --radius-12px: 12px;
+  --radius-16px: 16px;
+  --radius-20px: 20px;
+  --radius-full: 100%;
+
+  /* shadow color */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
+  --transition-smooth: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index Layers */
+  --z-nav: 1000;
+  --z-modal: 2000;
+}
+/* ******************** Main Container ******************** */
+#cont {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-12px);
+  background-color: rgb(165, 201, 236);
+  border: 5px solid yellow;
+}
+/* ******************** Header Section ******************** */
+header {
+  border: 5px solid black;
+  height: 85vh;
+  background-image: url("https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* ******************** Left Header Section ******************** */
+.left-header {
+  background-color: var(--color-white-bg);
+  border-radius: var(--radius-8px);
+  width: 47vw;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-8px);
+}
+.left-header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-8px);
+}
+.logo {
+  font-weight: 900;
+}
+.menu-symbol {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8px);
+  border: 1px solid black;
+  border-radius: var(--radius-16px);
+  padding: 8px 14px;
+  font-size: var(--text-12px);
+}
+.symbol-sm {
+  display: grid;
+  grid-template-columns: 8px 8px;
+  grid-template-rows: 8px 8px;
+  gap: 1px;
+}
+.a-sm,
+.d-sm {
+  height: 8px;
+  width: 8px;
+  border: 1px solid red;
+  border-radius: 0 2px 0 2px;
+}
+.b-sm,
+.c-sm {
+  height: 8px;
+  width: 8px;
+  border: 1px solid blue;
+  border-radius: 2px 0 2px 0;
+}
+
+/* ******************** Left Header Mid Section ******************** */
+.left-header-center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 180px;
+}
+.symbol-md {
+  display: grid;
+  grid-template-columns: 25px 25px;
+  grid-template-rows: 25px 25px;
+  gap: 1px;
+}
+.a-md,
+.d-md {
+  height: 25px;
+  width: 25px;
+  border: 1px solid red;
+  border-radius: 0 10px 0 10px;
+}
+.b-md,
+.c-md {
+  height: 25px;
+  width: 25px;
+  border: 1px solid blue;
+  border-radius: 10px 0 10px 0;
+}
+.left-center-content {
+  font-size: var(--text-20px);
+  width: 35%;
+  display: flex;
+  text-align: center;
+}
+.download-now-btn {
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-16px);
+  background-color: var(--color-black-bg);
+  width: fit-content;
+  padding: 5px 3px 5px 15px;
+  gap: var(--space-12px);
+}
+.download-now-btn div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-white);
+  font-size: var(--text-12px);
+}
+.btn-svg {
+  background-color: var(--color-white-bg);
+  border-radius: var(--radius-full);
+  padding: var(--space-4px);
+}
+.btn-svg svg {
+  height: 12px;
+}
+.left-header-footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 330px;
+  margin-left: 25%;
+  gap: var(--space-12pxs);
+  /* float: right; */
+}
+.no-limits {
+  font-size: var(--text-20px);
+}
+.eyebrow-heading {
+  font-size: var(--text-8px);
+  color: var(--color-border-gray);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow-heading hr {
+  height: 1px;
+  width: 50px;
+  background-color: var(--color-border-gray);
+  border: none;
+}
+
+/* ******************** Right Header Section ******************** */
+.right-header {
+  border: 1px solid red;
+  border-radius: var(--radius-sm);
+  width: 47vw;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-8px);
+}
+.right-header nav {
+  display: flex;
+  justify-content: space-between;
+}
+/* ******************** Right Header Leftcard Section ******************** */
+.right-header-leftcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+  width: 250px;
+  padding: var(--space-12px);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-12px);
+  color: var(--text-white);
+}
+/* ******************** Right Header Leftcard Nav Section ******************** */
+.right-header-leftcard-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.right-header nav svg {
+  height: 15px;
+}
+.social-logo div,
+.right-down-arrow div,
+.notification {
+  height: 25px;
+  width: 25px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-white-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-logo,
+.right-header-rightcard {
+  display: flex;
+  gap: 10px;
+  height: fit-content;
+  align-items: center;
+}
+.right-down-arrow {
+  transform: rotate(-45deg);
+}
+.right-header-leftcard-cont {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12px);
+}
+.right-header-leftcard-cont div:first-child {
+  font-size: var(--text-16px);
+  font-weight: 500;
+}
+.right-header-leftcard-cont div:last-child {
+  font-size: var(--text-12px);
+}
+/* ******************** Right Header Rightcard Nav Section ******************** */
+.right-header-rightcard {
+  margin-top: var(--space-12px);
+}
+.notification div {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.user-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-white);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-20px);
+  padding: 0 0 0 15px;
+  font-size: var(--text-16px);
+}
+.user-account div:first-child {
+  font-size: var(--text-12px);
+}
+.user {
+  height: 30px;
+  width: 30px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-white-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ******************** Right Header Number (Mid) Section ******************** */
+.number {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8px);
+}
+.number div {
+  height: 30px;
+  width: 30px;
+  border-radius: var(--radius-full);
+  border: 1px solid white;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+/* ******************** Right Header Number (Mid) Section HOVER AND ACTIVE USE FOR TRANSPARENT BACKGROUND ******************** */
+.number div:hover,
+.number div:active {
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+  cursor: pointer;
+}
+/* ******************** Right Header Bottom Section ******************** */
+.right-header-bottom {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 100px 100px;
+  border: 2px solid yellow;
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border-radius: var(--radius-20px);
+  gap: var(--text-20px);
+  place-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: var(--space-12px);
+}
+.right-header-bottom div:nth-child(1) {
+  border: 2px solid black;
+  height: 100px;
+  width: 300px;
+  margin: var(--space-8px);
+  border-radius: var(--radius-16px);
+  padding: var(--space-8px);
+  background-color: var(--color-white-bg);
+}
+.right-header-bottom div:nth-child(2) {
+  border: 2px solid red;
+  height: 100px;
+  width: 300px;
+  margin: var(--space-8px);
+  border-radius: var(--radius-16px);
+  padding: var(--space-8px);
+  background-color: var(--color-white-bg);
+}
+.right-header-bottom div:nth-child(3) {
+  border: 2px solid orange;
+  height: 100px;
+  width: 600px;
+  margin: var(--space-8px);
+  border-radius: var(--radius-16px);
+  padding: var(--space-8px);
+  background-color: var(--color-white-bg);
+  grid-row: 2 /-2;
+}
+/* ******************** Main Section ******************** */
+main {
+  border: 1px solid black;
+  border-radius: 12px 12px 0 0;
+  height: 180vh;
+  background-color: var(--color-white-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* justify-content: center; */
+}
+/* ******************** Main Section 1st Content ******************** */
+.main-1st-content {
+  width: 30vw;
+  position: relative;
+  margin: var(--space-32px);
+  margin-top: 50px;
+  border: 1px solid black;
+}
+.main-1st-content-text {
+  width: 30vw;
+  font-size: var(--text-20px);
+  font-weight: 700;
+}
+/*This Eyebrow-Heading is a variable now, it's being used same everywhere with same class, That's why it has been commented. If any error then this will be used*/
+/* .eyebrow-heading {
+  font-size: var(--text-8px);
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.eyebrow-heading hr {
+  height: 1px;
+  width: 50px;
+  background-color: var(--color-black-bg);
+  border: none;
+} */
+.right-eyebrow-heading {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+/* ******************** Main Section 2nd Content ******************** */
+.main-2nd-content {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: 350px;
+  gap: var(--space-12px);
+  margin-top: 50px;
+  border: 1px solid black;
+}
+.main-2nd-content svg,
+.icon-svg {
+  height: 25px;
+}
+
+/* ******************** Main Section Grid Box 1 ******************** */
+.main-2nd-grid-box1 {
+  background-image: url("https://images.unsplash.com/photo-1778100207121-2ee237397a43?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ2fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 0 12px 0 12px;
+  padding: var(--space-12px);
+  position: relative;
+}
+.main-2nd-grid-box1 div:nth-child(1) {
+  width: fit-content;
+  /* word-break: break-word; */
+  background-color: var(--color-white-bg);
+  border-radius: 4px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.main-2nd-grid-box1 div:nth-child(2) {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.main-2nd-grid-box1 div:nth-child(3) {
+  height: fit-content;
+  width: fit-content;
+  padding: var(--space-8px);
+  border-radius: var(--radius-16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: var(--text-12px);
+  color: var(--text-white);
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+}
+.main-2nd-grid-box1 div:nth-child(4) {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  transform: rotate(-45deg);
+}
+
+/* ******************** Main Section Grid Box 2 ******************** */
+.main-2nd-grid-box2 {
+  background-image: url("https://images.unsplash.com/photo-1777324369706-609d83aece87?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDI4fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D");
+  background-position: center center;
+  background-size: cover;
+  border-radius: 12px 0 12px 0;
+  padding: var(--space-12px);
+  position: relative;
+}
+.main-2nd-grid-box2 div:nth-child(1) {
+  height: fit-content;
+  width: fit-content;
+  padding: var(--space-8px);
+  border-radius: var(--radius-16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: var(--text-12px);
+  color: var(--text-white);
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+.main-2nd-grid-box2 div:nth-child(2) {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.main-2nd-grid-box2 div:nth-child(3) {
+  width: fit-content;
+  /* word-break: break-word; */
+  background-color: var(--color-white-bg);
+  border-radius: 4px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.main-2nd-grid-box2 div:nth-child(4) {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  transform: rotate(-45deg);
+}
+
+/* ******************** Main Section Grid Box 3 ******************** */
+.main-2nd-grid-box3 {
+  background-image: url("https://images.unsplash.com/photo-1776389554587-4594c9f5aacd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMwfENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 12px 0 12px 0;
+  padding: var(--space-12px);
+  position: relative;
+}
+.main-2nd-grid-box3 div:nth-child(1) {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+.main-2nd-grid-box3 div:nth-child(2) {
+  width: fit-content;
+  /* word-break: break-word; */
+  background-color: var(--color-white-bg);
+  text-align: right;
+  border-radius: 4px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.main-2nd-grid-box3 div:nth-child(3) {
+  height: fit-content;
+  width: fit-content;
+  padding: var(--space-8px);
+  border-radius: var(--radius-16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: var(--text-12px);
+  color: var(--text-white);
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+}
+.main-2nd-grid-box3 div:nth-child(4) {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  transform: rotate(-45deg);
+}
+
+/* ******************** Main Section Grid Box 4 ******************** */
+.main-2nd-grid-box4 {
+  background-image: url("https://images.unsplash.com/photo-1777972094693-9084fc20d5b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ5fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 12px 0 12px 0;
+  padding: var(--space-12px);
+  position: relative;
+}
+.main-2nd-grid-box4 div:nth-child(1) {
+  height: fit-content;
+  width: fit-content;
+  padding: var(--space-8px);
+  border-radius: var(--radius-16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: var(--text-12px);
+  color: var(--text-white);
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+.main-2nd-grid-box4 div:nth-child(2) {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+.main-2nd-grid-box4 div:nth-child(3) {
+  width: fit-content;
+  /* word-break: break-word; */
+  background-color: var(--color-white-bg);
+  border-radius: 4px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.main-2nd-grid-box4 div:nth-child(4) {
+  height: 40px;
+  width: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  transform: rotate(-45deg);
+}
+
+/* ******************** Main 2nd Section Arrows and Sliders ******************** */
+.main-card-arrow-sliders {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+.left-right-arrows {
+  display: flex;
+  gap: var(--space-4px);
+}
+.left-right-arrows svg {
+  fill: gray;
+}
+.left-right-arrows svg:hover,
+.left-right-arrows svg:active {
+  fill: var(--color-black-bg);
+  transform: scaleX(1.2);
+}
+.sliders {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.sliders hr {
+  height: 3px;
+  width: 50px;
+  background-color: gray;
+  border: none;
+}
+.sliders hr:hover,
+.sliders hr:active {
+  transform: scaleX(1.2);
+  background-color: var(--color-black-bg);
+}
+
+/* ******************** Main Section 3rd Content ******************** */
+.main-3rd-content {
+  display: flex;
+  gap: 100px;
+  margin-top: 50px;
+  width: 85vw;
+  min-height: 35vh;
+  border: 1px solid black;
+}
+/* ******************** Main Section 3rd Content left Section ******************** */
+.main-3rd-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+/*This Eyebrow-Heading is a variable now, it's being used same everywhere with same class, That's why it has been commented. If any error then this will be used*/
+.main-3rd-1st-element {
+  position: absolute;
+  top: 0rem;
+}
+.main-3rd-left-content {
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 18rem;
+  position: absolute;
+  top: 2rem;
+  margin-bottom: 50px;
+}
+.outline-btn {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: var(--radius-16px);
+  width: fit-content;
+  height: fit-content;
+  padding: 3px 8px;
+  gap: var(--space-8px);
+  background-color: transparent;
+}
+.outline-btn div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-12px);
+}
+.outline-btn svg {
+  transform: rotate(225deg);
+}
+.main-3rd-4th-element {
+  position: absolute;
+  bottom: 0px;
+  width: 11rem;
+  display: flex;
+  align-items: last baseline;
+}
+/* ******************** Main Section 3rd Content Right Section ******************** */
+.main-3rd-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.symbol-lg {
+  display: grid;
+  grid-template-columns: 205px 205px;
+  grid-template-rows: 145px 145px;
+  gap: 5px;
+}
+.a-lg,
+.d-lg {
+  height: 145px;
+  width: 205px;
+  border-radius: 0 40px 0 40px;
+  padding: var(--space-16px);
+}
+.b-lg,
+.c-lg {
+  height: 145px;
+  width: 205px;
+  border-radius: 40px 0 40px 0;
+  padding: var(--space-16px);
+}
+.a-lg {
+  background-image: url("https://images.unsplash.com/photo-1777971911576-de6d56a93681?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: top left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  color: var(--text-white);
+}
+.b-lg {
+  background-image: url("https://images.unsplash.com/photo-1777971911576-de6d56a93681?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: top right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--text-white);
+}
+.c-lg {
+  background-image: url("https://images.unsplash.com/photo-1777971911576-de6d56a93681?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: bottom left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  color: var(--text-white);
+}
+.d-lg {
+  background-image: url("https://images.unsplash.com/photo-1777971911576-de6d56a93681?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: bottom right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--text-white);
+}
+.a-lg div,
+.b-lg div,
+.c-lg div,
+.d-lg div {
+  height: fit-content;
+  width: fit-content;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-16px);
+}
+.symbol-lg-1st-content {
+  font-size: var(--text-8px);
+}
+.symbol-lg-2nd-content {
+  font-size: var(--text-16px);
+}
+/* ******************** Main Section 4th Content ******************** */
+.main-4th-content {
+  margin-top: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 85vw;
+  min-height: 35vh;
+  border: 1px solid black;
+}
+.main-4th-heading-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Outline Read More Button CSS Has been used earlier using same class from main content 3rd, */
+.main-4th-cards {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 27vw);
+  grid-template-rows: 200px;
+  gap: var(--space-12px);
+}
+.cards svg {
+  height: 25px;
+}
+/* ******************** Main 4th Section Grid Boxes ******************** */
+.cards {
+  background-size: cover;
+  background-position: center center;
+  border-radius: var(--space-12px);
+  font-size: var(--text-12px);
+  color: var(--text-white);
+  fill: var(--text-white);
+  padding: var(--space-8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cards-bg-1 {
+  background-image: url("https://images.unsplash.com/photo-1771506364945-0b6566c6cd5f?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+.cards-bg-2 {
+  background-image: url("https://plus.unsplash.com/premium_photo-1762868388982-9d3c8aa608a0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDR8Q0R3dXdYSkFiRXd8fGVufDB8fHx8fA%3D%3D");
+}
+.cards-bg-3 {
+  background-image: url("https://images.unsplash.com/photo-1777971636631-ec8b991f608d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM0fENEd3V3WEpBYkV3fHxlbnwwfHx8fHw%3D");
+}
+
+.cards-upper,
+.cards-lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards-1st-content,
+.cards-4th-content {
+  height: fit-content;
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: var(--radius-16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.cards-2nd-content,
+.cards-5th-content {
+  height: fit-content;
+  width: fit-content;
+  padding: var(--space-8px);
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.cards-5th-content {
+  transform: rotate(-45deg);
+}
+.cards-3rd-content div:first-child {
+  font-size: var(--text-20px);
+  margin-bottom: var(--space-12px);
+}
+footer {
+  min-height: 10vh;
+  background-color: var(--color-white-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+footer hr {
+  position: absolute;
+  top: 0px;
+  left: 3.5vw;
+  height: 2px;
+  width: 90vw;
+  background-color: gray;
+  border: none;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 85vw;
+  color: gray;
+}
+footer div svg {
+  height: 20px;
+  fill: gray;
+}
+.footer-content div:nth-child(2) {
+  display: flex;
+  gap: var(--space-8px);
+}
+.footer-content div:nth-child(3) {
+  font-size: var(--text-12px);
+}
