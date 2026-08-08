@@ -370,17 +370,30 @@ copyRight.style.fontSize = '12px';
 
 // ******************** Annoucement BAnner Section ********************
 
+// 1. Create the banner element
 const banner = document.createElement('p');
-banner.innerHTML = 'Special Update : We just won the 2026 Awwwards Site of the Year!'
+banner.innerHTML = '&#127881; <strong>Special Update :  </strong> We just won the 2026 Awwwards Site of the Year!';
+
+// 2. Apply positioning and styling
 banner.style.position = 'fixed';
+banner.style.top = '0';
+banner.style.left = '0';
+banner.style.width = '100%';
 banner.style.display = 'flex';
-banner.style.alignItems ='center';
+banner.style.alignItems = 'center';
+banner.style.justifyContent = 'center';
 banner.style.padding = '10px';
 banner.style.backgroundColor = 'rgb(7, 15, 69)';
 banner.style.color = 'yellow';
+banner.style.fontSize = '14px';
+banner.style.zIndex = '1'; 
 
-document.body.prepend('banner');
-console.log(banner);
+// 3. Prepend the element (pass the variable 'banner', not string 'banner')
+document.body.prepend(banner);
+
+// 4. Push document body down so the navbar remains fully visible right below the banner
+const bannerHeight = banner.offsetHeight;
+document.body.style.paddingTop = `${bannerHeight}px`;
 
 // ******************** Vibrant Colors Section ********************
 
@@ -388,6 +401,9 @@ const buttonStyle = document.getElementById('vibrant_color').firstElementChild.l
 buttonStyle.textContent = 'View Our Work';
 buttonStyle.style.backgroundColor = 'rgb(231, 84, 128)';
 // console.log(buttonStyle);
+
+// ******************** Computer Img Section ********************
+const ComputerImg = document.getElementsByClassName('section_1_right')
 
 // ******************** Our Services Section ********************
 
