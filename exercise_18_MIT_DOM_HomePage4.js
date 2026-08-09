@@ -403,20 +403,41 @@ buttonStyle.style.backgroundColor = 'rgb(231, 84, 128)';
 // console.log(buttonStyle);
 
 // ******************** Computer Img Section ********************
-const ComputerImg = document.getElementsByClassName('section_1_right')
+
+const heroImg = document.querySelector('.section_1_right img'); //Select the hero <img> element inside .section_1_right
+
+const currentSrc = heroImg.getAttribute('src'); // Retrieve current src URL using getAttribute
+console.log('Original Hero Image URL:', currentSrc);
+
+//Update the src attribute to the retro setup image (from the target screenshot)
+// const newImgUrl = 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=870&auto=format&fit=crop';
+// heroImg.setAttribute('src', newImgUrl);  //Either we can use this method which is pro and clean(In this method, we placed this link into a variable and can use it multiple time anywhere if needed also no confusion of quotes or anything else), or we can use second method below...
+
+heroImg.setAttribute('src', 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=870&auto=format&fit=crop');
+
+//Update the alt attribute to describe the new hero image
+heroImg.setAttribute('alt', 'Retro Electronics & Computer Setup');
+
+console.log('Updated Hero Image URL:', heroImg.getAttribute('src'));
 
 // ******************** Our Services Section ********************
 
 const trending = document.createElement('p')
 trending.innerHTML = '&#128293; Trending';
-// trending.setAttribute("id","yash")  //by this method i can add id to the tag and style it from CSS.
-trending.setAttribute("style", "fontSize : 8px;");
 
+// SET: Add ID, class, and inline CSS attributes from this method
+// trending.setAttribute('id', 'trendingBadge');
+// trending.setAttribute('class', 'badge-highlight');
+// Note: Use standard CSS syntax (kebab-case) inside the style attribute string
+trending.setAttribute('style', 'font-size: 10px; color: #e11d48; font-weight: bold; margin-bottom: 4px;');
 
-console.log(trending);
-
+// Insert the badge before the Web Development heading
 const trendingAdd = document.getElementById('trending');
 trendingAdd.before(trending);
+
+// console.log(trending);
+
+serviceCards.setAttribute('style', 'height: 250px;'); 
 
 // const trending = document.getElementsByClassName('service_content')[0].children[1];
 
