@@ -368,13 +368,13 @@ copyRight.style.fontSize = '12px';
 
 // ******************** Using Attribute Method To add or remove items ********************
 
-// ******************** Annoucement BAnner Section ********************
+// ******************** Annoucement Banner Section ********************
 
-// 1. Create the banner element
+//Create the banner element
 const banner = document.createElement('p');
 banner.innerHTML = '&#127881; <strong>Special Update :  </strong> We just won the 2026 Awwwards Site of the Year!';
 
-// 2. Apply positioning and styling
+//Apply positioning and styling
 banner.style.position = 'fixed';
 banner.style.top = '0';
 banner.style.left = '0';
@@ -388,10 +388,10 @@ banner.style.color = 'yellow';
 banner.style.fontSize = '14px';
 banner.style.zIndex = '1'; 
 
-// 3. Prepend the element (pass the variable 'banner', not string 'banner')
+//Prepend the element and passing the variable (banner), not string ('banner')
 document.body.prepend(banner);
 
-// 4. Push document body down so the navbar remains fully visible right below the banner
+//Push document body down so the navbar remains fully visible right below the banner
 const bannerHeight = banner.offsetHeight;
 document.body.style.paddingTop = `${bannerHeight}px`;
 
@@ -407,18 +407,19 @@ buttonStyle.style.backgroundColor = 'rgb(231, 84, 128)';
 const heroImg = document.querySelector('.section_1_right img'); //Select the hero <img> element inside .section_1_right
 
 const currentSrc = heroImg.getAttribute('src'); // Retrieve current src URL using getAttribute
-console.log('Original Hero Image URL:', currentSrc);
+// console.log('Original Hero Image URL:', currentSrc);
 
-//Update the src attribute to the retro setup image (from the target screenshot)
+//Updating the src attribute to the retro setup image
 // const newImgUrl = 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=870&auto=format&fit=crop';
-// heroImg.setAttribute('src', newImgUrl);  //Either we can use this method which is pro and clean(In this method, we placed this link into a variable and can use it multiple time anywhere if needed also no confusion of quotes or anything else), or we can use second method below...
+// heroImg.setAttribute('src', newImgUrl);  
+//Either we can use the above method which is pro and clean(In this method, we placed this link into a variable and can use it multiple time anywhere if needed also no confusion of quotes or anything else), or we can use second method below...
 
 heroImg.setAttribute('src', 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=870&auto=format&fit=crop');
 
 //Update the alt attribute to describe the new hero image
 heroImg.setAttribute('alt', 'Retro Electronics & Computer Setup');
 
-console.log('Updated Hero Image URL:', heroImg.getAttribute('src'));
+// console.log('Updated Hero Image URL:', heroImg.getAttribute('src'));
 
 // ******************** Our Services Section ********************
 
@@ -437,11 +438,44 @@ trendingAdd.before(trending);
 
 // console.log(trending);
 
-serviceCards.setAttribute('style', 'height: 250px;'); 
+//Increasing the card height and using setAttribute
+serviceCards.forEach((card) => {
+    card.setAttribute('style', 'height: 250px; width: 300px; background-color: rgba(208, 225, 233, 0.2); border-radius: 12px; padding: 30px 20px; display: flex; flex-direction: column; gap: 10px; align-items: center;');
+});
 
-// const trending = document.getElementsByClassName('service_content')[0].children[1];
+// ******************** Question #3 Using setAttribute ********************
 
+// 1. Create the new card element
+const newCard = document.createElement('div');
+newCard.classList.add('card');
 
+// 2. Insert the HTML structure
+newCard.innerHTML = `
+  <div class="icon">3D</div>
+  <h5>3D Modeling</h5>
+  <p class="sub_para">Immersive 3D graphics and custom web-based configurators.</p>
+`;
 
+// 3. Apply inline CSS using setAttribute
+newCard.setAttribute(
+  'style',
+  'height: 200px; width: 300px; background-color: rgba(208, 225, 233, 0.2); border-radius: 12px; padding: 30px 20px; display: flex; flex-direction: column; gap: 10px; align-items: center;'
+);
 
+// 4. Style the icon inside the card using setAttribute
+const newIcon = newCard.querySelector('.icon');
+newIcon.setAttribute(
+  'style',
+  'height: 70px; width: 70px; padding: 8px; border-radius: 8px; display: flex; align-items: center; justify-content: center; background-color: yellow; color: black;'
+);
+
+// 5. Style the heading inside the card using setAttribute
+const newHeading = newCard.querySelector('h5');
+newHeading.setAttribute('style', 'font-size: 14px; color: #ca8a04;');
+
+// 6. Append the finished card to the container
+const serviceContent = document.querySelector('.service_content');
+serviceContent.append(newCard);
+
+const 
 
