@@ -2131,4 +2131,24 @@ dublicateElement(); */
 // This removes the parent container jis container k ander hum outer Html likhte h. and agr hum koi new div banenge to uss ki jgha ye aa jaega else div nhi banenge uss div ko delete kr k uss k parent k ander directly aa jaega.
 // agr mai uss new div me same class ya id use krta hu to vo class and id kaam karegi uss ko delete nhi karegi.
 
+//*************** DOM Outer HTML ***************
 
+
+
+
+
+
+//*************** Replace With ***************
+const box1 = document.getElementsByClassName('con')[0];
+
+
+
+// const box2 = document.getElementsByClassName('con2');
+
+
+const replaceBox = document.createElement('div');
+replaceBox.setAttribute('style','height:150px; width:150px; border:2px solid black; background-color:green; display:flex; align-Items: center; justify-Content:center;');
+replaceBox.innerHTML = 'Box 3';
+box1.replaceWith(replaceBox);
+
+console.log(replaceBox);
