@@ -2139,16 +2139,30 @@ dublicateElement(); */
 
 
 //*************** Replace With ***************
-const box1 = document.getElementsByClassName('con')[0];
+// const box1 = document.getElementsByClassName('con')[0];
 
 
+// const replaceBox = document.createElement('div');
+// replaceBox.setAttribute('style','height:150px; width:150px; border:2px solid black; background-color:green; display:flex; align-Items: center; justify-Content:center;');
+// replaceBox.innerHTML = 'Box 3';
+// box1.replaceWith(replaceBox);
 
-// const box2 = document.getElementsByClassName('con2');
+// console.log(replaceBox);
 
 
-const replaceBox = document.createElement('div');
-replaceBox.setAttribute('style','height:150px; width:150px; border:2px solid black; background-color:green; display:flex; align-Items: center; justify-Content:center;');
-replaceBox.innerHTML = 'Box 3';
-box1.replaceWith(replaceBox);
+//*************** Insert Adjacent HTML/TEXT/Element ***************
 
-console.log(replaceBox);
+const box3 = document.getElementsByClassName('adjacentConMain')[0];
+
+//beforebegin:-
+// box3.insertAdjacentHTML('beforebegin','<div class = "adjacentBox3"> Box 3</div>');
+
+//afterbegin:-
+// box3.insertAdjacentHTML('afterbegin','<div class = "adjacentBox3"> Box 3</div>');
+
+//beforeEnd:-
+// box3.insertAdjacentHTML('beforeEnd','<div class = "adjacentBox3"> Box 3</div>');
+
+//afterEnd:-
+// box3.insertAdjacentHTML('afterEnd','<div class = "adjacentBox3"> Box 3</div>');
+
