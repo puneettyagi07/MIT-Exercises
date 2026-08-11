@@ -477,5 +477,5 @@ newHeading.setAttribute('style', 'font-size: 14px; color: #ca8a04;');
 const serviceContent = document.querySelector('.service_content');
 serviceContent.append(newCard);
 
-const 
+// const 
 
