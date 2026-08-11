@@ -2152,7 +2152,7 @@ dublicateElement(); */
 
 //*************** Insert Adjacent HTML/TEXT/Element ***************
 
-const box3 = document.getElementsByClassName('adjacentConMain')[0];
+// const box3 = document.getElementsByClassName('adjacentConMain')[0];
 
 //beforebegin:-
 // box3.insertAdjacentHTML('beforebegin','<div class = "adjacentBox3"> Box 3</div>');
