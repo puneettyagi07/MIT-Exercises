@@ -2173,18 +2173,38 @@ dublicateElement(); */
 //     h2.insertAdjacentElement("afterend", span);
 // }
 
-const myFunction = () => {
-const newButton = document.createElement('div');
+// const myFunction = () => {
+// const newButton = document.createElement('div');
 
-newButton.setAttribute("style","background-color: green; height:100px; width:100px; margin: 40ox;");
+// newButton.setAttribute("style","background-color: green; height:100px; width:100px; margin: 40ox;");
 
-const h2 = document.getElementById('myH2');
-newButton.innerText = "Hello World!";
+// const h2 = document.getElementById('myH2');
+// newButton.innerText = "Hello World!";
 
-h2.insertAdjacentElement("afterend", newButton);
-};
+// h2.insertAdjacentElement("afterend", newButton);
+// };
 
 
+// node removal:-  in this we can revmove the element completly
+// div.remove();
+
+
+// Class List :- in this we can add class in existing element
+
+const box = document.querySelector("div");
+console.log(box);
+
+const add = () =>{
+    box.classList.add("box");
+}
+
+const remove = () =>{
+    box.classList.remove('box');
+}
+
+const onOff = () =>{
+    box.classList.toggle('box');
+}
 
 
 
