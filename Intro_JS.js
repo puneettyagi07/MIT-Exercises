@@ -2166,3 +2166,25 @@ dublicateElement(); */
 //afterEnd:-
 // box3.insertAdjacentHTML('afterEnd','<div class = "adjacentBox3"> Box 3</div>');
 
+// function myFunction(){
+//     const span = document.getElementById("mySpan");
+//     const h2 = document.getElementById("myH2");
+
+//     h2.insertAdjacentElement("afterend", span);
+// }
+
+const myFunction = () => {
+const newButton = document.createElement('div');
+
+newButton.setAttribute("style","background-color: green; height:100px; width:100px; margin: 40ox;");
+
+const h2 = document.getElementById('myH2');
+newButton.innerText = "Hello World!";
+
+h2.insertAdjacentElement("afterend", newButton);
+};
+
+
+
+
+
