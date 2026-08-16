@@ -21,6 +21,8 @@
   color: var(--text-main);
   font-family: "Syne", sans-serif;
 }
+
+/* ****** Nav Bar Section ****** */
 nav {
   display: flex;
   justify-content: space-between;
@@ -40,7 +42,7 @@ nav {
   background-image: linear-gradient(
     to right,
     rgb(255, 255, 255) 0%,
-    rgb(148, 162, 163) 100%
+    rgba(148, 162, 163) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -93,6 +95,141 @@ nav {
   height: 17px;
   padding: 0;
   display: block;
+}
+hr{
+    width: 100%;
+    height: 2px;
+    border: none;
+    background-color: var(--surface-border);
+    margin-top: 25px;
+}
+
+/* ****** Main Cards ****** */
+.main-cards{
+    width: 100%;
+    height: fit-content;
+    padding: 35px 30px;
+    border: 1px solid var(--surface-border);
+    border-radius: 16px;
+    background-color: var(--surface-1);
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.mainCard-heading {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+/* ****** Small Cards ****** */
+.card-section{
+    display: flex;
+    justify-content: space-between;
+}
+.cards{
+    width: 32%;
+    height: fit-content;
+    padding: 20px 25px;
+    background-color: var(--surface-2);
+    border: 1px solid var(--surface-border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+}
+
+/* ****** OverView Section ****** */
+.cards p:first-child {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.8px;
+}
+
+.cards h2:nth-child(2){
+    font-size: xx-large;
+}
+.text-muted{
+    font-size: 14px;
+    color: var(--text-muted);
+}
+.cards p:last-child{
+    font-size: 12px;
+    color: var(--success);
+}
+
+/* ****** Dots ****** */
+.dot {
+  display: inline-block;
+  vertical-align: middle;
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+span.sucess{
+    box-shadow: 0 0 20px 3px var(--success);
+    background-color: var(--success);
+    border: 1px solid var(--success);
+}
+span.danger{
+    box-shadow: 0 0 20px 3px var(--danger);
+    background-color: var(--danger);
+    border: 1px solid var(--danger);
+}
+span.muted{
+    box-shadow: 0 0 20px 3px var(--text-muted);
+    background-color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+}
+/* ****** Security & Authentication Logs ****** */
+.security div:first-child{
+    color: var(--danger);
+}
+
+/* ****** Table ****** */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--surface-border);
+}
+
+td {
+  font-size: 15px;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'Courier New', monospace;
+  padding: 12px 10px;
+  font-weight: 400;
+  text-align: left;
+}
+.status-sucess, .status-danger{
+    height: fit-content;
+    width: fit-content;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 24px;
+    letter-spacing: 1.1px;
+}
+.status-sucess{
+    color: var(--success);
+    background-color: rgb(52, 211, 153, 0.2);
+}
+.status-danger{
+    color: var(--danger);
+    background-color: rgb(255, 74, 74, 0.2);
 }
 
 
