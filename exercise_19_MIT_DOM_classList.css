@@ -10,11 +10,13 @@
   --danger: #ff4a4a;
   --success: #34d399;
 }
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
+
 .base {
   background-color: var(--bg-base);
   padding: 30px 50px;
@@ -27,12 +29,14 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+
 .navLeft p {
   font-size: 14px;
   letter-spacing: 1.2px;
   font-weight: 700;
   color: var(--accent);
 }
+
 .navLeft h1 {
   display: inline-block;
   transform: scaleX(1.3);
@@ -48,6 +52,7 @@ nav {
   background-clip: text;
   color: transparent;
 }
+
 .navRight {
   padding: 10px;
   border: 1px solid var(--surface-border);
@@ -58,21 +63,7 @@ nav {
   justify-content: center;
   gap: 12px;
 }
-.nav-btn {
-  height: fit-content;
-  width: fit-content;
-  padding: 8px;
-  border: 1px solid var(--surface-border);
-  border-radius: 8px;
-  background-color: var(--surface-2);
-  color: var(--text-main);
-}
-.nav-btn svg {
-  fill: var(--text-main);
-  height: fit-content;
-  width: fit-content;
-  padding: 8px;
-}
+
 .nav-btn {
   display: inline-flex;
   align-items: center;
@@ -86,9 +77,17 @@ nav {
   font-size: 14px;
   cursor: pointer;
 }
-.hamburger.nav-btn {
-    padding: 8px;
+
+.nav-btn.enable {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
 }
+
+.hamburger.nav-btn {
+  padding: 8px;
+}
+
 .nav-btn svg {
   fill: currentColor;
   width: 18px;
@@ -96,54 +95,56 @@ nav {
   padding: 0;
   display: block;
 }
-hr{
-    width: 100%;
-    height: 2px;
-    border: none;
-    background-color: var(--surface-border);
-    margin-top: 25px;
+
+hr {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: var(--surface-border);
+  margin-top: 25px;
 }
 
-/* ****** Main Cards ****** */
-.main-cards{
-    width: 100%;
-    height: fit-content;
-    padding: 35px 30px;
-    border: 1px solid var(--surface-border);
-    border-radius: 16px;
-    background-color: var(--surface-1);
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: left;
+/* ****** Main Container Cards ****** */
+.main-cards {
+  width: 100%;
+  height: fit-content;
+  padding: 35px 30px;
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  background-color: var(--surface-1);
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
 }
 
 .mainCard-heading {
   font-weight: 700;
   display: flex;
   align-items: center;
+  color: var(--text-main);
 }
 
-/* ****** Small Cards ****** */
-.card-section{
-    display: flex;
-    justify-content: space-between;
-}
-.cards{
-    width: 32%;
-    height: fit-content;
-    padding: 20px 25px;
-    background-color: var(--surface-2);
-    border: 1px solid var(--surface-border);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    gap: 8px;
+/* ****** Small Inner Cards ****** */
+.card-section {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* ****** OverView Section ****** */
+.cards {
+  width: 32%;
+  height: fit-content;
+  padding: 20px 25px;
+  background-color: var(--surface-2);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
 .cards p:first-child {
   font-size: 12px;
   font-weight: 500;
@@ -151,52 +152,59 @@ hr{
   letter-spacing: 0.8px;
 }
 
-.cards h2:nth-child(2){
-    font-size: xx-large;
-}
-.text-muted{
-    font-size: 14px;
-    color: var(--text-muted);
-}
-.cards p:last-child{
-    font-size: 12px;
-    color: var(--success);
+.cards h2 {
+  font-size: xx-large;
+  color: var(--text-main);
 }
 
-/* ****** Dots ****** */
+.text-muted {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.cards p:last-child {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ****** Status Dots ****** */
 .dot {
   display: inline-block;
   vertical-align: middle;
   height: 12px;
   width: 12px;
   border-radius: 100%;
-  margin-right: 20px;
+  margin-right: 12px;
 }
-span.sucess{
-    box-shadow: 0 0 20px 3px var(--success);
-    background-color: var(--success);
-    border: 1px solid var(--success);
+
+span.sucess {
+  box-shadow: 0 0 12px 2px var(--success);
+  background-color: var(--success);
+  border: 1px solid var(--success);
 }
-span.danger{
-    box-shadow: 0 0 20px 3px var(--danger);
-    background-color: var(--danger);
-    border: 1px solid var(--danger);
+
+span.danger {
+  box-shadow: 0 0 12px 2px var(--danger);
+  background-color: var(--danger);
+  border: 1px solid var(--danger);
 }
-span.muted{
-    box-shadow: 0 0 20px 3px var(--text-muted);
-    background-color: var(--text-muted);
-    border: 1px solid var(--text-muted);
+
+span.muted {
+  box-shadow: 0 0 12px 2px var(--text-muted);
+  background-color: var(--text-muted);
+  border: 1px solid var(--text-muted);
 }
-/* ****** Security & Authentication Logs ****** */
-.security div:first-child{
-    color: var(--danger);
+
+/* ****** Security Logs Section ****** */
+.security .mainCard-heading {
+  color: var(--danger);
+  margin-bottom: 15px;
 }
 
 /* ****** Table ****** */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
 }
 
 th {
@@ -215,21 +223,53 @@ td {
   font-weight: 400;
   text-align: left;
 }
-.status-sucess, .status-danger{
-    height: fit-content;
-    width: fit-content;
-    font-size: 12px;
-    padding: 6px 12px;
-    border-radius: 24px;
-    letter-spacing: 1.1px;
-}
-.status-sucess{
-    color: var(--success);
-    background-color: rgb(52, 211, 153, 0.2);
-}
-.status-danger{
-    color: var(--danger);
-    background-color: rgb(255, 74, 74, 0.2);
+
+.status-sucess, .status-danger {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 24px;
+  letter-spacing: 1.1px;
+  text-align: center;
 }
 
+.status-sucess {
+  color: var(--success);
+  background-color: rgba(52, 211, 153, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
 
+.status-danger {
+  color: var(--danger);
+  background-color: rgba(255, 74, 74, 0.15);
+  border: 1px solid rgba(255, 74, 74, 0.3);
+}
+
+/* ****** Global Traffic Routing ****** */
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--surface-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--text-muted);
+  border-radius: 10px;
+}
+
+.us-east .progress-fill {
+  width: 45%;
+}
+
+.ap-south .progress-fill {
+  width: 35%;
+}
+
+.eu-central .progress-fill {
+  width: 20%;
+}
