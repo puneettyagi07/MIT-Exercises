@@ -1,39 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ClassList</title>
-    <link rel="stylesheet" href="exercise_19_MIT_DOM_classList.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="exercise_19_MIT_DOM_classList.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="base">
-        <nav>
-            <div class="navLeft">
-                <p>NODE ENVIRONMENT: PRODUCTION</p>
-                <h1>The Architect Console</h1>
+      <nav>
+        <div class="navLeft">
+          <p>NODE ENVIRONMENT: PRODUCTION</p>
+          <h1>The Architect Console</h1>
+        </div>
+        <div class="navRight">
+          <button class="enable nav-btn">Enable Security View</button>
+          <button class="dismiss nav-btn">Dismiss Security View</button>
+          <button class="toggle nav-btn">Toggle Live Traffic</button>
+          <button class="hamburger nav-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <path
+                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <hr />
+      <div class="main-container">
+        <section class="overview main-cards">
+          <div class="mainCard-heading">
+            <span class="dot sucess"></span> System overview
+          </div>
+          <div class="card-section">
+            <div class="build-status cards">
+              <p>NEXT.JS BUILD STATUS</p>
+              <h2>Optimized</h2>
+              <p>Last compiled 4m ago</p>
             </div>
-            <div class="navRight">
-                <button class="enable nav-btn">Enable Security View</button>
-                <button class="dismiss nav-btn">Dismiss Security View</button>
-                <button class="toggle nav-btn">Toggle Live Traffic</button>
-                <button class="hamburger nav-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"/></svg>
-                </button>
+            <div class="mongodb-cluster cards">
+              <p>MONGODB CLUSTER I/O</p>
+              <h2>842 <span class="text-muted">op/s</span></h2>
+              <p>Latency: 12ms</p>
             </div>
-        </nav>
+            <div class="active-websockets cards">
+              <p>ACTIVE WEBSOCKETS</p>
+              <h2>1,204</h2>
+              <p>Peak capacity: 15%</p>
+            </div>
+          </div>
+        </section>
+        <section class="security main-cards">
+            <div class="mainCard-heading">
+                <span class="dot sucess"></span> <span class="dot danger"></span> Security & Authentication Logs
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Event Type</th>
+                        <th>IP Origin</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[10:33:45 IST]</td>
+                        <td>JWT Token Refresh (Admin)</td>
+                        <td>192.168.1.104</td>
+                        <td><div class="status-sucess">VERIFIED</div></td>
+                    </tr>
+                    <tr>
+                        <td>[10:31:12 IST]</td>
+                        <td>Failed SSH Login Attempt</td>
+                        <td>45.33.22.110</td>
+                        <td><div class="status-danger">BLOCKED</div></td>
+                    </tr>
+                    <tr>
+                        <td>[10:28:05 IST]</td>
+                        <td>Database Connection Est.</td>
+                        <td>Internal (VPC)</td>
+                        <td><div class="status-sucess">AUTHORIZED</div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="global-traffic main-cards">
+            <div class="card"></div>
+        </section>
+      </div>
     </div>
-
-
-    
-
-
-
-    <script>
-
-    </script>
-</body>
+    <script></script>
+  </body>
 </html>
