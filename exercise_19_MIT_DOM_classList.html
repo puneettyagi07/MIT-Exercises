@@ -20,9 +20,9 @@
           <h1>The Architect Console</h1>
         </div>
         <div class="navRight">
-          <button class="enable nav-btn">Enable Security View</button>
-          <button class="dismiss nav-btn">Dismiss Security View</button>
-          <button class="toggle nav-btn">Toggle Live Traffic</button>
+          <button onclick="enable()" class="enable nav-btn">Enable Security View</button>
+          <button onclick="dismiss()" class="dismiss nav-btn">Dismiss Security View</button>
+          <button onclick="on_off()" class="toggle nav-btn">Toggle Live Traffic</button>
           <button class="hamburger nav-btn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
               <path
@@ -123,6 +123,18 @@
         </section>
       </div>
     </div>
-    <script></script>
+    <script>
+        const button = document.querySelector('.security, .global-traffic');
+
+        const enable = () =>{
+            button.classList.add('button');
+        }
+        const dismiss = () =>{
+            button.classList.remove('button');
+        }
+        const on_off = () =>{
+            button.classList.toggle('button');
+        }
+    </script>
   </body>
 </html>
