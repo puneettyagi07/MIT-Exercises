@@ -16,6 +16,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
+body{
+    background-color: var(--bg-base);
+}
 
 .base {
   background-color: var(--bg-base);
@@ -207,6 +210,7 @@ span.muted {
 }
 
 /* ****** Security Logs Section ****** */
+
 .security .mainCard-heading {
   color: var(--danger);
 }
@@ -260,8 +264,9 @@ td {
 }
 
 /* ****** Global Traffic Routing ****** */
-.global-traffic .mainCard-heading {
+.global_traffic  .mainCard-heading {
   color: var(--text-muted);
+  
 }
 
 .progress-bar {
@@ -301,4 +306,24 @@ td {
 .eu-central .progress-fill {
   width: 20%;
   background-color: var(--text-muted);
+}
+
+/* ****** Nav Button Function ****** */
+.display_hidden{
+    display:  none;
+}
+.security{
+    display:  flex;
+}
+.global_traffic{
+    display: flex;
+}
+
+
+.navButtons{
+    display: flex;
+}
+
+.navButton_hidden{
+    display: none;
 }
