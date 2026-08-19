@@ -34,6 +34,8 @@ nav {
 }
 
 .navLeft p {
+  /* display: inline-block; */
+  width: fit-content;
   font-size: 14px;
   letter-spacing: 1.2px;
   font-weight: 700;
@@ -41,7 +43,7 @@ nav {
 }
 
 .navLeft h1 {
-  display: inline-block;
+  /* display: inline-block; */
   transform: scaleX(1.3);
   transform-origin: left;
   font-weight: 800;
@@ -319,11 +321,43 @@ td {
     display: flex;
 }
 
-
-.navButtons{
+/* ****** Nav Button Function ****** */
+.display_hidden {
+    display: none;
+}
+.security {
+    display: flex;
+}
+.global_traffic {
     display: flex;
 }
 
-.navButton_hidden{
-    display: none;
+/* 1. Add align-items: center to stop nav height from stretching h1 */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Fixes h1 shifting */
+}
+
+/* 2. Add white-space: nowrap and align-items: center to navButtons */
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 600px;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: right center;
+  overflow: hidden;
+  white-space: nowrap; /* CRITICAL: Prevents text from wrapping and increasing height */
+  transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease,
+              transform 0.3s ease;
+}
+
+.navButton_hidden {
+  max-width: 0;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
 }
