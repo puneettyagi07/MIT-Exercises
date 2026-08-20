@@ -2191,20 +2191,51 @@ dublicateElement(); */
 
 // Class List :- in this we can add class in existing element
 
-const box = document.querySelector("div");
-console.log(box);
+// const box = document.querySelector("div");
+// console.log(box);
 
-const add = () =>{
-    box.classList.add("box");
-}
+// const add = () =>{
+//     box.classList.add("box");
+// }
 
-const remove = () =>{
-    box.classList.remove('box');
-}
+// const remove = () =>{
+//     box.classList.remove('box');
+// }
 
-const onOff = () =>{
-    box.classList.toggle('box');
-}
+// const onOff = () =>{
+//     box.classList.toggle('box');
+// }
 
 
 
+
+
+//*************** EventListner ***************
+
+// let box = document.querySelector("div");
+// let p =  box.firstElementChild;
+// console.log(p)
+
+
+// console.log(box)
+
+// console.log(box.classList.contains("box")
+
+//         let newBox = document.createElement("div");
+//         newBox.setAttribute("class","box");
+
+//        box.after(newBox)
+
+
+// let box2 = document.querySelector(".btn")
+// let box = document.querySelector(".box")
+
+
+// btn.addEventListener("mouseleave",()=>{
+//     box.classList.add("hello")
+// })
+
+// const newBox = document.querySelector('.newBox');
+// newBox.addEventListener('mouseenter',()=>{
+//     newBox.classList.add('newBoxEdit');
+// });
