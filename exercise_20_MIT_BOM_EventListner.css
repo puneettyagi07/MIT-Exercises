@@ -39,4 +39,10 @@ h1{
 }
 .xAxis, .yAxis{
     display: flex;
+    align-items: center;
+}
+
+.enter{
+    background-color: rgb(42, 36, 114);
+    color: rgb(255, 255, 255);
 }
