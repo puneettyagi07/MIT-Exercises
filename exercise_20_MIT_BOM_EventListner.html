@@ -14,22 +14,81 @@
 
     <div class="coordinates">
     <p>MOUSE Coordinates:</p>
-    <div class="xAxis">X = <div class="xAxisValue"> </div></div>
+    <div class="xAxis">X = <div class="xAxisValue"> 0 </div></div>
     <div class="yAxis">Y = <div class="yAxisValue"> </div></div>
     </div>
 
 
     </main>
     <script>
-        document.addEventListener("mousemove" ()=> {
-            
+
+        let x = document.querySelector(".xAxisValue");
+        let y = document.querySelector(".yAxisValue");
+
+        document.addEventListener("mousemove",(event)=>{
+            // x.innerText= event.clientX;
+            // let b = event.clientX
+            let px = "px"
+            x.innerText=  ` ${event.clientX} px`
+            y.innerText= event.clientY + px ;
+        })
 
 
-        });
+        let track = document.querySelector(".trackPad");
+        
+        track.addEventListener("mouseenter",()=>{
+            track.classList.add("enter");
+            track.textContent = 'Mosue Entered';
+
+        })
+
+        track.addEventListener("mouseleave",()=>{
+            track.classList.remove("enter");
+            track.textContent = 'Hover over me, click me, or move your mouse!' //How to get this content without this property when we remove mouse
+        })
+
+        const mouseMove = document.querySelector('.coordinates p');
+        mouseMove.addEventListener("mousemove",() =>{
+            mouseMove.textContent = 'Mouse Moving : '
+        })
+
+        
+    // const trackPad = document.querySelector('.trackPad');
+    // const xAxisValue = document.querySelector('.xAxisValue');
+    // const yAxisValue = document.querySelector('.yAxisValue');
+    // const coordStatus = document.querySelector('.coordinates p');
+
+    // trackPad.addEventListener('mouseenter', () => {
+    //     trackPad.style.backgroundColor = '#2a2472';
+    //     trackPad.style.color = '#ffffff';
+    //     trackPad.textContent = 'Mouse Entered';
+    // });
+
+    // document.addEventListener('mousemove', (event) => {
+    //     coordStatus.textContent = 'Mouse Moving:';
+        
+    //     xAxisValue.textContent = `${event.offsetX}px`;
+    //     yAxisValue.textContent = `${event.offsetY}px`;
+    // });
+
+    // document.addEventListener('mouseleave', () => {
+    //     trackPad.style.backgroundColor = 'rgb(24, 22, 72)';
+    //     trackPad.style.color = 'rgb(136, 136, 140)';
+    //     trackPad.textContent = 'Hover over me, click me, or move your mouse!';
+        
+    //     coordStatus.textContent = 'MOUSE Coordinates:';
+    //     xAxisValue.textContent = '0px';
+    //     yAxisValue.textContent = '0px';
+
+    
+    // });
 
 
 
-    </script>
+
+</script>
+
+
     
 </body>
 </html>
