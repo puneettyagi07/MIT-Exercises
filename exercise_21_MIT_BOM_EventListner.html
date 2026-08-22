@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListner</title>
+    <link rel="stylesheet" href="exercise_21_MIT_BOM_EventListner.css">
+</head>
+<body>
+    <main>
+        <div class="section">
+            <h1>Hover Over the Cards</h1>
+            <div class="cards">
+                <div class="card">Card</div>
+                <div class="card">Card</div>
+                <div class="card">Card</div>
+            </div>
+        </div>
+        <div class="buttonSection">
+            <h2>Click and Hold</h2>
+            <button>Press Me!</button>
+            <!-- <p>Mouse button is currently held down</p> -->
+        </div>
+    </main>
+
+    <script>
+        const cardFunction = document.querySelectorAll('.card');
+        // console.log(cardFunction)
+        const buttonFunction = document.querySelector('.buttonSection');
+        console.log(buttonFunction);
+
+        cardFunction.forEach(element => {
+            element.addEventListener("mouseenter",()=>{
+            element.classList.add("hoverCard");
+            element.textContent = 'Hovered!';
+            });
+        });
+
+        cardFunction.forEach(element => {
+            element.addEventListener('mouseleave', () =>{
+                element.classList.remove('hoverCard');
+                element.textContent = 'Card';
+            });
+        });
+
+        const pressButton = document.querySelector('.buttonSection button');
+
+        const pressPara = document.createElement('p');
+        pressPara.textContent = 'Mouse button is currently held down';
+        pressPara.style.color = 'rgb(218, 195, 121)';
+        pressPara.after('pressButton');
+
+
+  
+        // cardFunction.addEventListener("mouseenter",()=>{
+        //     cardFunction.classList.add("hoverCard")
+        // })
+
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
