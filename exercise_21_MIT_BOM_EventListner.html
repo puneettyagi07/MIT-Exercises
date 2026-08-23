@@ -24,44 +24,37 @@
     </main>
 
     <script>
-        const cardFunction = document.querySelectorAll('.card');
-        // console.log(cardFunction)
-        const buttonFunction = document.querySelector('.buttonSection');
-        console.log(buttonFunction);
+    const cards = document.querySelectorAll('.card');
 
-        cardFunction.forEach(element => {
-            element.addEventListener("mouseenter",()=>{
-            element.classList.add("hoverCard");
-            element.textContent = 'Hovered!';
-            });
+    cards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.classList.add("hoverCard");
+            card.textContent = 'Hovered!';
         });
-
-        cardFunction.forEach(element => {
-            element.addEventListener('mouseleave', () =>{
-                element.classList.remove('hoverCard');
-                element.textContent = 'Card';
-            });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('hoverCard');
+            card.textContent = 'Card';
         });
+    });
 
-        const pressButton = document.querySelector('.buttonSection button');
+    const pressButton = document.querySelector('.buttonSection button');
 
-        const pressPara = document.createElement('p');
-        pressPara.textContent = 'Mouse button is currently held down';
-        pressPara.style.color = 'rgb(218, 195, 121)';
-        pressPara.after('pressButton');
+    const pressPara = document.createElement('p');
+    pressPara.textContent = 'Mouse button is currently held down';
+    pressPara.style.color = 'rgb(218, 195, 121)';
 
+    pressButton.addEventListener('mousedown', () => {
+        pressButton.after(pressPara); 
+    });
 
-  
-        // cardFunction.addEventListener("mouseenter",()=>{
-        //     cardFunction.classList.add("hoverCard")
-        // })
+    pressButton.addEventListener('mouseup', () => {
+        pressPara.remove();
+    });
 
-
-        
-
-
-
-    </script>
+    pressButton.addEventListener('mouseleave', () => {
+        pressPara.remove();
+    });
+</script>
     
 </body>
 </html>
