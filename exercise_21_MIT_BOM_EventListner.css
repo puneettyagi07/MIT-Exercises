@@ -31,13 +31,16 @@ main{
     align-items: center;
     justify-content: center;
 }
-.card{
+
+.card {
     height: fit-content;
-    width: fit-content;
-    padding: 20px 50px;
-    border: 1px solid white;
+    width: 140px;
+    text-align: center;
+    padding: 20px 0;
+    border: 2px solid white; 
     border-radius: 8px;
     background-color: rgba(131, 126, 126, 0.3);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .buttonSection{
@@ -59,14 +62,19 @@ button{
     background-color: rgb(218, 195, 121);
 }
 
-
-.hoverCard{
+.hoverCard {
     transform: scale(1.1);
-    transition: all 0.8s ease-in-out;
-    border: 2px solid white;
     font-weight: 700;
+    background-color: rgba(131, 126, 126, 0.6);
 }
 
 p{
     color: rgb(218, 195, 121);
+}
+
+.shadow{
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    border-radius: 100%;
 }
