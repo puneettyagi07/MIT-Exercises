@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Inspector</title>
+    <link rel="stylesheet" href="exercise_22_MIT_BOM_EventInspector.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main_container">
+      <nav>
+        <h1>Event Inspector</h1>
+        <p>
+          Intaract with your mouse or keyboard to capture real-time DOM events
+          and modifier states.
+        </p>
+      </nav>
+      <main>
+        <section class="cardSection">
+          <h3>Mouse Tracking</h3>
+          <div class="trackPad">
+            <p>Click, Right-Click, or Move Here</p>
+            <p>Try holding Option/Alt, Shift ot Ctrl while clicking</p>
+          </div>
+          <div class="buttonBottom">
+            <div class="btn">ALT / OPTION</div>
+            <div class="btn">CTRL</div>
+            <div class="btn">SHIFT</div>
+            <div class="btn">CMD / WIN</div>
+          </div>
+        </section>
+        <section class="cardSection">
+          <h3>Active Readouts</h3>
+          <div class="events">
+            <div class="valuesDisplay">
+              <div class="value">
+                <p></p>
+                <div class="lastEvent"></div>
+              </div>
+              <div class="value">
+                <p></p>
+                <div class="keyPressed"></div>
+              </div>
+              <div class="value">
+                <p></p>
+                <div class="mouseAxis"></div>
+              </div>
+              <div class="value">
+                <p></p>
+                <div class="btnClicked"></div>
+              </div>
+            </div>
+            <div class="buttonBottom">
+              <div class="btn">ALT / OPTION</div>
+              <div class="btn">CTRL</div>
+              <div class="btn">SHIFT</div>
+              <div class="btn">CMD / WIN</div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <p>
+        <span>Pro tip : </span>Test hokling <span>Alt</span> +
+        <span>Click</span> or pressing combinations like <span>Ctrl</span> +
+        <span>Shift</span> +<span>Key</span>.
+      </p>
+    </div>
+  </body>
+</html>
