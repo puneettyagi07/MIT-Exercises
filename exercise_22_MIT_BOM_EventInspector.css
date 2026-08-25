@@ -5,9 +5,99 @@
 }
 .main_container{
     display: flex;
+    height: 100vh;
     flex-direction: column;
-    background-color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 246, 246);
     font-family: "Syne", sans-serif;
     gap: 15px;
+    padding: 30px;
 }
-.
+nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 550px;
+}
+nav h1{
+    font-size: 36px;
+    font-weight: 900;
+}
+main{
+    display: flex;
+    gap: 20px;
+}
+.cardSection{
+    height: 300px;
+    width: 500px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px 16px;
+    background-color: white;
+}
+.trackPad{
+    width: 100%;
+    height: 200px;
+    border: 2px dashed blue;
+    background-color: rgba(0, 89, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+}
+.trackPad p:first-child{
+    font-weight: 700;
+    color: blue;
+    margin-bottom: 10px;
+}
+.trackPad p:last-child{
+    font-size: 14px;
+    color: gray;
+}
+.buttonBottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.btn{
+    height: 50px;
+    width: 24%;
+    color: gray;
+    background-color: rgb(245, 246, 246);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+.events{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.valuesDisplay{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.value{
+    width: 49%;
+    height: 71px;
+    padding: 10px;
+    background-color: rgb(245, 246, 246);
+    border-radius: 8px;
+}
+.value p:first-child{
+    color: gray;
+    font-size: 14px;
+    font-weight: 500;
+}
+.value div:last-child{
+    font-size: 16px;
+    font-weight: 700;
+}
