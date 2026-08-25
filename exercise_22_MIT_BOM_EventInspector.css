@@ -91,6 +91,9 @@ main{
     padding: 10px;
     background-color: rgb(245, 246, 246);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .value p:first-child{
     color: gray;
@@ -100,4 +103,17 @@ main{
 .value div:last-child{
     font-size: 16px;
     font-weight: 700;
+}
+.tip{
+    color: gray;
+    margin-top: 10px;
+}
+span{
+    font-weight: 700;
+    color: black;
+    height: fit-content;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 8px;
+    background-color: rgba(209, 210, 210, 0.5);
 }
