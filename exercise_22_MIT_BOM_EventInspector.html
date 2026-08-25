@@ -31,7 +31,7 @@
           <div class="buttonBottom">
             <div class="btn">ALT / OPTION</div>
             <div class="btn">CTRL</div>
-            <div class="btn">SHIFT</div>
+            <div class="btn shift ">SHIFT</div>
             <div class="btn">CMD / WIN</div>
           </div>
         </section>
@@ -57,9 +57,9 @@
               </div>
             </div>
             <div class="buttonBottom">
-              <div class="btn">ALT / OPTION</div>
+              <div class="btn alt">ALT / OPTION</div>
               <div class="btn">CTRL</div>
-              <div class="btn">SHIFT</div>
+              <div class="btn shift2" >SHIFT</div>
               <div class="btn">CMD / WIN</div>
             </div>
           </div>
@@ -72,8 +72,45 @@
       </p>
     </div>
     <script>
+      const trackPad = document.querySelector('.trackPad'); //Target trackpad Div to add or remove events on trackpad
+      // console.log(trackPad);
+      const mouseAxisDisplay = document.querySelector('.mouseAxis'); //Target mouseAxis Div to put X / Y coordinates value
+      // console.log(mouseAxisDisplay);
+      const lastEventDisplay = document.querySelector('.lastEvent'); //target last event Div, means what did last will show here
+      // console.log(lastEventDisplay);
 
-      
+
+
+
+      // Mouse Events on trackpad:- 
+      trackPad.addEventListener('mousemove', (event) =>{
+      mouseAxisDisplay.textContent = `X = ${event.offsetX}px | Y = ${event.offsetY}px`;
+      });
+
+      trackPad.addEventListener('mouseenter', (event) =>{
+        lastEventDisplay.textContent = 'Mouse Enter';
+        trackPad.classList.add('trackPadHover');
+      });
+
+      trackPad.addEventListener('mouseleave', (event) =>{
+        lastEventDisplay.textContent = 'Mouse Leave';
+        trackPad.classList.remove('trackPadHover');
+      });
+
+      trackPad.addEventListener('mousedown', (event) =>{
+        lastEventDisplay.textContent = 'Mouse Down';
+        trackPad.classList.add('trackPadClicked');
+
+      })
+      trackPad.addEventListener('mouseup', (event) =>{
+        lastEventDisplay.textContent = 'Mouse Up';
+        trackPad.classList.remove('trackPadClicked');
+
+      })
+
+
+
     </script>
+    
   </body>
 </html>

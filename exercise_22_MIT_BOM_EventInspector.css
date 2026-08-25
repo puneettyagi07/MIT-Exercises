@@ -117,3 +117,18 @@ span{
     border-radius: 8px;
     background-color: rgba(209, 210, 210, 0.5);
 }
+
+
+/* JS Event Classes needs to be added */
+.trackPadHover{
+    background-color: rgba(58, 77, 201, 0.552);
+}
+.trackPadClicked{
+    transform: scale(0.9);
+    transition: all 0.8s ease-in-out;
+}
+
+.new{
+    background-color: blue;
+    color: white;
+}
