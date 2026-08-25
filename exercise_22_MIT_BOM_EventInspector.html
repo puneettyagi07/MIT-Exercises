@@ -29,10 +29,10 @@
             <p>Try holding Option/Alt, Shift ot Ctrl while clicking</p>
           </div>
           <div class="buttonBottom">
-            <div class="btn">ALT / OPTION</div>
-            <div class="btn">CTRL</div>
+            <div class="btn alt">ALT / OPTION</div>
+            <div class="btn ctrl">CTRL</div>
             <div class="btn shift ">SHIFT</div>
-            <div class="btn">CMD / WIN</div>
+            <div class="btn cmd">CMD / WIN</div>
           </div>
         </section>
         <section class="cardSection">
@@ -57,10 +57,10 @@
               </div>
             </div>
             <div class="buttonBottom">
-              <div class="btn alt">ALT / OPTION</div>
-              <div class="btn">CTRL</div>
+              <div class="btn alt2">ALT / OPTION</div>
+              <div class="btn ctrl2">CTRL</div>
               <div class="btn shift2" >SHIFT</div>
-              <div class="btn">CMD / WIN</div>
+              <div class="btn cmd2">CMD / WIN</div>
             </div>
           </div>
         </section>
@@ -78,6 +78,17 @@
       // console.log(mouseAxisDisplay);
       const lastEventDisplay = document.querySelector('.lastEvent'); //target last event Div, means what did last will show here
       // console.log(lastEventDisplay);
+      const shift = document.querySelector('.shift');
+      console.log(shift);
+      const alt = document.querySelector('.alt');
+      const cmd = document.querySelector('.cmd');
+      const ctrl = document.querySelector('.ctrl');
+
+      const bottomBtn = document.querySelector('.buttonBottom');
+      bottomBtn.forEach(element => {
+        element.addEventListener
+        
+      });
 
 
 
@@ -85,27 +96,35 @@
       // Mouse Events on trackpad:- 
       trackPad.addEventListener('mousemove', (event) =>{
       mouseAxisDisplay.textContent = `X = ${event.offsetX}px | Y = ${event.offsetY}px`;
+
+      event.shiftKey === true ? `shift.classList.add('active_btn')`: `sift.classList.remove('active_btn')`;
+      event.altKey === true ? `shift.classList.add('active_btn')`: `sift.classList.remove('active_btn')`;
+      event.commandKey === true ? `shift.classList.add('active_btn')`: `sift.classList.remove('active_btn')`;
+      event.shiftKey === true ? `shift.classList.add('active_btn')`: `sift.classList.remove('active_btn')`;
       });
 
       trackPad.addEventListener('mouseenter', (event) =>{
-        lastEventDisplay.textContent = 'Mouse Enter';
         trackPad.classList.add('trackPadHover');
+        lastEventDisplay.textContent = 'Mouse Enter';
       });
 
       trackPad.addEventListener('mouseleave', (event) =>{
-        lastEventDisplay.textContent = 'Mouse Leave';
         trackPad.classList.remove('trackPadHover');
+        lastEventDisplay.textContent = 'Mouse Leave';
       });
 
       trackPad.addEventListener('mousedown', (event) =>{
-        lastEventDisplay.textContent = 'Mouse Down';
         trackPad.classList.add('trackPadClicked');
+        lastEventDisplay.textContent = 'Mouse Down';
 
       })
       trackPad.addEventListener('mouseup', (event) =>{
-        lastEventDisplay.textContent = 'Mouse Up';
         trackPad.classList.remove('trackPadClicked');
+        lastEventDisplay.textContent = 'Mouse Up';
 
+      })
+      trackPad.addEventListener('contextmenu', (event) =>{
+        lastEventDisplay.textContent = 'Context Menu';
       })
 
 
