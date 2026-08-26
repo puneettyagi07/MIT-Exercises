@@ -31,7 +31,7 @@
           <div class="buttonBottom">
             <div class="btn alt">ALT / OPTION</div>
             <div class="btn ctrl">CTRL</div>
-            <div class="btn shift ">SHIFT</div>
+            <div class="btn shift">SHIFT</div>
             <div class="btn cmd">CMD / WIN</div>
           </div>
         </section>
@@ -59,7 +59,7 @@
             <div class="buttonBottom">
               <div class="btn alt2">ALT / OPTION</div>
               <div class="btn ctrl2">CTRL</div>
-              <div class="btn shift2" >SHIFT</div>
+              <div class="btn shift2">SHIFT</div>
               <div class="btn cmd2">CMD / WIN</div>
             </div>
           </div>
@@ -72,64 +72,102 @@
       </p>
     </div>
     <script>
-      const trackPad = document.querySelector('.trackPad'); //Target trackpad Div to add or remove events on trackpad
+      const trackPad = document.querySelector(".trackPad"); //Target trackpad Div to add or remove events on trackpad
       // console.log(trackPad);
-      const mouseAxisDisplay = document.querySelector('.mouseAxis'); //Target mouseAxis Div to put X / Y coordinates value
+      const mouseAxisDisplay = document.querySelector(".mouseAxis"); //Target mouseAxis Div to put X / Y coordinates value
       // console.log(mouseAxisDisplay);
-      const lastEventDisplay = document.querySelector('.lastEvent'); //target last event Div, means what did last will show here
+      const lastEventDisplay = document.querySelector(".lastEvent"); //target last event Div, means what did last will show here
       // console.log(lastEventDisplay);
-      const shift = document.querySelector('.shift');
-      console.log(shift);
-      const alt = document.querySelector('.alt');
-      const cmd = document.querySelector('.cmd');
-      const ctrl = document.querySelector('.ctrl');
+      const shift = document.querySelector(".shift"); //Target Btn Key
+      // console.log(shift);
+      const alt = document.querySelector(".alt");
+      const meta = document.querySelector(".cmd");
+      const ctrl = document.querySelector(".ctrl");
 
-      const bottomBtn = document.querySelector('.buttonBottom');
-      bottomBtn.forEach(element => {
-        element.addEventListener
-        
+      const shift2 = document.querySelector(".shift2"); //Target Btn Key
+      // console.log(shift);
+      const alt2 = document.querySelector(".alt2");
+      const meta2 = document.querySelector(".cmd2");
+      const ctrl2 = document.querySelector(".ctrl2");
+
+      const btnClickedDisplay = document.querySelector(".btnClicked");
+
+      const keyPressedDisplay = document.querySelector('.keyPressed');
+
+      // const bottomBtn = document.querySelector('.buttonBottom');
+      // bottomBtn.forEach(element => {
+      //   element.addEventListener('mousemove', (event) =>{
+      // event.key === true ? `element.classList.add('active_btn')`: `element.classList.remove('active_btn')`;
+      // });
+
+      // Mouse Events on trackpad:-
+      trackPad.addEventListener("mousemove", (event) => {
+        mouseAxisDisplay.textContent = `X = ${event.offsetX}px | Y = ${event.offsetY}px`;
+
+        event.shiftKey === true
+          ? shift.classList.add("active_btn")
+          : shift.classList.remove("active_btn");
+        event.altKey === true
+          ? alt.classList.add("active_btn")
+          : alt.classList.remove("active_btn");
+        event.metaKey === true
+          ? meta.classList.add("active_btn")
+          : meta.classList.remove("active_btn");
+        event.ctrlKey === true
+          ? ctrl.classList.add("active_btn")
+          : ctrl.classList.remove("active_btn");
       });
 
-
-
-
-      // Mouse Events on trackpad:- 
-      trackPad.addEventListener('mousemove', (event) =>{
-      mouseAxisDisplay.textContent = `X = ${event.offsetX}px | Y = ${event.offsetY}px`;
-
-      event.shiftKey === true ? `shift.classList.add('active_btn')`: `sift.classList.remove('active_btn')`;
-      event.altKey === true ? `shift.classList.add('active_btn')`: `sift.classList.remove('active_btn')`;
-      event.commandKey === true ? `shift.classList.add('active_btn')`: `sift.classList.remove('active_btn')`;
-      event.shiftKey === true ? `shift.classList.add('active_btn')`: `sift.classList.remove('active_btn')`;
+      trackPad.addEventListener("mouseenter", (event) => {
+        trackPad.classList.add("trackPadHover");
+        lastEventDisplay.textContent = "Mouse Enter";
       });
 
-      trackPad.addEventListener('mouseenter', (event) =>{
-        trackPad.classList.add('trackPadHover');
-        lastEventDisplay.textContent = 'Mouse Enter';
+      trackPad.addEventListener("mouseleave", (event) => {
+        trackPad.classList.remove("trackPadHover");
+        lastEventDisplay.textContent = "Mouse Leave";
       });
 
-      trackPad.addEventListener('mouseleave', (event) =>{
-        trackPad.classList.remove('trackPadHover');
-        lastEventDisplay.textContent = 'Mouse Leave';
+      trackPad.addEventListener("mousedown", (event) => {
+        trackPad.classList.add("trackPadClicked");
+        lastEventDisplay.textContent = "Mouse Down";
+        btnClickedDisplay.textContent = event.button;
+      });
+      trackPad.addEventListener("mouseup", (event) => {
+        trackPad.classList.remove("trackPadClicked");
+        lastEventDisplay.textContent = "Mouse Up";
+      });
+      trackPad.addEventListener("contextmenu", (event) => {
+        lastEventDisplay.textContent = "Context Menu";
       });
 
-      trackPad.addEventListener('mousedown', (event) =>{
-        trackPad.classList.add('trackPadClicked');
-        lastEventDisplay.textContent = 'Mouse Down';
+      // Keyboard Events:-
+
+      btnClickedDisplay.addEventListener("keydown", (event) => {
+      
+
+        event.shiftKey === true
+          ? shift2.classList.add("active_btn")
+          : shift2.classList.remove("active_btn");
+        event.altKey === true
+          ? alt2.classList.add("active_btn")
+          : alt2.classList.remove("active_btn");
+        event.metaKey === true
+          ? meta2.classList.add("active_btn")
+          : meta2.classList.remove("active_btn");
+        event.ctrlKey === true
+          ? ctrl2.classList.add("active_btn")
+          : ctrl2.classList.remove("active_btn");
+
+
+      });
+
+      keyPressedDisplay.addEventListener('keydown', (event) => {
+        btnClickedDisplay.textContent = 'event.keyboard';
 
       })
-      trackPad.addEventListener('mouseup', (event) =>{
-        trackPad.classList.remove('trackPadClicked');
-        lastEventDisplay.textContent = 'Mouse Up';
-
-      })
-      trackPad.addEventListener('contextmenu', (event) =>{
-        lastEventDisplay.textContent = 'Context Menu';
-      })
-
 
 
     </script>
-    
   </body>
 </html>
