@@ -52,7 +52,7 @@
                 <div class="mouseAxis"></div>
               </div>
               <div class="value">
-                <p>BUTTON CLICKED</p>
+                <p>MOUSE BUTTON CLICKED</p>
                 <div class="btnClicked"></div>
               </div>
             </div>
@@ -92,7 +92,7 @@
 
       const btnClickedDisplay = document.querySelector(".btnClicked");
 
-      const keyPressedDisplay = document.querySelector('.keyPressed');
+      const keyPressedDisplay = document.querySelector(".keyPressed");
 
       // const bottomBtn = document.querySelector('.buttonBottom');
       // bottomBtn.forEach(element => {
@@ -131,7 +131,7 @@
       trackPad.addEventListener("mousedown", (event) => {
         trackPad.classList.add("trackPadClicked");
         lastEventDisplay.textContent = "Mouse Down";
-        btnClickedDisplay.textContent = event.button;
+        // btnClickedDisplay.textContent = event.button;
       });
       trackPad.addEventListener("mouseup", (event) => {
         trackPad.classList.remove("trackPadClicked");
@@ -139,35 +139,44 @@
       });
       trackPad.addEventListener("contextmenu", (event) => {
         lastEventDisplay.textContent = "Context Menu";
+        btnClickedDisplay.textContent = "Right Click";
+      });
+
+      trackPad.addEventListener("click", (event) => {
+        btnClickedDisplay.textContent = "Left Click";
+      });
+
+      trackPad.addEventListener("dblclick", (event) => {
+        btnClickedDisplay.textContent = "Double Click";
       });
 
       // Keyboard Events:-
 
-      btnClickedDisplay.addEventListener("keydown", (event) => {
-      
+      document.addEventListener("keydown", (event) => {
+        keyPressedDisplay.textContent = event.key === ' ' ? space : event.key;
+        lastEventDisplay.textContent = "Key Pressed";
+        // btnClickedDisplay.textContent = event.key;
 
-        event.shiftKey === true
-          ? shift2.classList.add("active_btn")
-          : shift2.classList.remove("active_btn");
-        event.altKey === true
-          ? alt2.classList.add("active_btn")
-          : alt2.classList.remove("active_btn");
-        event.metaKey === true
-          ? meta2.classList.add("active_btn")
-          : meta2.classList.remove("active_btn");
-        event.ctrlKey === true
-          ? ctrl2.classList.add("active_btn")
-          : ctrl2.classList.remove("active_btn");
-
-
+        if (event.shiftKey === true) {
+          shift2.classList.add("active_btn");
+        } else if (event.altKey === true) {
+          alt2.classList.add("active_btn");
+        } else if (event.metaKey === true) {
+          meta2.classList.add("active_btn");
+        } else if(event.ctrlKey === true) {
+          ctrl2.classList.add("active_btn");
+        }
       });
 
-      keyPressedDisplay.addEventListener('keydown', (event) => {
-        btnClickedDisplay.textContent = 'event.keyboard';
+      document.addEventListener("keyup", (event) => {
+        lastEventDisplay.textContent = "Key Released";
+        // btnClickedDisplay.textContent = 'NONE';
 
-      })
-
-
+        shift2.classList.remove("active_btn");
+        alt2.classList.remove("active_btn");
+        meta2.classList.remove("active_btn");
+        ctrl2.classList.remove("active_btn");
+      });
     </script>
   </body>
 </html>
