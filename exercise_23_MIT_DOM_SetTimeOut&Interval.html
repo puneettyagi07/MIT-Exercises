@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time-Out & Interval</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: "Syne", sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px 50px;
+        }
+        section{
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            height: 300px;
+            padding: 25px;
+            /* box-shadow: 0 0 20px 15px rgba(197, 214, 13, 0.5) */
+        }
+        button{
+            height: 30px;
+            width: 100%;
+            border: none;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            border-radius: 12px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1> JavaScript Timers</h1>
+    <section class="setinterval">
+        <h2>1. Set Interval</h2>
+        <p>This repeats over and over.</p>
+        <h3>Count : <span>0</span></h3>
+        <p>(Updates In Every 1 Second)</p>
+
+    </section>
+    <section class="setTimeOut">
+        <h2>2. Set TimeOut</h2>
+        <p>This happens exactly once after a delay.</p>
+        <button>Click Me</button>
+        <p>Hello! Wait for 3 Seconds!</p>
+        <!-- <p>Hello! The 3 Seconds are Up!</p> -->
+
+    </section>
+
+    <script src="exercise_23_MIT_DOM_SetTimeOut&Interval.js"></script>
+</body>
+</html>
