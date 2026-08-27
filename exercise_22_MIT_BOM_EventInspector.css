@@ -127,8 +127,8 @@ span{
     transform: scale(0.9);
     transition: all 0.8s ease-in-out;
 }
-
-.new{
+.active_btn{
     background-color: blue;
     color: white;
 }
+
