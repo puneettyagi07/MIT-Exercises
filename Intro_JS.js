@@ -2208,8 +2208,6 @@ dublicateElement(); */
 
 
 
-
-
 //*************** EventListner ***************
 
 // let box = document.querySelector("div");
@@ -2239,3 +2237,28 @@ dublicateElement(); */
 // newBox.addEventListener('mouseenter',()=>{
 //     newBox.classList.add('newBoxEdit');
 // });
+
+
+//*************** SET TIME-OUT  / SET TIME-IN ***************
+
+
+
+
+
+let box = document.querySelector(".box");
+let btn = document.querySelector(".btn");
+
+
+
+btn.addEventListener("click",()=>{
+        setTimeout(()=>{
+                box.classList.add("newBoxEdit")
+        },6000)
+})
+
+
+btn.addEventListener("click",()=>{
+    setInterval(()=>{
+        box.style.backgroundColor= randomColor()
+    },2000)
+})
