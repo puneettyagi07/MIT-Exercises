@@ -243,7 +243,7 @@ numberSection.style.display = 'flex';
 numberSection.style.flexDirection = 'column';
 numberSection.style.gap = '10px';
 numberSection.style.alignItems = 'center';
-numberSection.style.padding = '30px 0';
+numberSection.style.paddingTop = '30px';
 
 const blue = document.getElementsByClassName('blueBG')[0];
 blue.style.height = 'fit-content';
@@ -404,22 +404,22 @@ buttonStyle.style.backgroundColor = 'rgb(231, 84, 128)';
 
 // ******************** Computer Img Section ********************
 
-const heroImg = document.querySelector('.section_1_right img'); //Select the hero <img> element inside .section_1_right
+const computerImg = document.querySelector('.section_1_right img'); //Select the hero <img> element inside .section_1_right
 
-const currentSrc = heroImg.getAttribute('src'); // Retrieve current src URL using getAttribute
-// console.log('Original Hero Image URL:', currentSrc);
+const currentSrc = computerImg.getAttribute('src'); // Retrieve current src URL using getAttribute
+// console.log('Original Computer Image URL:', currentSrc);
 
 //Updating the src attribute to the retro setup image
 // const newImgUrl = 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=870&auto=format&fit=crop';
-// heroImg.setAttribute('src', newImgUrl);  
-//Either we can use the above method which is pro and clean(In this method, we placed this link into a variable and can use it multiple time anywhere if needed also no confusion of quotes or anything else), or we can use second method below...
+// computerImg.setAttribute('src', newImgUrl);  
+//Either we can use the above method which is pro and clean(In this method, we 1st placed this link into a variable  as a string and can use it multiple time anywhere if needed also no confusion of quotes or anything else), or we can use second method below...
 
-heroImg.setAttribute('src', 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=870&auto=format&fit=crop');
+computerImg.setAttribute('src', 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=870&auto=format&fit=crop');
 
 //Update the alt attribute to describe the new hero image
-heroImg.setAttribute('alt', 'Retro Electronics & Computer Setup');
+computerImg.setAttribute('alt', 'Retro Electronics & Computer Setup');
 
-// console.log('Updated Hero Image URL:', heroImg.getAttribute('src'));
+// console.log('Updated computer Image URL:', computerImg.getAttribute('src'));
 
 // ******************** Our Services Section ********************
 
@@ -438,44 +438,78 @@ trendingAdd.before(trending);
 
 // console.log(trending);
 
-//Increasing the card height and using setAttribute
+//Increasing the card height from 200px to 250px because since trending p tag added it's alignment distrubed, using setAttribute
 serviceCards.forEach((card) => {
     card.setAttribute('style', 'height: 250px; width: 300px; background-color: rgba(208, 225, 233, 0.2); border-radius: 12px; padding: 30px 20px; display: flex; flex-direction: column; gap: 10px; align-items: center;');
 });
 
 // ******************** Question #3 Using setAttribute ********************
 
-// 1. Create the new card element
+//Create the new card element
 const newCard = document.createElement('div');
 newCard.classList.add('card');
 
-// 2. Insert the HTML structure
+//Insert the HTML structure
 newCard.innerHTML = `
   <div class="icon">3D</div>
   <h5>3D Modeling</h5>
   <p class="sub_para">Immersive 3D graphics and custom web-based configurators.</p>
 `;
 
-// 3. Apply inline CSS using setAttribute
+//Apply inline CSS using setAttribute
 newCard.setAttribute(
   'style',
   'height: 200px; width: 300px; background-color: rgba(208, 225, 233, 0.2); border-radius: 12px; padding: 30px 20px; display: flex; flex-direction: column; gap: 10px; align-items: center;'
 );
 
-// 4. Style the icon inside the card using setAttribute
+//Style the icon inside the card using setAttribute
 const newIcon = newCard.querySelector('.icon');
 newIcon.setAttribute(
   'style',
   'height: 70px; width: 70px; padding: 8px; border-radius: 8px; display: flex; align-items: center; justify-content: center; background-color: yellow; color: black;'
 );
 
-// 5. Style the heading inside the card using setAttribute
+//Style the heading inside the card using setAttribute
 const newHeading = newCard.querySelector('h5');
 newHeading.setAttribute('style', 'font-size: 14px; color: #ca8a04;');
 
-// 6. Append the finished card to the container
+//Append the finished card to the container
 const serviceContent = document.querySelector('.service_content');
 serviceContent.append(newCard);
 
-// const 
+//Editing Imagination para.
+const imaginationNewPara = imaginationRight.getElementsByClassName('sub_para')[0];
+imaginationNewPara.textContent ='Founded on the principles of minimalist structures combined with striking, colorful aesthetics, our team dedicates itself to pushing the boundaries of the modern web.';
+console.log(imaginationNewPara);
+
+// ******************** Question #4 Using before & after to add copyright after stats section ********************
+
+const declaration = document.createElement('h6');
+
+// declaration.textContent = 'Statistics verified by independent 3rd party audits in Q1 2026.'; //In this (textContent) we cann't use html tag, that's why i have used innerHtml.
+declaration.innerHTML = '<sup>*</sup> Statistics verified by independent 3<sup>rd</sup> party audits in Q1 2026.'
+
+declaration.setAttribute('style', 'margin-top: 5px; font-size: 12px; color: #6b7280; text-align: center; font-weight:200; margin-collapse: collapse;');
+
+numberSection.after(declaration);
+
+// console.log(declaration);
+
+const singleClientStory = document.getElementsByClassName('.clientCard');
+
+singleClientStory.setAttribute('style','width: 100%; height: fit-content; background-color: white; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 15px;')
+
+console.log(singleClientStory);
+
+
+
+
+
+
+
+
+
+
+
+
 
