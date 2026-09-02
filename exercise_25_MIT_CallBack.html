@@ -23,9 +23,9 @@
 <body>
     <h1>User Login System</h1>
     <div class="buttonSection">
-        <button class="alert">Log In(Alert)</button>
-        <button class="console">Log In(Console)</button>
-        <button class="screen">Log In(Screen)</button>
+        <button class="alert" onclick="alertBtn()">Log In(Alert)</button>
+        <button class="console" onclick="consoleBtn">Log In(Console)</button>
+        <button class="screen" onclick="screenBtn">Log In(Screen)</button>
     </div>
 
 
@@ -34,13 +34,54 @@
     
     <script>
 
-        let loginUser = (puneet, callback) =>{
+        const alertBtn = document.querySelector('.alert');
+        const consoleBtn = document.querySelector('.console');
+        const screenBtn = document.querySelector('.screen');
 
-            return 'Welcome Back, Puneet!'
 
-        }
+        alertBtn.addEventListener((click) =>{
+            alert('Hello Puneet, This is Alert Message!')
+        });
 
-        loginUser();
+        consoleBtn.addEventListener((click) =>{
+            console.log('Welcome in Console, Puneet!')
+        });
+
+        screenBtn.addEventListener((click) =>{
+            screenBtn.innerHTML = 'Welcome BAck, Puneet!'
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // let loginUser = (puneet, callback) =>{
+
+        //     return puneet
+        // }
+        // loginUser("Welcome Back, Puneet!"(
+        //     ()=>{
+        //         alert('This is alert Message!');
+        //     }
+        // ), 
+        // ()=>{
+        //     let alert = document.querySelector('.alert');
+        //     alert.addEventListener((click) =>{
+        //         alert("Welcome Back, Puneet from 1st callBack parameter");
+        //     })()
+        // });
 
 
 
