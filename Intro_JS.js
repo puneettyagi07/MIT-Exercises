@@ -2239,26 +2239,82 @@ dublicateElement(); */
 // });
 
 
-//*************** SET TIME-OUT  / SET TIME-IN ***************
+//*************** SET TIME-OUT / TIME-IN & Invertal ***************
 
 
 
 
 
-let box = document.querySelector(".box");
-let btn = document.querySelector(".btn");
+// let box = document.querySelector(".box");
+// let btn = document.querySelector(".btn");
 
 
 
-btn.addEventListener("click",()=>{
-        setTimeout(()=>{
-                box.classList.add("newBoxEdit")
-        },6000)
-})
+// btn.addEventListener("click",()=>{
+//         setTimeout(()=>{
+//                 box.classList.add("newBoxEdit")
+//         },6000)
+// })
 
 
-btn.addEventListener("click",()=>{
-    setInterval(()=>{
-        box.style.backgroundColor= randomColor()
-    },2000)
-})
+// btn.addEventListener("click",()=>{
+//     setInterval(()=>{
+//         box.style.backgroundColor= randomColor()
+//     },2000)
+// })
+
+
+//*************** Call Back Hell / Call Back / Clouser ***************
+// Example of Clouser:- 
+// function createBankAccount(initialBalance) {
+//   let balance = initialBalance; // Private variable
+
+//   return {
+//     deposit(amount) {
+//       balance += amount;
+//       return `Deposited $${amount}. Balance: $${balance}`;
+//     },
+//     withdraw(amount) {
+//       if (amount > balance) return "Insufficient funds";
+//       balance -= amount;
+//       return `Withdrew $${amount}. Balance: $${balance}`;
+//     },
+//     getBalance() {
+//       return balance;
+//     }
+//   };
+// }
+
+// const account = createBankAccount(100);
+
+// console.log(account.deposit(50));    // Output: Deposited $50. Balance: $150
+// console.log(account.withdraw(20));   // Output: Withdrew $20. Balance: $130
+// console.log(account.balance);         // Output: undefined (Direct access is blocked!)
+
+
+// Example of Call Back :- 
+
+
+
+
+
+
+//*************** Promises ***************
+
+// let a = new Promise((resolve, reject) => {
+
+//     let b = Math.random();
+
+//         if(b > 0.5){
+//             resolve("Hello World");
+//         }
+//         else{
+//             reject("This is Error");
+//         }
+// });
+
+// a.then((a) =>{
+//     console.log(a);
+// }).catch((b)=>{
+//     console.log(b);
+// });
