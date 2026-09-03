@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px;
+        justify-content: center;
+        align-items: center;
+      }
+      .main {
+        min-height: 140px;
+        width: 240px;
+        border: 2px solid black;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 15px;
+        gap: 6px;
+      }
+      .main p {
+        font-size: 14px;
+      }
+      .main span {
+        font-weight: 700;
+        color: #2563eb;
+      }
+      .status {
+        font-size: 14px;
+        font-weight: 600;
+        min-height: 20px;
+      }
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 1px solid #333;
+        background-color: #f3f4f6;
+        font-weight: 600;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <p>Name : <span class="name"></span></p>
+      <p>Class : <span class="class"></span></p>
+      <p>Subject : <span class="subject"></span></p>
+      <p>Roll Number : <span class="rollNo"></span></p>
+    </div>
+
+    <p class="status"></p>
+    <button>Click Me</button>
+
+    <script>
+      const btn = document.querySelector("button");
+      const statusText = document.querySelector(".status");
+
+      const nameSpan = document.querySelector(".name");
+      const classSpan = document.querySelector(".class");
+      const subjectSpan = document.querySelector(".subject");
+      const rollNoSpan = document.querySelector(".rollNo");
+
+      const studentData = new Promise((resolve, reject) => {
+        
+        let num = Math.floor(Math.random() *10 ) + 1;
+
+        if (num > 5){
+            setTimeout(()=>{
+                resolve();
+            },1000);
+        }
+        else{
+            reject();
+        }
+      });
+
+      studentData.then(()=>{
+        nameSpan.textContent = 'Puneet Tyagi';
+        classSpan.textContent = 'BCA';
+        subjectSpan.textContent = 'MERN';
+        rollNoSpan.textContent = '007';
+      });
+
+      studentData.catch(()=>{
+        document.querySelector('.main').textContent = 'User Not Found';
+      })
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <!-- <script>
+      const btn = document.querySelector("button");
+      const statusText = document.querySelector(".status");
+
+      const nameSpan = document.querySelector(".name");
+      const classSpan = document.querySelector(".class");
+      const subjectSpan = document.querySelector(".subject");
+      const rollNoSpan = document.querySelector(".rollNo");
+
+      // Helper function to clear previous details
+      function clearFields() {
+        nameSpan.textContent = "";
+        classSpan.textContent = "";
+        subjectSpan.textContent = "";
+        rollNoSpan.textContent = "";
+      }
+
+      // Function returning a Promise with a 3-second delay
+      function fetchStudentData() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const randomNumber = Math.floor(Math.random() * 10) + 1; // 1 to 10
+
+            if (randomNumber <= 5) {
+              resolve({
+                name: "Yash",
+                grade: "12th",
+                subject: "Maths",
+                rollNo: "1",
+              });
+            } else {
+              reject("User Not Found");
+            }
+          }, 3000);
+        });
+      }
+
+      // Button Click Handler with Countdown
+      btn.addEventListener("click", () => {
+        clearFields();
+        btn.disabled = true;
+        statusText.style.color = "#6b7280";
+
+        // 1. Initialize backward countdown
+        let secondsLeft = 3;
+        statusText.textContent = `Searching... (${secondsLeft}s delay)`;
+
+        // 2. Decrement countdown every second
+        const countdownTimer = setInterval(() => {
+          secondsLeft--;
+          if (secondsLeft > 0) {
+            statusText.textContent = `Searching... (${secondsLeft}s delay)`;
+          } else {
+            clearInterval(countdownTimer);
+          }
+        }, 1000);
+
+        // 3. Handle Promise resolution
+        fetchStudentData()
+          .then((userData) => {
+            statusText.textContent = "";
+            nameSpan.textContent = userData.name;
+            classSpan.textContent = userData.grade;
+            subjectSpan.textContent = userData.subject;
+            rollNoSpan.textContent = userData.rollNo;
+          })
+          .catch((errorMessage) => {
+            statusText.style.color = "#dc2626";
+            statusText.textContent = errorMessage;
+          })
+          .finally(() => {
+            clearInterval(countdownTimer); // Safety cleanup
+            btn.disabled = false;
+          });
+      });
+    </script> -->
+  </body>
+</html>
