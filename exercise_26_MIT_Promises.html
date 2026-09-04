@@ -68,50 +68,58 @@
         cursor: not-allowed;
       } */
 
-      table{
+      table {
         width: 100%;
         border: 1px solid black;
         border-collapse: collapse;
       }
-      th, td{
+      th,
+      td {
         border: 1px solid black;
+      }
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 6px;
+        border: 1px solid #333;
+        background-color: #f3f4f6;
+        font-weight: 600;
       }
       
     </style>
   </head>
   <body>
-
     <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Class</th>
-                <th>Subject</th>
-                <th>Roll No.</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Subject</th>
+          <th>Roll No.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
-
+    <button>Show Data</button>
 
     <!-- <div class="main">
       <p>Name : <span class="name"></span></p>
@@ -123,13 +131,59 @@
     <p class="status"></p>
     <button>Click Me</button> -->
 
-
     <script>
-        const header = document.querySelector('th');
-        cosnole.log(header);
+      const header = document.querySelector("th");
+      cosnole.log(header);
 
+      const table = document.querySelector("table");
+      const theader = document.querySelector("thead");
+      const bodies = document.querySelector("tbody");
+      const button = document.querySelector("button");
 
-        
+      // console.log(tableRow);
+
+      table.style.fontSize = "16px";
+      table.style.textAlign = "center";
+      table.style.borderRadius = "24px 24px 0px 0px";
+
+      header.style.backgroundColor = "black";
+      header.style.color = "white";
+
+      let ShowDataPromise = new Promise((resolve, reject) => {
+        if (
+          button.addEventListener("click", () => {
+            button.textContent = "Wait 3 Sec...";
+          })
+        ) {
+          setTimeout(() => {
+            resolve();
+          }, 2000);
+        } else {
+          reject();
+        }
+      });
+
+      ShowDataPromise.then(() => {
+        bodies.tbody.rows[0].tr.cells[0].textContent = "Puneet";
+        bodies.tbody.rows[0].tr.cells[1].textContent = "12th";
+        bodies.tbody.rows[0].tr.cells[2].textContent = "Computer Science";
+        bodies.tbody.rows[0].tr.cells[3].textContent = "007";
+
+        bodies.tbody.rows[1].tr.cells[0].textContent = "Puneet";
+        bodies.tbody.rows[1].tr.cells[1].textContent = "12th";
+        bodies.tbody.rows[1].tr.cells[2].textContent = "Computer Science";
+        bodies.tbody.rows[1].tr.cells[3].textContent = "007";
+
+        bodies.tbody.rows[2].tr.cells[0].textContent = "Puneet";
+        bodies.tbody.rows[2].tr.cells[1].textContent = "12th";
+        bodies.tbody.rows[2].tr.cells[2].textContent = "Computer Science";
+        bodies.tbody.rows[2].tr.cells[3].textContent = "007";
+      });
+
+      ShowDataPromise.catch(() =>{
+        document.querySelector('bodies').textContent = 'No Data Found';
+      });
+      
     </script>
 
     <!-- <script>
@@ -167,7 +221,7 @@
       })
     </script> -->
 
-    <!-- <script>
+    <!-- <script> //AI Answer
       const btn = document.querySelector("button");
       const statusText = document.querySelector(".status");
 
