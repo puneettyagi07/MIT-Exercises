@@ -31,7 +31,7 @@
         justify-content: center;
         align-items: center;
       }
-      .main {
+      /* .main {
         min-height: 140px;
         width: 240px;
         border: 2px solid black;
@@ -39,7 +39,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         padding: 15px;
         gap: 6px;
       }
@@ -66,11 +66,54 @@
       button:disabled {
         opacity: 0.6;
         cursor: not-allowed;
+      } */
+
+      table{
+        width: 100%;
+        border: 1px solid black;
+        border-collapse: collapse;
       }
+      th, td{
+        border: 1px solid black;
+      }
+      
     </style>
   </head>
   <body>
-    <div class="main">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Subject</th>
+                <th>Roll No.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- <div class="main">
       <p>Name : <span class="name"></span></p>
       <p>Class : <span class="class"></span></p>
       <p>Subject : <span class="subject"></span></p>
@@ -78,9 +121,18 @@
     </div>
 
     <p class="status"></p>
-    <button>Click Me</button>
+    <button>Click Me</button> -->
+
 
     <script>
+        const header = document.querySelector('th');
+        cosnole.log(header);
+
+
+        
+    </script>
+
+    <!-- <script>
       const btn = document.querySelector("button");
       const statusText = document.querySelector(".status");
 
@@ -113,18 +165,7 @@
       studentData.catch(()=>{
         document.querySelector('.main').textContent = 'User Not Found';
       })
-
-
-
-
-
-
-
-
-
-
-
-    </script>
+    </script> -->
 
     <!-- <script>
       const btn = document.querySelector("button");
