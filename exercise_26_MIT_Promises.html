@@ -131,62 +131,125 @@
     <p class="status"></p>
     <button>Click Me</button> -->
 
-    <script>
-      const header = document.querySelector("th");
-      cosnole.log(header);
+    <script> //Table me details show karne k liye
+    const table = document.querySelector("table");
+const theader = document.querySelector("thead");
+const bodies = document.querySelector("tbody");
+const button = document.querySelector("button");
 
-      const table = document.querySelector("table");
-      const theader = document.querySelector("thead");
-      const bodies = document.querySelector("tbody");
-      const button = document.querySelector("button");
+// Table & Header Styling
+table.style.fontSize = "16px";
+table.style.textAlign = "center";
+theader.style.backgroundColor = "black";
+theader.style.color = "white";
 
-      // console.log(tableRow);
+// Function returning a fresh Promise
+function fetchStudentData() {
+  return new Promise((resolve, reject) => {
+    // Generates an integer from 1 to 10
+    const randomNum = Math.floor(Math.random() * 10) + 1;
 
-      table.style.fontSize = "16px";
-      table.style.textAlign = "center";
-      table.style.borderRadius = "24px 24px 0px 0px";
+    setTimeout(() => {
+      if (randomNum >= 5) {
+        resolve();
+      } else {
+        reject();
+      }
+    }, 2000);
+  });
+}
 
-      header.style.backgroundColor = "black";
-      header.style.color = "white";
+// Button Click Event Listener
+button.addEventListener("click", () => {
+  button.textContent = "Wait 2 Sec...";
+  button.disabled = true;
 
-      let ShowDataPromise = new Promise((resolve, reject) => {
-        if (
-          button.addEventListener("click", () => {
-            button.textContent = "Wait 3 Sec...";
-          })
-        ) {
-          setTimeout(() => {
-            resolve();
-          }, 2000);
+  fetchStudentData()
+    .then(() => {
+      bodies.rows[0].cells[0].textContent = "Puneet";
+      bodies.rows[0].cells[1].textContent = "12th";
+      bodies.rows[0].cells[2].textContent = "Computer Science";
+      bodies.rows[0].cells[3].textContent = "007";
+
+      bodies.rows[1].cells[0].textContent = "Aman";
+      bodies.rows[1].cells[1].textContent = "12th";
+      bodies.rows[1].cells[2].textContent = "Physics";
+      bodies.rows[1].cells[3].textContent = "008";
+
+      bodies.rows[2].cells[0].textContent = "Rohan";
+      bodies.rows[2].cells[1].textContent = "12th";
+      bodies.rows[2].cells[2].textContent = "Mathematics";
+      bodies.rows[2].cells[3].textContent = "009";
+    })
+    .catch(() => {
+      bodies.innerHTML = `<tr><td colspan="4" style="color: red; padding: 12px;">No Data Found</td></tr>`;
+    })
+    .finally(() => {
+      button.textContent = "Show Data";
+      button.disabled = false;
+    });
+});
+</script>
+
+<!-- <script> //AI Ka answer table me details show karne k liye using forEach loop
+
+  const table = document.querySelector("table");
+  const theader = document.querySelector("thead");
+  const bodies = document.querySelector("tbody");
+  const button = document.querySelector("button");
+
+  // Table & Header Styling
+  table.style.fontSize = "16px";
+  table.style.textAlign = "center";
+  theader.style.backgroundColor = "black";
+  theader.style.color = "white";
+
+  // Function returning a Promise
+  function loadStudentData() {
+    return new Promise((resolve, reject) => {
+      // Simulate 3-second network delay
+      setTimeout(() => {
+        const isSuccess = Math.random() > 0.2; // 80% success, 20% failure
+
+        if (isSuccess) {
+          resolve([
+            { name: "Puneet", class: "12th", subject: "Computer Science", rollNo: "007" },
+            { name: "Aman", class: "12th", subject: "Physics", rollNo: "008" },
+            { name: "Rohan", class: "12th", subject: "Mathematics", rollNo: "009" }
+          ]);
         } else {
-          reject();
+          reject("No Data Found");
         }
+      }, 3000);
+    });
+  }
+
+  // Button Click Handler
+  button.addEventListener("click", () => {
+    button.textContent = "Wait 3 Sec...";
+    button.disabled = true;
+
+    loadStudentData()
+      .then((students) => {
+        // Populate each row with received data
+        students.forEach((student, index) => {
+          bodies.rows[index].cells[0].textContent = student.name;
+          bodies.rows[index].cells[1].textContent = student.class;
+          bodies.rows[index].cells[2].textContent = student.subject;
+          bodies.rows[index].cells[3].textContent = student.rollNo;
+        });
+      })
+      .catch((error) => {
+        bodies.innerHTML = `<tr><td colspan="4" style="color: red; padding: 12px;">${error}</td></tr>`;
+      })
+      .finally(() => {
+        button.textContent = "Show Data";
+        button.disabled = false;
       });
+  });
+</script> -->
 
-      ShowDataPromise.then(() => {
-        bodies.tbody.rows[0].tr.cells[0].textContent = "Puneet";
-        bodies.tbody.rows[0].tr.cells[1].textContent = "12th";
-        bodies.tbody.rows[0].tr.cells[2].textContent = "Computer Science";
-        bodies.tbody.rows[0].tr.cells[3].textContent = "007";
-
-        bodies.tbody.rows[1].tr.cells[0].textContent = "Puneet";
-        bodies.tbody.rows[1].tr.cells[1].textContent = "12th";
-        bodies.tbody.rows[1].tr.cells[2].textContent = "Computer Science";
-        bodies.tbody.rows[1].tr.cells[3].textContent = "007";
-
-        bodies.tbody.rows[2].tr.cells[0].textContent = "Puneet";
-        bodies.tbody.rows[2].tr.cells[1].textContent = "12th";
-        bodies.tbody.rows[2].tr.cells[2].textContent = "Computer Science";
-        bodies.tbody.rows[2].tr.cells[3].textContent = "007";
-      });
-
-      ShowDataPromise.catch(() =>{
-        document.querySelector('bodies').textContent = 'No Data Found';
-      });
-      
-    </script>
-
-    <!-- <script>
+    <!-- <script> //Box me Name and span me Details show karne ki JS
       const btn = document.querySelector("button");
       const statusText = document.querySelector(".status");
 
@@ -221,7 +284,7 @@
       })
     </script> -->
 
-    <!-- <script> //AI Answer
+    <!-- <script> //AI Answer of Box Me details show karne k liye with count down button
       const btn = document.querySelector("button");
       const statusText = document.querySelector(".status");
 
