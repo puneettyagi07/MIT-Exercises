@@ -70,12 +70,42 @@
 
       table {
         width: 100%;
+        border-collapse: separate; /* Required for border-radius to take effect */
+        border-spacing: 0;
         border: 1px solid black;
-        border-collapse: collapse;
+        border-radius: 16px 16px 0px 0px; /* Rounds the outer table top corners */
+        overflow: hidden;
+        font-size: 16px;
+        text-align: center;
       }
-      th,
+
+      /* Make header bigger with generous padding & font size */
+      th {
+        background-color: black;
+        color: white;
+        padding: 16px 20px; /* Increases header row height */
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: 2px solid black;
+      }
+
+      /* Round the top-left and top-right header cells */
+      th:first-child {
+        border-top-left-radius: 14px;
+      }
+
+      th:last-child {
+        border-top-right-radius: 14px;
+      }
+
       td {
-        border: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 12px;
+      }
+
+      td:last-child {
+        border-right: none;
       }
       button {
         padding: 10px 20px;
@@ -85,7 +115,6 @@
         background-color: #f3f4f6;
         font-weight: 600;
       }
-      
     </style>
   </head>
   <body>
@@ -100,22 +129,22 @@
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>null</td>
+          <td>null</td>
+          <td>null</td>
+          <td>null</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>null</td>
+          <td>null</td>
+          <td>null</td>
+          <td>null</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>null</td>
+          <td>null</td>
+          <td>null</td>
+          <td>null</td>
         </tr>
       </tbody>
     </table>
@@ -131,67 +160,68 @@
     <p class="status"></p>
     <button>Click Me</button> -->
 
-    <script> //Table me details show karne k liye
-    const table = document.querySelector("table");
-const theader = document.querySelector("thead");
-const bodies = document.querySelector("tbody");
-const button = document.querySelector("button");
+    <script>
+      //Table me details show karne k liye
+      const table = document.querySelector("table");
+      const theader = document.querySelector("thead");
+      const bodies = document.querySelector("tbody");
+      const button = document.querySelector("button");
 
-// Table & Header Styling
-table.style.fontSize = "16px";
-table.style.textAlign = "center";
-theader.style.backgroundColor = "black";
-theader.style.color = "white";
+      // Table & Header Styling
+      table.style.fontSize = "16px";
+      table.style.textAlign = "center";
+      theader.style.backgroundColor = "black";
+      theader.style.color = "white";
 
-// Function returning a fresh Promise
-function fetchStudentData() {
-  return new Promise((resolve, reject) => {
-    // Generates an integer from 1 to 10
-    const randomNum = Math.floor(Math.random() * 10) + 1;
+      // Function returning a fresh Promise
+      function fetchStudentData() {
+        return new Promise((resolve, reject) => {
+          // Generates an integer from 1 to 10
+          const randomNum = Math.floor(Math.random() * 10) + 1;
 
-    setTimeout(() => {
-      if (randomNum >= 5) {
-        resolve();
-      } else {
-        reject();
+          setTimeout(() => {
+            if (randomNum >= 5) {
+              resolve();
+            } else {
+              reject();
+            }
+          }, 2000);
+        });
       }
-    }, 2000);
-  });
-}
 
-// Button Click Event Listener
-button.addEventListener("click", () => {
-  button.textContent = "Wait 2 Sec...";
-  button.disabled = true;
+      // Button Click Event Listener
+      button.addEventListener("click", () => {
+        button.textContent = "Wait 2 Sec...";
+        button.disabled = true;
 
-  fetchStudentData()
-    .then(() => {
-      bodies.rows[0].cells[0].textContent = "Puneet";
-      bodies.rows[0].cells[1].textContent = "12th";
-      bodies.rows[0].cells[2].textContent = "Computer Science";
-      bodies.rows[0].cells[3].textContent = "007";
+        fetchStudentData()
+          .then(() => {
+            bodies.rows[0].cells[0].textContent = "Puneet";
+            bodies.rows[0].cells[1].textContent = "12th";
+            bodies.rows[0].cells[2].textContent = "Computer Science";
+            bodies.rows[0].cells[3].textContent = "007";
 
-      bodies.rows[1].cells[0].textContent = "Aman";
-      bodies.rows[1].cells[1].textContent = "12th";
-      bodies.rows[1].cells[2].textContent = "Physics";
-      bodies.rows[1].cells[3].textContent = "008";
+            bodies.rows[1].cells[0].textContent = "Aman";
+            bodies.rows[1].cells[1].textContent = "12th";
+            bodies.rows[1].cells[2].textContent = "Physics";
+            bodies.rows[1].cells[3].textContent = "008";
 
-      bodies.rows[2].cells[0].textContent = "Rohan";
-      bodies.rows[2].cells[1].textContent = "12th";
-      bodies.rows[2].cells[2].textContent = "Mathematics";
-      bodies.rows[2].cells[3].textContent = "009";
-    })
-    .catch(() => {
-      bodies.innerHTML = `<tr><td colspan="4" style="color: red; padding: 12px;">No Data Found</td></tr>`;
-    })
-    .finally(() => {
-      button.textContent = "Show Data";
-      button.disabled = false;
-    });
-});
-</script>
+            bodies.rows[2].cells[0].textContent = "Rohan";
+            bodies.rows[2].cells[1].textContent = "12th";
+            bodies.rows[2].cells[2].textContent = "Mathematics";
+            bodies.rows[2].cells[3].textContent = "009";
+          })
+          .catch(() => {
+            bodies.innerHTML = `<tr><td colspan="4" style="color: red; padding: 12px;">No Data Found</td></tr>`;
+          })
+          .finally(() => {
+            button.textContent = "Show Data";
+            button.disabled = false;
+          });
+      });
+    </script>
 
-<!-- <script> //AI Ka answer table me details show karne k liye using forEach loop
+    <!-- <script> //AI Ka answer table me details show karne k liye using forEach loop
 
   const table = document.querySelector("table");
   const theader = document.querySelector("thead");
