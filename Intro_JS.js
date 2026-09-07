@@ -2318,3 +2318,7 @@ dublicateElement(); */
 // }).catch((b)=>{
 //     console.log(b);
 // });
+
+
+//*************** Async / Await ***************
+// It's used with only promises, to wait any fumction / 
