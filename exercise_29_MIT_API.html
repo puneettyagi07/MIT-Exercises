@@ -22,16 +22,21 @@
         let div = document.querySelector('div');
 
         async function hello(){
+
             let a = await fetch("https://jsonplaceholder.typicode.com/users");
             let data = await a.json();
-
-            // console.log(data);
-
+            
             data.forEach(element => {
-                
+                element.name  
+        
+                console.log(element.name);
+
 
                 
+                div.textContent = element.name;
             });
+
+            
         }
 
         hello();
