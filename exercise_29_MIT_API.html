@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API / Connecting String</title>
+</head>
+<body>
+
+    <div></div>
+
+
+    <script>
+        /**
+         * API / Connecting String
+         * It is use to convert any web to code (to use Any AI Website to our code) and code to database
+         * API Always returns promises. (Note :- We dont need to use resole or reject in this because it's already inbuilt.)
+         * And Fetch API
+         * async is always used in function and await will be used twice, 1st  where we are fetching API (link) and 2nd where we convert it into json / text format
+        */
+
+        let div = document.querySelector('div');
+
+        async function hello(){
+            let a = await fetch("https://jsonplaceholder.typicode.com/users");
+            let data = await a.json();
+
+            // console.log(data);
+
+            data.forEach(element => {
+                
+
+                
+            });
+        }
+
+        hello();
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
