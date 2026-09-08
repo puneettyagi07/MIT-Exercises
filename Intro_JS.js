@@ -2322,3 +2322,9 @@ dublicateElement(); */
 
 //*************** Async / Await ***************
 // It's used with only promises, to wait any fumction / 
+
+
+
+
+
+//*************** API ***************
