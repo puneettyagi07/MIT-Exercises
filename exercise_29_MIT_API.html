@@ -111,6 +111,7 @@
 
             // 2. Convert data into a readable JavaScript array
             let userList = await response.json();
+            console.log(userList);
 
             // 3. Pick a random index between 0 and the total users (0 to 9)
             let randomIndex = Math.floor(Math.random() * userList.length);
