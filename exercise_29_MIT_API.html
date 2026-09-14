@@ -84,7 +84,7 @@
 
         //     let data = await a.json();
 
-        //     // console.log(data);
+        //     console.log(data);
 
         //     personData.innerHTML = `
         //         <p><strong>Name:</strong> ${data.name}</p>
@@ -92,8 +92,7 @@
         //         <p><strong>City:</strong> ${data.address}</p>
         //         <p><strong>Phone:</strong> ${data.phone}</p>
         //     `;
-
-          
+        
         // }
         // details();
 
@@ -101,19 +100,19 @@
         const btn = document.querySelector('#getUserBtn');
         const detailsBox = document.querySelector('.details');
 
-        // Step 2: Define the async function
+       
         async function getRandomUser() {
-            // Tell the user data is loading
+            
             detailsBox.textContent = "Loading...";
 
-            // 1. Get raw data from the server
+            
             let response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-            // 2. Convert data into a readable JavaScript array
+           
             let userList = await response.json();
             console.log(userList);
 
-            // 3. Pick a random index between 0 and the total users (0 to 9)
+            
             let randomIndex = Math.floor(Math.random() * userList.length);
             let person = userList[randomIndex];
 
